@@ -1,10 +1,12 @@
+<h1>qaewqeqwe</h1>
+
 <div class="row">
             <div class="col-12">
 
                 <div class="carousel center-align">
                 <?php 
-                    if(get_field("slider")){
-                    foreach (get_field("slider") as $item) {?>
+                    if(get_field("repeater")){
+                    foreach (get_field("repeater") as $item) {?>
                     <div class="carousel-item">
                         <img src="<?php echo $item["imagen"] ?>" alt="">
                     </div>
