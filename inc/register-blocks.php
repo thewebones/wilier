@@ -37,3 +37,14 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
+acf_register_block_type(array(
+    'name'              => 'bloque1',
+    'title'             => __('bloque1'),
+    'description'       => __('bloque1'),
+    'render_template'   => 'template-parts/blocks/bloque1/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('panel', 'slider', 'article'),
+    'category' => 'widgets'
+
+));
