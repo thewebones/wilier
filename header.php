@@ -30,31 +30,5 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'web-andres' ); ?></a>
 
 	<header id="masthead" class="site-header row">
-		<div class="site-branding col-md-2">
-            <img src="<?php echo get_field('logo','option') ?>" alt="">
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation col-md-8">
-            <?php
-            foreach (get_field('menu_autos','option') as $item){
-                     ?>
-            <div class="menu-item-auto">
-                <h4><?php ECHO $item['tipo_auto'] ?></h4>
-                <img src="<?php echo $item['imagen_auto'] ?>" alt="">
-            </div>
-            <?php
-            }
-            ?>
-
-		</nav><!-- #site-navigation -->
-        <div class="site-menu col-md-2">
-            <div class="menu-item-auto">
-                <h4><?php echo get_field('nuevo_usuario','option') ?></h4>
-                <img src="<?php echo get_field('usuario_imagen','option') ?>" alt="">
-            </div>
-            <div class="menu-item-auto">
-
-                <img id="drop" src="<?php echo get_field('menu_drop_imagen','option') ?>" alt="">
-            </div>
-        </div>
+	
 	</header><!-- #masthead -->
