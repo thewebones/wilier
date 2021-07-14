@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/webandres/vendors/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/webandres/vendors/swiper-bundle.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 

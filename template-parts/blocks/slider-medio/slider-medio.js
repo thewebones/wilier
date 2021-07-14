@@ -19,3 +19,5 @@ function movePrevCarousel() {
     var moveLeft = M.Carousel.getInstance(elems);
     moveLeft.prev(1);
 }
+
+console.log("aaa");
