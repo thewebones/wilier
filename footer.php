@@ -21,5 +21,7 @@
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/webandres/vendors/jquery.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/webandres/vendors/swiper-bundle.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/webandres/vendors/bootstrap.min.js"></script>
+<script src="<?php echo get_site_url(); ?>/wp-content/themes/webandres/template-parts/blocks/slider-medio/slider-medio.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

@@ -26,3 +26,14 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
+acf_register_block_type(array(
+    'name'              => 'slider-medio',
+    'title'             => __('Slider'),
+    'description'       => __('slider'),
+    'render_template'   => 'template-parts/blocks/slider-medio/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('panel', 'slider', 'article'),
+    'category' => 'widgets'
+
+));
