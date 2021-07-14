@@ -27,7 +27,7 @@ get_header();
 //			if ( comments_open() || get_comments_number() ) :
 //				comments_template();
 //			endif;
-			get_template_part( 'template-parts/content');
+		//	get_template_part( 'template-parts/content');
 			
 		endwhile; // End of the loop.
 		?>
