@@ -37,3 +37,25 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
+acf_register_block_type(array(
+    'name'              => 'bloque1',
+    'title'             => __('bloque1'),
+    'description'       => __('bloque1'),
+    'render_template'   => 'template-parts/blocks/bloque1/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('panel', 'slider', 'article'),
+    'category' => 'widgets'
+
+));
+
+acf_register_block_type(array(
+    'name'              => 'slider-hover',
+    'title'             => __('Slider hover'),
+    'description'       => __('slider hover'),
+    'render_template'   => 'template-parts/blocks/slider-hover/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('panel', 'slider-hover', 'article'),
+    'category' => 'widgets'
+
+));

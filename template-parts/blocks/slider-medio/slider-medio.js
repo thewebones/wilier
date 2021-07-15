@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const elementosCarrusel = document.querySelectorAll('.carousel');
+    const elementosCarrusel = document.querySelectorAll('.section-slider-medio .carousel');
     M.Carousel.init(elementosCarrusel, {
         duration: 200,
         dist: -50,
-        shift: 80,
-        padding: 0,
+        shift: -70,
+        padding: 300,
         numVisible: 5,
         indicators: true,
     });
@@ -20,4 +20,3 @@ function movePrevCarousel() {
     moveLeft.prev(1);
 }
 
-console.log("aaa");

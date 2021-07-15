@@ -1,0 +1,29 @@
+$rosado: #c6538c;
+
+.section-bloque1{
+
+  height: 200px;
+
+
+  .ache{
+    font-size: 100px;
+  }
+
+  &.Amateur{
+    background: white;
+  .ache{
+    color:black
+  }
+  }
+  &.Profesional{
+    background: black;
+    .ache{
+      color:white
+    }
+  }
+
+
+
+
+
+}
