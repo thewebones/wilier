@@ -1,0 +1,46 @@
+.form_comunidad_container{
+    position: relative;
+    width:100%;
+}
+.form_comunidad_container img{
+    width:inherit;
+}
+.form_container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-between;
+    text-align: center;
+    width:260px;
+    background:black;
+    position:absolute;
+    top:30%;
+    left:5vw;
+
+}
+.form_titulo{
+    color:gray;
+    font-size:1.2rem;
+    font-weight:bold
+}
+.img_form{
+    height:25px;
+    background-image:url(http://localhost/wilier/wp-content/themes/webandres/img/robe_recursos/img_form.png) ;
+    width:100%;
+
+}
+.form_input{
+    height:30px;
+    width:80%;
+}
+.form_comunidad_footer {
+    position:relative;
+    height:20vw;
+    background-image:url(http://localhost/wilier/wp-content/themes/webandres/img/robe_recursos/background_footer_comunidad.png) ;
+}
+.form_comunidad_footer img{
+    position: absolute;
+    top: -5vw;
+    left: 40%;
+    width:50vw;
+}

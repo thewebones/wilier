@@ -48,3 +48,33 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+acf_register_block_type(array(
+    'name'              => 'bloque-slider-bicicletas',
+    'title'             => __('Bloque slider bicicletas'),
+    'description'       => __('bg-cta-section'),
+    'render_template'   => 'template-parts/blocks/bloque-slider-bicicletas/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('panel','slider', 'bicicles'),
+    'category' => 'widgets'
+
+));
+acf_register_block_type(array(
+    'name'              => 'bloque-mapa',
+    'title'             => __('Bloque mapa'),
+    'description'       => __('bg-cta-section'),
+    'render_template'   => 'template-parts/blocks/bloque-mapa/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('panel','mapa'),
+    'category' => 'widgets'
+
+));
+acf_register_block_type(array(
+    'name'              => 'bloque-form-comunidad',
+    'title'             => __('Bloque form comunidad'),
+    'description'       => __('bg-cta-section'),
+    'render_template'   => 'template-parts/blocks/bloque-form-comunidad/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('panel','comunidad'),
+    'category' => 'widgets'
+
+));

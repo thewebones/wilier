@@ -1,0 +1,60 @@
+.bloque_mapa_container{
+    display: flex;
+    justify-content:space-around;
+    padding:0 30px;
+}
+.menu_mapa_container{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+}
+.imagen_mapa_container{
+    width:50vw;
+    text-align: end;
+}
+.imagen_mapa_container img{
+    width:inherit;
+}
+.menu_title{
+    position: absolute;
+    top:10px;
+    width:max-content;
+}
+
+.content-input input{
+    visibility:hidden;
+    position: absolute;
+    right:0;
+}
+.content-input{
+    position:relative;
+    margin-bottom: 5px;
+    padding:5px 0 5px 60px;
+    display: block;
+    font-size: 2rem;
+    color: gray;
+}
+
+.content-input input + i{
+    background:gray;
+    border: none;
+    position: absolute;
+    top:20px;
+    height:25px;
+    width:25px;
+    border-radius: 100%;
+    left:25px;
+}
+.content-input:hover i{
+    border:1px solid black;
+}
+
+.content-input input:checked + i{
+    background:#FF0008;
+}
+.content-input input:checked + i + span{
+    color:black;
+}
+
