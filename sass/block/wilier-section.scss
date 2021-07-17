@@ -1,0 +1,122 @@
+.wilier-section {
+  margin-bottom: 100px;
+  .contenidoinside {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .division{
+      width: 40%;
+      margin: 3%;
+    }
+  }
+  @media (max-width: 994px) {
+    .division {
+      width: 100% !important;
+
+      .imagen-wilier {
+        width: 100%;
+      }
+    }
+    .marca-wilier {
+      margin-left: 0 !important;
+
+    }
+    .marca {
+      text-align: center !important;
+    }
+    .contenidoinside {
+      display: block !important;
+    }
+    .titulo-wilier {
+      font-size: 38px !important;
+      text-align: -webkit-center;
+
+    }
+    .contenido-wilier {
+      padding-right: 0 !important;
+      margin-left: 0 !important;
+    }
+    .imagencontenedor {
+      margin-right: 0 !important;
+      text-align: -webkit-center;
+      margin-left: 0 !important;
+    }
+    .texto-wilier {
+      display: none;
+    }
+    .imagen-marca {
+      margin-top: 0 !important;
+    }
+    .texto-wilier2 {
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.005em;
+      margin-top: 60px;
+      display: block !important;
+      text-align: left;
+    }
+    .imagen-marca2 {
+      display: block !important;
+      height: 162.91px;
+    }
+  }
+  .contenido-wilier {
+    margin-bottom: 100px;
+  }
+  .marca {
+    padding-top: 60px;
+  }
+  .imagen-marca {
+    z-index: 0;
+    position: relative;
+    height: 162.91px;
+    margin-top: -220px;
+  }
+  .texto-wilier {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.005em;
+    margin-bottom: 30px;
+  }
+  .titulo-wilier {
+    padding-top: 120px;
+    margin-bottom: 25px;
+    font-size: 48px;
+    font-style: normal;
+    font-family: Roboto;
+    font-weight: bold;
+    line-height: 56px;
+  }
+  .texto-wilier2 {
+    margin-bottom: 30px;
+    display: none;
+  }
+  .imagen-marca2 {
+    display: none;
+  }
+  &.Amateur {
+    background: white;
+  }
+  &.Profesional {
+    background: black;
+    color: white !important;
+
+  }
+  @media (max-width: 1650px) {
+    .contenidoinside {
+      align-items: normal;
+    }
+  }
+  .marca-wilier {
+    margin-left: 50px;
+
+  }
+}

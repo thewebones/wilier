@@ -1,0 +1,123 @@
+.embajador-section {
+  width: 100%;
+  display: flex;
+  margin-bottom: 100px;
+  @media (max-width: 860px) {
+    display: block !important;
+  }
+  .imagen-embajador {
+    width: 50%;
+  }
+  .nombre-embajador2 {
+    display: none;
+  }
+  .embajador-wilier2 {
+    display: none;
+    margin-bottom: 40px;
+  }
+  .embajador-contenido {
+    margin-top: 10%;
+    width: 50%;
+    margin-left: 80px;
+  }
+  .nombre-embajador {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px !important;
+    line-height: 56px;
+    margin-bottom: 25px;
+  }
+  .embajador-wilier {
+    font-family: Roboto;
+    color: #EE3031;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.005em;
+    margin-bottom: 40px;
+  }
+  .embajador-texto {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.005em;
+    width: 70%;
+  }
+  @media (max-width: 1800px)and (min-width: 860px) {
+  .embajador-texto {
+    width: 90% !important;
+  }
+}
+  @media (max-width: 860px) {
+    .embajador-texto {
+      padding-bottom: 20px;
+    }
+    .imagen-embajador {
+      width: 98% !important;
+      margin-bottom: 50px;
+    }
+    .embajador-contenido {
+      width: 100% !important;
+      text-align: -webkit-center;
+      margin-left: 0 !important;
+    }
+    .nombre-embajador {
+      display: none !important;
+    }
+    .embajador-wilier {
+      display: none !important;
+    }
+    .embajador-texto {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.005em;
+    }
+    .nombre-embajador2 {
+      display: block !important;
+      text-align: center;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 46px;
+      text-align: center;
+      letter-spacing: 0.0025em;
+    }
+    .embajador-wilier2 {
+      display: block !important;
+      text-align: center;
+      font-family: Roboto;
+      color: #EE3031;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.005em;
+    }
+    .embajador-texto {
+      width: 95% !important;
+      text-align: left;
+    }
+  }
+  &.Amateur {
+    background: white;
+  }
+  &.Profesional {
+    background: black;
+    color: white !important;
+    .embajador-wilier2 {
+      color: #EE3031;
+    }
+    .embajador-wilier {
+      color: #EE3031;
+    }
+  }
+}
+
