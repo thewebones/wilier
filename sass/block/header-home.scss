@@ -1,13 +1,10 @@
 .header-home {
   .header-general {
-    width: 100%;
+
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-position: bottom !important;
-    object-fit: cover !important;
+    background-position: center !important;
     align-items: center;
-    height: 760px;
-    left: -26px;
     display: flex;
     flex-wrap: wrap;
   }
