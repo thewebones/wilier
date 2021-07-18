@@ -48,6 +48,48 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+acf_register_block_type(array(
+    'name'              => 'wilier-section',
+    'title'             => __('wilier section'),
+    'description'       => __('definicion de wilier'),
+    'render_template'   => 'template-parts/blocks/wilier-section/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('section', 'wilier'),
+    'category' => 'widgets'
+
+));
+acf_register_block_type(array(
+    'name'              => 'embajador-section',
+    'title'             => __('embajador section'),
+    'description'       => __('embajador de wilier'),
+    'render_template'   => 'template-parts/blocks/wilier-embajador/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('section', 'embajador', 'wilier'),
+    'category' => 'widgets'
+
+));
+
+acf_register_block_type(array(
+    'name'              => 'wilier-profesional-section',
+    'title'             => __('profesional section'),
+    'description'       => __('embajador de wilier'),
+    'render_template'   => 'template-parts/blocks/wilier-profesional-section/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('section', 'profesional', 'wilier'),
+    'category' => 'widgets'
+
+));
+acf_register_block_type(array(
+    'name'              => 'header-home',
+    'title'             => __('header home'),
+    'description'       => __('header de la home'),
+    'render_template'   => 'template-parts/blocks/header-home/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('section', 'header','home','wilier'),
+    'category' => 'widgets'
+
+));
+
 
 acf_register_block_type(array(
     'name'              => 'slider-hover',
@@ -61,6 +103,7 @@ acf_register_block_type(array(
 ));
 
 acf_register_block_type(array(
+<<<<<<< HEAD
     'name'              => 'video-home',
     'title'             => __('video home'),
     'description'       => __('video home'),
@@ -80,3 +123,14 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+=======
+    'name'              => 'modelo-bikes-wilier',
+    'title'             => __('modelo bikes wilier'),
+    'description'       => __('section modelos bikes'),
+    'render_template'   => 'template-parts/blocks/modelo-bikes-wilier/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('modelo', 'wilier', 'bikes'),
+    'category' => 'widgets'
+
+));
+>>>>>>> 4f897630a7fd55c4b7aeb60474687b1b23f31d13
