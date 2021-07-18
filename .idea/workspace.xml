@@ -544,7 +544,7 @@
       <workItem from="1626289595410" duration="5233000" />
       <workItem from="1626321045576" duration="59652000" />
       <workItem from="1626488088885" duration="695000" />
-      <workItem from="1626489187555" duration="14859000" />
+      <workItem from="1626489187555" duration="14891000" />
     </task>
     <task id="LOCAL-00001" summary="sass bloque example">
       <created>1626292265881</created>
@@ -609,11 +609,18 @@
       <option name="project" value="LOCAL" />
       <updated>1626640456384</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="package.json">
+      <created>1626640652980</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1626640652980</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90947000" />
+    <option name="totallyTimeSpent" value="90979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1380" height="735" extended-state="0" />
