@@ -19,8 +19,9 @@
     <link rel="icon" type="image/jpg" sizes="32x32" href="<?php echo get_site_url(); ?>/wp-content/themes/webandres/img/favicon.png">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/webandres/vendors/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/webandres/vendors/swiper-bundle.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/materialize.css">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 

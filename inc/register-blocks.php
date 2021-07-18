@@ -59,3 +59,24 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
+acf_register_block_type(array(
+    'name'              => 'video-home',
+    'title'             => __('video home'),
+    'description'       => __('video home'),
+    'render_template'   => 'template-parts/blocks/video-home/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('panel', 'video-home', 'article'),
+    'category' => 'widgets'
+
+));
+acf_register_block_type(array(
+    'name'              => 'card-producto',
+    'title'             => __('card producto'),
+    'description'       => __('card producto'),
+    'render_template'   => 'template-parts/blocks/card-producto/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('panel', 'card-producto', 'card'),
+    'category' => 'widgets'
+
+));

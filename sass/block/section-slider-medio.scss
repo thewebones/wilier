@@ -24,11 +24,20 @@
 
 .carousel .carousel-item {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     height: 514px !important;
     width: 342px !important;
     opacity: 1 !important;   
+}
+@media only screen and (max-width: 600px) {
+    .carousel .carousel-item {
+        height: 434.38px !important;
+        width: 289px !important;
+        margin-left: 20px !important; 
+    } 
+    .middle-indicator {
+        display: none;
+    }
 }
 
 .carousel .carousel-item img {
