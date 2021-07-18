@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="756044fc-2664-49d1-a5b0-832581faa594" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass.css" afterPath="$PROJECT_DIR$/sass.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -313,8 +311,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/header.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/style.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sass/block/header-home.scss</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -322,7 +319,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/sass.css</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -506,7 +502,7 @@
       <workItem from="1626289595410" duration="5233000" />
       <workItem from="1626321045576" duration="59652000" />
       <workItem from="1626488088885" duration="695000" />
-      <workItem from="1626489187555" duration="14028000" />
+      <workItem from="1626489187555" duration="14667000" />
     </task>
     <task id="LOCAL-00001" summary="sass bloque example">
       <created>1626292265881</created>
@@ -557,11 +553,18 @@
       <option name="project" value="LOCAL" />
       <updated>1626622606428</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="package.json">
+      <created>1626638728545</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1626638728545</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90116000" />
+    <option name="totallyTimeSpent" value="90755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1380" height="735" extended-state="0" />
@@ -599,7 +602,8 @@
     <MESSAGE value="sass bloque example" />
     <MESSAGE value="alain viernes" />
     <MESSAGE value="alain domingo" />
-    <option name="LAST_COMMIT_MESSAGE" value="alain domingo" />
+    <MESSAGE value="package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="package.json" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
