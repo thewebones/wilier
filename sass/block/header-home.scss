@@ -70,7 +70,7 @@
   .boton-header-home2 {
     margin-bottom: 130px;
     background: #EE3031;
-    width: 244.4px;
+    width: 230.4px;
     height: 35px;
     display: flex;
     align-items: center;
@@ -127,12 +127,10 @@
   @media (max-width: 411px) {
     .header-responsive {
       margin-left: 0 !important;
+      margin-right: 0 !important;
     }
     .img-responsive {
       margin-right: 10px !important;
-    }
-    .boton-header-home2, .header-texto2 {
-      width: 210px !important;
     }
     .flecha {
       margin-left: 3px;
