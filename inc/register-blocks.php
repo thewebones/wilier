@@ -103,7 +103,6 @@ acf_register_block_type(array(
 ));
 
 acf_register_block_type(array(
-<<<<<<< HEAD
     'name'              => 'video-home',
     'title'             => __('video home'),
     'description'       => __('video home'),
@@ -123,7 +122,7 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
-=======
+acf_register_block_type(array(
     'name'              => 'modelo-bikes-wilier',
     'title'             => __('modelo bikes wilier'),
     'description'       => __('section modelos bikes'),
@@ -133,4 +132,3 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
->>>>>>> 4f897630a7fd55c4b7aeb60474687b1b23f31d13
