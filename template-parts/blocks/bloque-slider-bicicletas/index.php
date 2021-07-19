@@ -10,7 +10,7 @@
     <div class="slider_container <?php if($estilo=="profesional") echo "slider_container_dark" ?>">
     <h1 class="slider_title"><?php echo get_field("title_slider") ?></h1>
     <div id="carouselExampleIndicators" class="carousel slide mt-5 slider_carousel" data-ride="carousel">
-    <button class="btn btn-slider-change <?php if($estilo=='profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators" data-slide-to="0">
+    <button class="btn btn-slider-change <?php if($estilo=='profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators" data-slide="prev">
         <span>
         <?php if($estilo=="profesional") {?>
             <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/dark/prev.png"/>
@@ -57,7 +57,7 @@
                 $cont++;
             } ?>
             </div>
-    <button class="btn btn-slider-change <?php if($estilo=='profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators" data-slide-to="1">
+    <button class="btn btn-slider-change <?php if($estilo=='profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators" data-slide="next">
     <?php if($estilo=="profesional") {?>
             <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/dark/next.png"/>
         <?php }else {?>

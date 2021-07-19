@@ -2,7 +2,7 @@
 
 <div class="<?php if($estilo=="profesional") echo "dark";?>">
 <div class="form_comunidad_container">
-    <img src="<?php echo get_site_url(); ?>/wp-content/themes/webandres/img/robe_recursos/img_comunidad.png"/>
+    <img src="<?php echo get_field("imagen_fondo_formulario")?>"/>
     <div class="form_container">
         <!-- <div class="img_form mb-3" ></div> -->
         <p class="form_titulo">FORMÁ PARTE DE NUESTRA COMUNIDAD</p>
@@ -13,6 +13,6 @@
 </div>
 </div>
 <div class="form_comunidad_footer">
-    <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/form_image_footer.png"/>
+<img src="<?php echo get_field("imagen_inferior")?>"/>
 </div>
 </div>
