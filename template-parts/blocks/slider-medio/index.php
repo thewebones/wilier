@@ -1,9 +1,8 @@
-<h1>qaewqeqwe</h1>
-
-<div class="row">
+<section class="section-slider-medio <?php echo get_field("estilo")?>">
+    <div class="row">
             <div class="col-12">
 
-                <div class="carousel center-align">
+                <div class="carousel  center-align">
                 <?php 
                     if(get_field("repeater")){
                     foreach (get_field("repeater") as $item) {?>
@@ -24,4 +23,5 @@
                     </div>
                 </div>        
             </div>
-</div>
+    </div>
+</section>

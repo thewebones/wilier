@@ -1,0 +1,101 @@
+.modelo-bikes-wilier {
+  .modelo-bike {
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .division {
+    width: 40%;
+  }
+  .division2 {
+    width: 55%;
+  }
+  .contenido-modelo {
+    margin-top: 8%;
+    align-self: center;
+    text-align: -webkit-center;
+  }
+  .titulo-modelo {
+    text-align: -webkit-left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    color: #0B0B0B;
+  }
+  .modelo-texto {
+    text-align: -webkit-left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    color: #0B0B0B;
+  }
+  .boton-ver-modelos {
+    display: none;
+  }
+  .imagen-modelo {
+    margin-top: 20px;
+    padding-left: 50px;
+  }
+  @media (max-width: 1000px) {
+    .contenido-modelo {
+      margin-top: 0 !important;
+    }
+    .titulo-modelo {
+      font-size: 38px;
+    }
+    .modelo-texto {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 800px) {
+    .boton-ver-modelos {
+      margin-top: 30px;
+      display: block;
+      background: #EE3031;
+      width: 193.14px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.0125em;
+    }
+    .flecha {
+      width: 5%;
+      margin-left: 10px;
+    }
+    .imagen-modelo, .tres-flechas {
+      display: none !important;
+    }
+    .modelo-bike {
+      display: block;
+    }
+    .contenido-modelo {
+      width: 100%;
+      .titulo-modelo, .modelo-texto {
+        text-align: -webkit-center !important;
+      }
+    }
+  }
+  &.Amateur {
+    background: white;
+  }
+  &.Profesional {
+    background: black;
+    .titulo-modelo, .modelo-texto {
+      color: white !important;
+    }
+  }
+}

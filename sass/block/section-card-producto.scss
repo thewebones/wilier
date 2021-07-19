@@ -1,0 +1,116 @@
+.section-card-producto {
+padding-top: 25px;
+
+.carousel {
+  width: 1250px;
+  height: fit-content;
+  margin: auto !important;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+}
+    .card-producto {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: start;
+         font-family: 'Roboto';
+     }
+   
+     .card {
+         width: 405px;
+         height: fit-content;
+         margin: 5px;
+         border: 2px solid #DFDFDF;
+         box-shadow: none;
+     }
+     .categoria {
+         font-size: 18px;
+         font-weight: 400;
+     }
+    .card-title {
+         margin-top: 15px;
+        margin-bottom: 30px !important;
+        font-size: 48px;
+         font-weight: 700;
+     }
+     .descripcion {
+         font-size: 18px;
+         font-weight: 400; 
+    }
+    .action {
+         display: flex !important;
+        flex-direction: row;
+        align-items: center;         
+        justify-content: space-around;
+        margin-bottom: 20px;
+
+        .precio {
+            width: 100px;
+             margin-right: 100px;
+            justify-content: start;
+             color: #00873A;
+            font-size: 20px;
+         }
+         .boton {
+             justify-content: end;         
+             .btn-cotizar {
+                border: 1px solid #000;
+               color: black;
+                 box-sizing: border-box;
+                font-size: 18px;
+                padding: 10px;
+               font-weight: 500;
+                 font-family: 'Roboto';
+             }
+         }
+    }
+    &.Profesional {
+        background-color: #000;
+        .card {
+            background-color: #000;
+            color: #fff;
+        }
+        .action {
+            .btn-cotizar {
+                border: 1px solid #fff;
+                color: white;
+            }
+        }
+    }
+   
+
+    .boton-card-producto {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .boton-card-producto a {
+        width: 313px;
+        height: 50px;
+        color: white !important;
+        background: #EE3031;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white !important;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.0125em;
+     }
+    
+
+}
+
+
