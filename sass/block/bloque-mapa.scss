@@ -55,7 +55,7 @@
     background:gray;
     border: none;
     position: absolute;
-    top:1vw;
+    top:0.7vw;
     height:25px;
     width:25px;
     border-radius: 100%;
@@ -72,7 +72,7 @@
     color:black;
 }
 
-@media (max-width:600px){
+@media (max-width:700px){
     .bloque_mapa_container{
         flex-direction: column-reverse;
         position: relative;

@@ -7,7 +7,6 @@
     $cont=0;
     $estilo=get_field("estilo");
     ?>
-    
     <div class="slider_container <?php if($estilo=="profesional") echo "slider_container_dark" ?>">
     <h1 class="slider_title"><?php echo get_field("title_slider") ?></h1>
     <div id="carouselExampleIndicators" class="carousel slide mt-5 slider_carousel" data-ride="carousel">

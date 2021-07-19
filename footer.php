@@ -71,14 +71,11 @@ $estilo=get_field("estilo","option");
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/swiper-bundle.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/bootstrap.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/template-parts/blocks/slider-medio/slider-medio.js"></script>
-<<<<<<< HEAD
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/js/jquery.expander.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/js/main.js"></script>
-=======
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/template-parts/blocks/slider-hover/slider-hover.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/materialize.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
->>>>>>> cb17d8ca637712795ba576f6955369c594e4bfc9
 </body>
 </html>
