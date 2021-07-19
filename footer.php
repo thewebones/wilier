@@ -8,55 +8,57 @@
  *
  * @package Web_Andres
  */
-
+$estilo=get_field("estilo","option"); 
 ?>
 
 	<footer id="colophon" class="site-footer">
-	<div class="footer_container">
+	<div class="footer_container <?php if($estilo=="profesional")echo "footer_container_dark" ?>">
 			<div class="footer_links">
 				<div class="footer_description_page flex_column mr-5">
 					<div class="footer_imagen">
-					<img width="200px" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/prueba.jpg"/>
+					<img width="200px" 
+					src=
+					"<?php if($estilo=="profesional")echo get_field("logo_dark","option"); else echo get_field("logo","option");?>"/>
 					</div>
 					<div class="footer_social_movil mt-5">
-					<a><img class="ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/></a>
-					<a><img class="ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/twitter.svg"/></a>
-					<a><img class="ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/instagram.svg"/></a>
-					<a><img class="ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/facebook.svg"/></a>
+					<?php if(get_field('repeater_social',"option"))
+					foreach(get_field("repeater_social","option") as $itemSocial){
+					?>
+					<a href="<?php echo $itemSocial["link_social"]["url"] ?>"><img class="ml-3" src="<?php if($estilo=="profesional") echo $itemSocial["imagen_social_dark"];else  echo $itemSocial["imagen_social"];?>"/></a>
+					<?php } ?>
 				</div>
-					<p class="footer_text_description mt-5">Lorem ipsum dolor sit amet, consectetur 
-adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip 
-ex ea commodo consequat</p>
+					<p class="footer_text_description mt-5 "><?php echo get_field("description","option") ?></p>
 				</div>
 				<div class="footer_container_links">
-				<div class="footer_bikes flex_column mr-5">
-					<h3>Bikes</h3>
-					<a class="mt-2">Ruta</a>
-					<a class="mt-2">Gravel</a>
-					<a class="mt-2">Montaña</a>
-					<a class="mt-2">E Bikes</a>
+				<?php 
+				if(get_field("repeater_menu_links","option"))
+				foreach(get_field("repeater_menu_links","option") as $menu){ ?>
+				<div class="footer_menu flex_column mr-5">
+					<h3><?php echo $menu["title"] ?></h3>
+					<?php if($menu["repeater_items"]) 
+					foreach($menu["repeater_items"] as $item)
+					if($item["texto_item"]){
+					?>
+					<span class="mt-2"><?php echo $item["texto_item"] ?></span>
+					<?php }else {?>
+					 <a class="mt-2" href="<?php echo $item["link_item"]["url"] ?>"><?php echo $item["link_item"]["title"] ?></a>	
+					<?php } ?>
 				</div>
-				<div class="footer_about flex_column mr-5">
-					<h3>Nosotros</h3>
-					<a class="mt-2">Mundo Wilier</a>
-					<a class="mt-2">Contacto</a>
-				</div>
+				<?php } ?>
 				</div>
 				<div class="footer_social">
-					<a><img class="ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/></a>
-					<a><img class="ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/twitter.svg"/></a>
-					<a><img class="ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/instagram.svg"/></a>
-					<a><img class="ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/facebook.svg"/></a>
+					<?php if(get_field('repeater_social',"option"))
+					foreach(get_field("repeater_social","option") as $itemSocial){
+					?>
+					<a href="<?php echo $itemSocial["link_social"]["url"] ?>"><img class="ml-3" src="<?php if($estilo=="profesional") echo $itemSocial["imagen_social_dark"];else  echo $itemSocial["imagen_social"];?>"/></a>
+					<?php } ?>
 				</div>
 			</div>
 			<div class="footer_derechos mt-5">
-				<p>Copyright © 2020. LogoIpsum. All rights reserved.</p>
+				<p><?php echo get_field("texto_copyright","option") ?></p>
 				<div class="footer_term_policy">
-					<a class="mr-5">Terms & Conditions</a>
-					<a>Privacy Policy</a>
+					<a class="mr-5" href="<?php echo get_field("term_conditions_link","option")["url"] ?>"><?php echo get_field("term_conditions_link","option")["title"]?></a>
+					<a href="<?php echo get_field("privacy_policy_link","option")["url"]?>"><?php echo get_field("privacy_policy_link","option")["title"]?></a>
 				</div>
 			</div>
 		</div>
@@ -70,5 +72,7 @@ ex ea commodo consequat</p>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/bootstrap.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/template-parts/blocks/slider-medio/slider-medio.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/js/jquery.expander.js"></script>
+<script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/js/main.js"></script>
 </body>
 </html>

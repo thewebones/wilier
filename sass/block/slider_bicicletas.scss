@@ -1,3 +1,18 @@
+.slider_container{
+    padding:4vw 2vw;
+}
+
+.slider_container_dark{
+    background: black;
+}
+.slider_container_dark .slider_modelo,.slider_container_dark .slider_description,.slider_container_dark .slider_title{
+    color:white;
+}
+.slider_container_dark .btn-slider{
+    border: 1px solid white;
+    color:white;
+}
+
 .slider_title{
     text-align: center;
     font-size:2rem;
@@ -12,6 +27,7 @@
     color:#009641;
     font-size: 1.2rem;
     font-weight: bold;
+    width:max-content;
 }
 .slider_button_price{
     display:flex;
@@ -44,6 +60,7 @@
 }
 .imagen_slider_container img{
     width:inherit;
+    height: 35vw;
 }
 .slider_modelo{
     font-size: 3rem;
@@ -52,12 +69,14 @@
 .slider_description{
     font-size:1.2rem;
 }
-
+.carrusel_container{
+    overflow: initial;
+}
 .borderWhite{
     border: 1px solid white;
 }
-.dark{
-    background:black;
+.slider_text{
+    width: 50vw;
 }
 @media (max-width:1070px){
     html{
@@ -82,8 +101,10 @@
     .slider_categoria{
         position:absolute;
         top:1rem;
-        color:black;
         font-weight:bold;
+    }
+    .slider_text{
+        width: 94%;
     }
 }
 

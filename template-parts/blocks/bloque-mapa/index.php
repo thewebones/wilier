@@ -1,23 +1,24 @@
-<div class="bloque_mapa_container">
+<?php
+$estilo=get_field("estilo");
+?>
+
+<div class="bloque_mapa_container <?php if($estilo=="profesional") echo "bloque_mapa_container_dark" ?>">
     <div class="menu_mapa_container">
-        <h1 class="menu_title">¿Donde comprar?</h1>
+        <p class="menu_title"><?php echo get_field("titulo") ?></p>
         <div class="radio_container">
-            <div class="prueba">
+            <?php if(get_field("repeater_opciones")) 
+            foreach(get_field("repeater_opciones") as $radioItem){
+            ?>
             <label class="content-input">
-                <input type="radio" name="radio" id="autovia" checked>
+                <input type="radio" name="radio" id="autovia" onClick="load(event)">
                 <i></i>
-                <span>Santa Astana</span>
+                <span><?php echo $radioItem["name_input_radio"] ?></span>
+                <input type="hidden" value="<?php echo $radioItem["imagen"] ?>"/>
             </label>
-            <label class="content-input">
-                <input type="radio" name="radio" id="autovia">
-                <i></i>
-                <span>San Ramon</span>
-            </label>
-            </div>
+            <?php } ?>
         </div>
-        
     </div>
     <div class="imagen_mapa_container">
-        <img src="<?php echo get_site_url(); ?>/wp-content/themes/webandres/img/robe_recursos/mapa.png"/>
+        <img class="showImagen" src=""/>
     </div>
 </div>
