@@ -35,17 +35,23 @@ padding-top: 25px;
          font-weight: 400;
      }
     .card-title {
-         margin-top: 15px;
-        margin-bottom: 30px !important;
         font-size: 48px;
-         font-weight: 700;
+        font-weight: 700;
+        margin-bottom: 0 !important;
      }
      .descripcion {
          font-size: 18px;
          font-weight: 400; 
+         text-align: justify;
+    }
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
     }
     .action {
-         display: flex !important;
+        display: flex !important;
         flex-direction: row;
         align-items: center;         
         justify-content: space-around;
@@ -108,6 +114,7 @@ padding-top: 25px;
         font-size: 18px;
         line-height: 21px;
         letter-spacing: 0.0125em;
+        text-decoration: none;
      }
     
 

@@ -17,19 +17,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="icon" type="image/jpg" sizes="32x32" href="<?php echo get_site_url(); ?>/wp-content/themes/webandres/img/favicon.png">
-<<<<<<< HEAD
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/webandres/vendors/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/webandres/vendors/swiper-bundle.min.css">
-	<link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/materialize.css">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" rel="stylesheet">
-=======
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/swiper-bundle.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/wilier/sass.css">
->>>>>>> 4f897630a7fd55c4b7aeb60474687b1b23f31d13
 	<?php wp_head(); ?>
 </head>
 
