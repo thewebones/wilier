@@ -1,0 +1,107 @@
+.bloque_mapa_container{
+    display: flex;
+    justify-content:space-around;
+    padding:6vw 30px;
+}
+
+.bloque_mapa_container_dark{
+    background:black;
+}
+
+.bloque_mapa_container_dark p,.bloque_mapa_container_dark .content-input input:checked + i + span{
+    color: white;
+}
+.bloque_mapa_container_dark .content-input:hover i{
+    border:1px solid white;
+}
+
+.menu_mapa_container{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+}
+.imagen_mapa_container{
+    width:50vw;
+    text-align: end;
+}
+.imagen_mapa_container img{
+    width:inherit;
+    height: 40vw;
+}
+.menu_title{
+    position: absolute;
+    top:10px;
+    width:max-content;
+    font-size:48px;
+}
+
+.content-input input{
+    visibility:hidden;
+    position: absolute;
+    right:0;
+}
+.content-input{
+    position:relative;
+    margin-bottom: 5px;
+    padding:5px 0 5px 60px;
+    display: block;
+    font-size: 48px;
+    color: gray;
+}
+
+.content-input input + i{
+    background:gray;
+    border: none;
+    position: absolute;
+    top:40%;
+    height:25px;
+    width:25px;
+    border-radius: 100%;
+    left:25px;
+}
+.content-input:hover i{
+    border:1px solid black;
+}
+
+.content-input input:checked + i{
+    background:#FF0008;
+}
+.content-input input:checked + i + span{
+    color:black;
+}
+.form_button{
+    font-size:20px;
+}
+@media (max-width:1070px){
+    .bloque_mapa_container{
+        flex-direction: column-reverse;
+        position: relative;
+        align-items:center;
+    }
+    .menu_mapa_container{
+        position: initial;
+        margin-top: 20px;
+    }
+    .imagen_mapa_container{
+        width:100%;
+        margin-top: 60px;
+    }
+    .imagen_mapa_container img{
+        height: 60vw;
+    }
+    .radio_container{
+        display: flex;
+        width:max-content;
+    }
+    .content-input{
+        font-size: 16px;
+    }
+    .menu_title{
+        font-size: 30px;
+    }
+    .content-input input + i{
+        top:5px;
+    }
+}
