@@ -1,13 +1,18 @@
 
 .section-slider-medio {
-
+  padding-bottom: 100px !important;
   &.Profesional {
     background-color: black;
     padding-top: 100px;
-
+    
     .flickity-prev-next-button {
-        color: white;
-        border: solid 1px white;
+        color: white !important;
+        border: solid 1px white !important;
+        background: transparent !important;
+
+    }
+    .flickity-prev-next-button .arrow {
+      fill: #fff;
     }
 }  
 margin-bottom: 100px;
@@ -24,6 +29,7 @@ margin-bottom: 100px;
   margin-right: 30px;
   margin-left: 30px;
   margin-top: 40px !important;
+  object-fit: cover;
 }
 
 /* cell number */
@@ -40,6 +46,8 @@ margin-bottom: 100px;
   margin-top: -75px !important;
   height: 700px;
   width: 403px !important;
+  object-fit: contain;
+  object-position: bottom;
 
  }
  
@@ -62,14 +70,17 @@ margin-bottom: 100px;
     display: none;
   }
   .carousel-cell img {
-    width: 289px;
-    height: 434px;
-    margin: auto !important;
+    width: 289px !important;
+    height: 434px !important;
+    object-fit: contain;
   }
   .carousel-cell.is-selected img {
-    width: 289px;
-    height: 434px;
-    margin: auto !important;
+    width: 289px !important;
+    height: 434px !important;
+    margin-right: 100px !important;
+    margin-top: 40px !important;
+    object-fit: contain;
+    
   }
 }
 
