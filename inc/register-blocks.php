@@ -154,6 +154,7 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
 acf_register_block_type(array(
     'name'              => 'modelo-bikes-wilier',
     'title'             => __('modelo bikes wilier'),
@@ -161,6 +162,17 @@ acf_register_block_type(array(
     'render_template'   => 'template-parts/blocks/modelo-bikes-wilier/index.php',
     'icon'              => 'admin-comments',
     'keywords'          => array('modelo', 'wilier', 'bikes'),
+    'category' => 'widgets'
+
+));
+
+acf_register_block_type(array(
+    'name'              => 'por-categoria',
+    'title'             => __('por categoria'),
+    'description'       => __('por categoria'),
+    'render_template'   => 'template-parts/blocks/por-categoria/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('por-categoria', 'categoria', 'bikes'),
     'category' => 'widgets'
 
 ));

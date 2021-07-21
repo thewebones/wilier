@@ -1,0 +1,40 @@
+
+.section-por-categoria {
+    
+    .categoria {
+        padding: 100px;
+        display: flex;
+        flex-direction: row;
+    }
+    .izq {    
+        justify-content: flex-start;
+        width: 50%;
+        text-align: justify;
+        align-self: center;
+
+        .title{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 56px;
+            margin-bottom: 30px;
+        }
+        .descripcion {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+        }
+        .fondo {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+    }
+    .foto-der {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+    }
+}
