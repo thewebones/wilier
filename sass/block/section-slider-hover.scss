@@ -1,6 +1,10 @@
 
  .section-slider-hover {
-    
+
+    h4 {
+        margin-top: 25px !important;
+        color: gray;
+    }
     h2 {
         text-align: center;
         font-size: 48px;
@@ -14,6 +18,7 @@
      padding-top: 100px;
 
      h4 {
+         margin-top: 25px !important;
          color: #fff;
      }
      h2 {
@@ -34,7 +39,7 @@
     height: fit-content;
     margin: auto !important;
   }
-  
+   
   /* cell number */
   .carousel-cell:before {
     display: block;
@@ -47,6 +52,9 @@
   .item {
       margin: 10px;
   }
+  .item a {
+      text-decoration: none;
+  }
   .item img {
     height: 425px !important;
     width: 284px !important;
@@ -54,16 +62,20 @@
   .item h4 {
       text-align: center;
   }
-  .item img:hover {
+  .item:hover {
+    img {
     height: 446px !important;
     width: 304px !important;
     margin-top: -10px !important;
-     margin-left: -10px;
+    margin-left: -10px;
+    }
+    
     h4 {
         color: black;
         font-weight: bold;
         font-size: 36px;
         line-height: 46px;
+        text-decoration: none !important;
     }
 
 }
@@ -72,5 +84,40 @@
     .carousel {
         margin-left: 50px !important;
     }    
+}
+
+.fondo {
+    margin-top: -250px;
+    height: 400px;
+    background-image: url(http://localhost/wilier/wp-content/uploads/2021/07/photo_2021-07-16_16-25-25.jpg);
+    .boton-slider {
+        position: relative;
+        // display: flex;
+        // justify-content: center;
+        // margin-top: 50px !important;
+        // padding-bottom: 10px !important;
+        top: 87.5%;
+        text-align: -webkit-center;
+        margin-top: -50px;
+    }
+
+    .boton-slider a {
+        width: 313px;
+        height: 50px;
+        color: white !important;
+        background: #EE3031;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white !important;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.0125em;
+        text-decoration: none;
+    }
+
 }
 }

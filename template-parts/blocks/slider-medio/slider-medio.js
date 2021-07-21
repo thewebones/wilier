@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const elementosCarrusel = document.querySelectorAll('.section-slider-medio .carousel');
+/* document.addEventListener('DOMContentLoaded', () => {
+    const elementosCarrusel = document.querySelectorAll('.carousel');
     M.Carousel.init(elementosCarrusel, {
         duration: 200,
         dist: -50,
@@ -18,5 +18,4 @@ function movePrevCarousel() {
     var elems = document.querySelector('.carousel');
     var moveLeft = M.Carousel.getInstance(elems);
     moveLeft.prev(1);
-}
-
+} */
