@@ -66,6 +66,7 @@ $estilo=get_field("estilo","option");
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/popper.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/jquery.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/swiper-bundle.min.js"></script>
