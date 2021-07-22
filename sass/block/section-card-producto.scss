@@ -29,11 +29,24 @@ padding-top: 25px;
          margin: 5px;
          border: 2px solid #DFDFDF;
          box-shadow: none;
+         @media only screen and (max-width: 600px) {        
+            width: 390px !important;    
+            visibility: hidden;
+          }
      }
+     @media only screen and (max-width: 600px) {           
+        .card.is-selected {
+            margin-left: 31px !important;
+            visibility: visible !important;
+        }  
+      }
      .card-image img{
         object-fit: cover;
         width: 393px;
         height: 260px; 
+        @media only screen and (max-width: 600px) {        
+            width: 385px !important;      
+          }
        }
      .categoria {
          font-size: 18px;

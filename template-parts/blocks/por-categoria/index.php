@@ -11,8 +11,8 @@
         foreach( $categories as $category ) {
     ?>
 
-    <div class="por-categoria">
-        <div class="izq">
+    <div class="por-categoria container">
+        <div class="izq container">
             <div class="title">
                 <?php echo $category->name; ?>
             </div>
@@ -28,7 +28,7 @@
             </div>
         </div>
         
-        <div class="foto-der">
+        <div class="foto-der container">
             <img class="img" src="<?php echo the_field('imagen', $category);?>">
         </div>
     </div> 
