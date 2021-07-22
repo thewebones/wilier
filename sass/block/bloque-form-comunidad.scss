@@ -16,12 +16,12 @@
     justify-content:space-between;
     text-align: center;
     width:260px;
-    background:url("http://localhost/wilier/wp-content/themes/wilier/img/robe_recursos/background_form.png");
+
     position:absolute;
     top:20%;
     left:5vw;
-    background-size:cover;
-    padding: 20px 10px;
+    background-size:contain !important;
+    padding: 40px 10px;
 }
 .form_titulo{
     color:gray;
