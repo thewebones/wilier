@@ -30,6 +30,11 @@ padding-top: 25px;
          border: 2px solid #DFDFDF;
          box-shadow: none;
      }
+     .card-image img{
+        object-fit: cover;
+        width: 393px;
+        height: 260px; 
+       }
      .categoria {
          font-size: 18px;
          font-weight: 400;
