@@ -11,7 +11,7 @@ $estilo = get_field("estilo");
     foreach( $categories as $category ) {
 ?>
 
-    <div class="categoria">
+    <div class="por-categoria">
         <div class="izq">
             <div class="title">
                 <?php echo $category->name; ?>
@@ -39,31 +39,27 @@ $estilo = get_field("estilo");
     <div class="post-bicicleta">
 
             <?php 
-                $nombre = $category->name; 
+                $cat = $category->name; 
 
-                $args = array(
-                'post_type'=> 'bicicletas',
+                $args2 = array(
+                'post_type'=> 'bicicleta',
                 'order'    => 'ASC',
-                'category_name'=> 'ebike ruta'
-                );
                 
-                $the_query = new WP_Query( $args );
-                var_dump($the_query);
+                );
+                $the_query2 = new WP_Query( $args2 );
             ?>
-            
-            
-            
-            
+                  
             <div class="card-producto text-center row">
 
                 <div class="carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-                       <?php if($the_query->have_posts()) :
-                        while($the_query->have_posts()) :
-                            $the_query->the_post();
+                
+                      <?php if($the_query2->have_posts()) :
+                        while($the_query2->have_posts()) :
+                            $the_query2->the_post();
+                            
+                        if($cat == get_the_category()[0]->name) { ?> 
                         
-                        ?>
-                        
-                        <div class="card">
+                         <div class="card">
                             <div class="card-image">
                             <?php if($estilo=="profesional") {?>
                                 <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
@@ -93,29 +89,27 @@ $estilo = get_field("estilo");
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     
+                        
                         <?php 
+                        }
                         endwhile;
-                        wp_reset_postdata();
-                    else:
-                        ?>
-                        <p class="classNotFound">No se encontró ningun documento de la categoría seleccionada</p>
-                        <?php
+                       
                     endif;
-                        ?>     
+                        ?>   
+                        
 
                 </div>
-                </div>
-                <div class="boton-card-producto">
-                        <a class="boton" href="<?php echo get_field("boton")["url"]?>">
-                            <?php echo get_field("boton")["title"]?>
-                            <img class="flecha ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
-                        </a>
-                </div>
-            
                   
-
+                <div class="boton-card-producto">
+                                <a class="boton" href="<?php esc_url( get_category_link( get_cat_ID(get_the_category()[0]->name) ) )?>">
+                                    Ver todos los modelos
+                                    <img class="flecha ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
+                                </a>
+                </div>  
+        </div>
+                  
     </div>
 <?php } ?>
 

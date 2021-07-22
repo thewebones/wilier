@@ -1,7 +1,7 @@
 <?php
     $args=array(
         'post_type'=>'bicicleta',
-        'order'    =>'ASC'
+        'order'    =>'ASC',
     );
     $the_query=new WP_Query($args);
     $estilo=get_field("estilo");
