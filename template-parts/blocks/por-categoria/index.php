@@ -1,15 +1,15 @@
 
 <section class="section-por-categoria <?php echo get_field("estilo")?>">
-<?php
-$estilo = get_field("estilo");  
-    // Listado de categorias                  
-      $categories = get_categories( array(
-      'orderby' => 'name',
-      'order'   => 'ASC',
-    ) );
+    <?php
+    $estilo = get_field("estilo");  
+        // Listado de categorias                  
+        $categories = get_categories( array(
+        'orderby' => 'name',
+        'order'   => 'ASC',
+        ) );
 
-    foreach( $categories as $category ) {
-?>
+        foreach( $categories as $category ) {
+    ?>
 
     <div class="por-categoria">
         <div class="izq">
@@ -58,6 +58,7 @@ $estilo = get_field("estilo");
                             $the_query2->the_post();
                             
                         if($cat == get_the_category()[0]->name) { ?> 
+                       
                         
                          <div class="card">
                             <div class="card-image">
