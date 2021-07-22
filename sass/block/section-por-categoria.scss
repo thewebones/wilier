@@ -15,6 +15,7 @@
         width: 50%;
         text-align: justify;
         align-self: center;
+        padding: 50px;
         @media only screen and (max-width: 900px) {
             width: 100%;
         }    
@@ -44,9 +45,12 @@
     }
     .foto-der {
         display: flex;
-        justify-content: flex-end;
+        justify-content: end;
         width: 50%;
-        @media only screen and (max-width: 900px) {
+        img {
+        object-fit: cover;
+        }
+        @media only screen and (max-width: 995px) {
             display: none;
         }  
     }

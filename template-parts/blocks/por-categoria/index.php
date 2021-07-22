@@ -29,7 +29,7 @@
         </div>
         
         <div class="foto-der container">
-            <img class="img" src="<?php echo the_field('imagen', $category);?>">
+            <img class="img-fluid" src="<?php echo the_field('imagen_post_categoria', $category);?>">
         </div>
     </div> 
 
