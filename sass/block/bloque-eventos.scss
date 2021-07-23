@@ -77,7 +77,16 @@
 .evento_name_responsive{
     display:none;
 }
-
+.quitarSombra{
+    box-shadow: none;
+}
+.colorWhite{
+    color:white !important;
+}
+.btnWhite{
+    border:2px solid white !important;
+    color:white !important;
+}
 @media (max-width: 800px) {
     .generalContainer{
         padding: 1px 0;
@@ -128,5 +137,8 @@
         box-shadow: 0 10px 5px -5px lightgrey;
         align-items:flex-end;
         padding-right: 5vw;
+    }
+    .quitarSombra{
+        box-shadow: none;
     }
 }
