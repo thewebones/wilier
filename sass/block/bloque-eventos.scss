@@ -1,0 +1,132 @@
+.generalContainer{
+    padding: 20px 0;
+}
+
+.eventoContainer{
+    height:400px;
+    display: flex;
+    position: relative;
+}
+.imageInfoContainer{
+    position: absolute;
+    width:60%;
+    height: 100%;
+    box-shadow: -10px -10px 5px -5px #f7f5f5;
+}
+.imageInfoContainer img{
+   width: 100%;
+   height:inherit;
+}
+.fleximagenContainer{
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+}
+.imagenEventoContainer{
+    height:100%;
+    width:70%;
+}
+.imagenEventoContainer img{
+    height:inherit;
+    width:100%;
+}
+.fechaEventoContainer{
+    background-size: cover !important;
+    height:20%;
+    width:25%;
+    position:absolute;
+    right: -0.15vw;
+    bottom:6%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    padding-top: 10px;
+}
+.eventoInfoContainer{
+    position:absolute;
+    left:10%;
+    top:10%;
+}
+.evento_categoria{
+    color:#7B91B1;
+    font-size:18px;
+    margin:0 !important;
+}
+.evento_modelo{
+    font-size: 36px;
+    font-weight: bold;
+    color:#EE3031;
+    margin:0 !important;
+}
+.compartir span{
+    font-weight: bold;
+}
+.evento_premio{
+    font-weight: bold;
+}
+.evento_hora{
+    font-size: 20px;
+    font-weight: bold;
+    color:#EE3031;
+}
+.evento_fecha{
+    font-size: 16px;
+    font-weight: bold;
+}
+.evento_name_responsive{
+    display:none;
+}
+
+@media (max-width: 800px) {
+    .generalContainer{
+        padding: 1px 0;
+    }
+    .imagenEventoContainer{
+        width:100%;
+    }
+    .evento_name_responsive{
+        background-size: cover !important;
+        height:30%;
+        width:80%;
+        position:absolute;
+        top:-15%;
+        left:-4%;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:flex-start;
+        padding-left: 5vw;
+        box-shadow: 0 -10px 5px -5px lightgrey;
+    }
+    .eventoInfoContainer{
+        position: initial;
+    }
+    .fleximagenContainer{
+        position: relative;
+    }
+    .eventoContainer{
+        margin-top: 20vw !important;
+        height:fit-content;
+        position: initial;
+        flex-direction: column-reverse;
+    }
+    .eventoInfoContainer{
+        margin-top: 10vw;
+    } 
+    .responsive{
+        display:none;
+    }
+    .evento_hora,.evento_fecha{
+        font-size: 4vw;
+    }
+    .fechaEventoContainer{
+        height: 30%;
+        width:60%;
+        right:-4%;
+        bottom:-13%;
+        box-shadow: 0 10px 5px -5px lightgrey;
+        align-items:flex-end;
+        padding-right: 5vw;
+    }
+}

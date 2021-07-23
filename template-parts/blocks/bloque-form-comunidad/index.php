@@ -1,6 +1,6 @@
 <?php $estilo=get_field("estilo"); ?>
 
-<div class="<?php if($estilo=="profesional") echo "dark";?>">
+<div class="<?php if($estilo=="Profesional") echo "dark";?>">
 <div class="form_comunidad_container">
     <img src="<?php echo get_field("imagen_fondo_formulario")?>"/>
     <div class="form_container">

@@ -8,12 +8,17 @@
  */
 
 get_header();
+var_dump("dfdf");
 ?>
 
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
-
+		<?php if ( have_posts() ) : 
+			
+			if('post'=== get_post_type())
+			var_dump("postentrdada");
+			
+			?>
 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -25,7 +30,9 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
+				?>
+				
+				<?php
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
