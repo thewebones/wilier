@@ -176,3 +176,46 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
+acf_register_block_type(array(
+    'name'              => 'header',
+    'title'             => __('header'),
+    'description'       => __('header'),
+    'render_template'   => 'template-parts/blocks/header/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('header', 'menu'),
+    'category' => 'widgets'
+));
+
+acf_register_block_type(array(
+    'name'              => 'footer',
+    'title'             => __('footer'),
+    'description'       => __('footer'),
+    'render_template'   => 'template-parts/blocks/footer/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('footer', 'social','policy','term','conditions'),
+    'category' => 'widgets'
+
+));
+
+acf_register_block_type(array(
+    'name'              => 'header home menu',
+    'title'             => __('header home menu'),
+    'description'       => __('header home menu'),
+    'render_template'   => 'template-parts/blocks/bloque-header-home-menu/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('header', 'menu','modelo'),
+    'category' => 'widgets'
+
+));
+
+acf_register_block_type(array(
+    'name'              => 'eventos',
+    'title'             => __('eventos'),
+    'description'       => __('eventos'),
+    'render_template'   => 'template-parts/blocks/bloque-eventos/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('eventos',),
+    'category' => 'widgets'
+
+));

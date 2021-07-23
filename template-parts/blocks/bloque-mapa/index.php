@@ -2,7 +2,7 @@
 $estilo=get_field("estilo");
 ?>
 
-<div class="bloque_mapa_container <?php if($estilo=="profesional") echo "bloque_mapa_container_dark" ?>">
+<div class="bloque_mapa_container <?php if($estilo=="Profesional") echo "bloque_mapa_container_dark" ?>">
     <div class="menu_mapa_container">
         <p class="menu_title"><?php echo get_field("titulo") ?></p>
         <div class="radio_container">

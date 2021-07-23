@@ -2,6 +2,13 @@
 .footer_container{
     padding:4vw 30px;
 }
+.footer_container a{
+    color: black;
+}
+.footer_container a:hover{
+    color: gray;
+    text-decoration: none;
+}
 .footer_container_dark p,.footer_container_dark a,.footer_container_dark h3,.footer_container_dark span{
     color:white;
 }
@@ -10,7 +17,6 @@
 }
 .footer_container_dark a:hover{
     color:#e2dada;
-    text-decoration: none;
 }
 
 .footer_links{

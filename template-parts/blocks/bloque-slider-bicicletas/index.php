@@ -7,12 +7,12 @@
     $cont=0;
     $estilo=get_field("estilo");
     ?>
-    <div class="slider_container <?php if($estilo=="profesional") echo "slider_container_dark" ?>">
+    <div class="slider_container <?php if($estilo=="Profesional") echo "slider_container_dark" ?>">
     <h1 class="slider_title"><?php echo get_field("title_slider") ?></h1>
     <div id="carouselExampleIndicators" class="carousel slide mt-5 slider_carousel" data-ride="carousel">
-    <button class="btn btn-slider-change <?php if($estilo=='profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators" data-slide="prev">
+    <button class="btn btn-slider-change <?php if($estilo=='Profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators" data-slide="prev">
         <span>
-        <?php if($estilo=="profesional") {?>
+        <?php if($estilo=="Profesional") {?>
             <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/dark/prev.png"/>
         <?php }else {?>
             <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/prev.svg"/>
@@ -27,7 +27,7 @@
                 <div class="carousel-item <?php if($cont==0) echo "active"?>">
                     <div class="slider_item">
                         <div class="imagen_slider_container">
-                            <?php if($estilo=="profesional") {
+                            <?php if($estilo=="Profesional") {
                                 $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
                                 <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>"/>
                         <?php }else
@@ -42,7 +42,7 @@
                                 <a href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider ml-3">
                                 Consultar 
                                 <span>
-                                    <?php if($estilo=="profesional"){ ?>
+                                    <?php if($estilo=="Profesional"){ ?>
                                     <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
                                     <?php }else{?>
                                     <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
