@@ -1,5 +1,24 @@
 
 .section-por-categoria {
+    padding-bottom: 50px;
+    &.Profesional {
+        background-color: #000;
+        .izq {
+            color: #fff;
+        }
+        .card {
+            background-color: #000;
+            color: #fff;
+        }
+        .action {
+            .boton {
+                border: 1px solid #fff ;
+                a {
+                color: white !important;
+                }
+            }
+        }
+    }
     
     .por-categoria {
         padding: 100px 0;
@@ -156,19 +175,7 @@
                    }
                }
           }
-          &.Profesional {
-              background-color: #000;
-              .card {
-                  background-color: #000;
-                  color: #fff;
-              }
-              .action {
-                  .btn-cotizar {
-                      border: 1px solid #fff;
-                      color: white;
-                  }
-              }
-          }
+          
          
       
           .boton-card-producto {
