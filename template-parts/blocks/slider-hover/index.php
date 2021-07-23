@@ -24,7 +24,7 @@
     </div>                          
                           
    
-    <div class="fondo">
+    <div class="fondo" style="background-image: url(<?php echo get_field("fondo")?>)">
         <div class="boton-slider">
             <a class="boton" href="<?php echo get_field("boton")["url"]?>">
                 <?php echo get_field("boton")["title"]?>  
