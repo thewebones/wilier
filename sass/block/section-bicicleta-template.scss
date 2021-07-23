@@ -1,0 +1,35 @@
+.section-bicicleta-template {
+  
+  .carousel {
+    width: 100%;
+    height: 100%;
+    }
+    
+    .carousel-cell {
+      width: 100%;
+      height: 100vh;
+    }
+    
+    /* cell number */
+    .carousel-cell:before {
+      display: block;
+      text-align: center;
+      line-height: 200px;
+      font-size: 80px;
+      color: white;
+    }
+    .flickity-prev-next-button{
+      border-radius: 0% !important;
+      background-color: transparent !important;
+      border: 1px solid #fff;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+    .flickity-prev-next-button svg path{
+      fill: #fff !important;
+    }
+    .flickity-page-dots {
+      display: none;
+    }
+    
+} 

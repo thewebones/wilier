@@ -11,8 +11,8 @@
         foreach( $categories as $category ) {
     ?>
 
-    <div class="por-categoria">
-        <div class="izq">
+    <div class="por-categoria container">
+        <div class="izq container">
             <div class="title">
                 <?php echo $category->name; ?>
             </div>
@@ -28,8 +28,8 @@
             </div>
         </div>
         
-        <div class="foto-der">
-            <img class="img" src="<?php echo the_field('imagen', $category);?>">
+        <div class="foto-der container">
+            <img class="img-fluid" src="<?php echo the_field('imagen_post_categoria', $category);?>">
         </div>
     </div> 
 
@@ -102,15 +102,14 @@
                         
 
                 </div>
-                  
-                <div class="boton-card-producto">
+             
+        </div>
+        <div class="boton-card-producto">
                                 <a class="boton" href="<?php esc_url( get_category_link( get_cat_ID(get_the_category()[0]->name) ) )?>">
                                     Ver todos los modelos
                                     <img class="flecha ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
                                 </a>
-                </div>  
-        </div>
-                  
+                </div>       
     </div>
 <?php } ?>
 
