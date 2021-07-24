@@ -105,11 +105,12 @@
              
         </div>
         <div class="boton-card-producto">
-                                <a class="boton" href="<?php esc_url( get_category_link( get_cat_ID(get_the_category()[0]->name) ) )?>">
+
+                                <a class="boton" href="<?php echo esc_url(get_category_link(get_cat_ID($cat))) ?>">
                                     Ver todos los modelos
                                     <img class="flecha ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
                                 </a>
-                </div>       
+        </div>       
     </div>
 <?php } ?>
 

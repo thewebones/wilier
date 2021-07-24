@@ -219,3 +219,14 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
+acf_register_block_type(array(
+    'name'              => 'visitenos',
+    'title'             => __('Visitenos'),
+    'description'       => __('visitenos'),
+    'render_template'   => 'template-parts/blocks/visitenos/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('visitenos',),
+    'category' => 'widgets'
+
+));
