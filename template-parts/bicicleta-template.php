@@ -56,5 +56,15 @@
 
     </div>
 
+        
+    <div class="modelo-bicicleta">
+        <?php $modelo_cont = get_post_meta( get_the_ID(), "repeater_modelo", true );
+            for( $i = 0; $i < $modelo_cont; $i++ ) {
+                $item = get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_imagen_modelo', true );
+                update_post_meta(get_the_ID(),'imagen_modelo-'.$i,wp_get_attachment_image_src($item,'full')[0]);
 
+            ?> 
+            <img class="img" src="<?php echo get_post_meta(get_the_ID(),'imagen_modelo-'.$i,true) ?>">
+        <?php } ?>
+    </div>     
 </section>
