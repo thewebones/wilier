@@ -1,0 +1,32 @@
+.section-visitenos-form {
+    .visitenos-form {
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content:space-between;
+        text-align: center;
+        height: 539px;
+        @media only screen and (max-width: 900px) {
+            flex-direction: column !important;
+        }
+
+        .form {
+            width: 375px;          
+            height: 539px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .form_titulo {
+                color: #fff;
+                font-size:1.2rem;
+                font-weight:bold
+            }
+        }
+        .foto img{
+            object-fit: cover;
+            width: 1026px;
+            height: 539px;
+            
+        }
+    }
+}

@@ -230,3 +230,14 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
+acf_register_block_type(array(
+    'name'              => 'visitenos-form',
+    'title'             => __('Formulario Visitenos'),
+    'description'       => __('visitenos-form'),
+    'render_template'   => 'template-parts/blocks/visitenos-form/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('visitenos-form',),
+    'category' => 'widgets'
+
+));
