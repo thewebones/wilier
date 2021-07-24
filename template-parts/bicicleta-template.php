@@ -65,6 +65,8 @@
 
             ?> 
             <img class="img" src="<?php echo get_post_meta(get_the_ID(),'imagen_modelo-'.$i,true) ?>">
+            <h2><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_modelo_nombre', true ); ?> </h2>
+            
         <?php } ?>
     </div>     
 </section>
