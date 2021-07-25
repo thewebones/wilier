@@ -7,7 +7,7 @@
     $estilo=get_field("estilo");
 ?>
 
-<section class="section-bicicleta-template">
+<section class="section-bicicleta-template <?php echo get_field("estilo")?>">
     <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true}'>
         <?php 
         $galeria_cont = get_post_meta( get_the_ID(), "repeater-slider", true );
@@ -24,7 +24,7 @@
     <div class="flecha">
         
     </div>
-    <div class="container categoria-section <?php echo get_field("estilo")?>">
+    <div class="container categoria-section">
         <h5 class="categoria-titulo"><?php echo get_the_category()[0]->name ?></h5>
         <h1 class="categoria-name"><?php echo the_title() ?></h1>
             <div class="categoria-img">
@@ -57,16 +57,36 @@
     </div>
 
         
-    <div class="modelo-bicicleta">
+    <div class="modelo-bicicleta" style="background: url('<?php echo get_field("background_repeater")?>')">
         <?php $modelo_cont = get_post_meta( get_the_ID(), "repeater_modelo", true );
             for( $i = 0; $i < $modelo_cont; $i++ ) {
                 $item = get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_imagen_modelo', true );
                 update_post_meta(get_the_ID(),'imagen_modelo-'.$i,wp_get_attachment_image_src($item,'full')[0]);
 
-            ?> 
-            <img class="img" src="<?php echo get_post_meta(get_the_ID(),'imagen_modelo-'.$i,true) ?>">
-            <h2><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_modelo_nombre', true ); ?> </h2>
-            
+            ?>
+         <div class="container contenido-modelo">
+           <div class="img-modelo division1">
+            <h1 class="modelo-caract-responsive"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_modelo', true ); ?> </h1>
+            <img class="image-part img-fluid" src="<?php echo get_post_meta(get_the_ID(),'imagen_modelo-'.$i,true) ?>">
+           </div>
+           <div class="division1">
+            <h2 class="modelo-nombre"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_modelo_nombre', true ); ?> </h2>
+            <h1 class="modelo-caract"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_modelo', true ); ?> </h1>
+            <p class="modelo-texto"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_texto', true ); ?> </p>
+             <div class="btn-modelo">
+                 <a class="boton-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["url"]  ?>">
+                     <?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["title"]  ?>
+                     <span>
+                        <?php if(get_field("estilo") == 'profesional') { ?>
+                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
+
+                        <?php } else{?>
+                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">
+                        <?php } ?>
+                    </span>
+                 </a>
+             </div>
+         </div>
         <?php } ?>
     </div>     
 </section>

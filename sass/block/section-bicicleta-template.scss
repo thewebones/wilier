@@ -100,15 +100,122 @@
         height: 40px;
         margin-top: 6%;
       }
-    @media (max-width: 750px) {
+    @media (max-width: 800px) {
       .categoria-descripcion-texto {
         display: none;
+      }
+      .precio-cat {
+        margin-top: 25px;
+      }
+      .categoria-descripcion {
+        margin: 0 3% 0 3%;
       }
       .divs2, .divs {
         width: 50% !important;
       }
-
+      .categoria-texto-precio {
+        margin:0 0 0 0;
+        text-align: left;
+      }
+      .boton-categoria {
+        text-align: right;
       }
 
-
+      }
+  &.Amateur {
+    background: white;
+  }
+  &.Profesional {
+    background: black;
+    .categoria-name, .categoria-descripcion-texto, .boton-cotizar {
+      color: white !important;
+    }
+  }
+      .modelo-bicicleta {
+        background-position: left !important;
+        background-repeat: no-repeat !important;
+      }
+     .contenido-modelo {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+     }
+    .division1 {
+      width: 40%;
+      margin: 5% 3%;
+      text-align: -webkit-left;
+    }
+    .modelo-nombre {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.005em;
+      color: #7B91B1;
+    }
+    .modelo-caract {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 56px;
+      color: #0B0B0B;
+    }
+    .modelo-caract-responsive {
+      display: none;
+    }
+    .modelo-texto {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.005em;
+      color: #0B0B0B;
+    }
+  @media (max-width: 800px) {
+    .division1 {
+      margin-top: 50px;
+      width: 100%;
+    }
+    .modelo-texto {
+      margin-bottom: 50px;
+    }
+    .modelo-bicicleta {
+      background: none !important;
+    }
+    .modelo-nombre, .modelo-caract {
+      display: none;
+    }
+    .modelo-caract-responsive {
+      display: block;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 38px;
+      line-height: 56px;
+      color: #0B0B0B;
+      text-align: center;
+    }
+  }
+    &.Amateur {
+      background: white;
+    }
+    &.Profesional {
+      background: black;
+      .modelo-caract-responsive, .modelo-caract, .modelo-texto, .boton-cotizar {
+        color: white !important;
+      }
+      .boton-cotizar {
+        background: #EE3031;
+      }
+      .image-part {
+        border: solid;
+        border-width: 2px;
+        color: white;
+      }
+    }
 }
