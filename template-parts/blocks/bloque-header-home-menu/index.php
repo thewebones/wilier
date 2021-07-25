@@ -20,7 +20,7 @@ $cats=get_categories($args);
     </div>
     <div class="container empty division"></div>
     <div class="menuFlotanteContainer">
-        <div class="imagenMenuFlotante"  
+        <div class="imagenMenuFlotante <?php if($estilo =="Profesional") echo "quitarSombra" ?>"  
         style="background: url('<?php if($estilo=="Amateur") echo get_field("imagen_menu_inferior"); else echo get_field("imagen_menu_inferior_profesional"); ?>')"> 
 			<div class="container menuContainer menuHeaderHomeContainer <?php if($estilo=="Profesional") echo "menuHeaderHomeDark";?>">
 			<?php foreach($cats as $cat){ ?>

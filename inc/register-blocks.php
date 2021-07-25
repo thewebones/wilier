@@ -217,5 +217,34 @@ acf_register_block_type(array(
     'icon'              => 'admin-comments',
     'keywords'          => array('eventos',),
     'category' => 'widgets'
+));
 
+acf_register_block_type(array(
+    'name'              => 'bloque agentes soporte',
+    'title'             => __('bloque agentes soporte'),
+    'description'       => __('bloque agentes soporte'),
+    'render_template'   => 'template-parts/blocks/bloque-bloque-agentes-soporte/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('soporte','atencion al cliente','escoger bicicleta'),
+    'category' => 'widgets'
+));
+
+acf_register_block_type(array(
+    'name'              => 'comentarios cliente',
+    'title'             => __('comentarios cliente'),
+    'description'       => __('comentarios cliente'),
+    'render_template'   => 'template-parts/blocks/bloque-comentarios-cliente/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('soporte','cliente','comentarios','opiniones'),
+    'category' => 'widgets'
+));
+
+acf_register_block_type(array(
+    'name'              => 'bloque seccion de fotos',
+    'title'             => __('bloque seccion de fotos'),
+    'description'       => __('bloque seccion de fotos'),
+    'render_template'   => 'template-parts/blocks/bloque-seccion-fotos/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('fotos','seccion','imagenes'),
+    'category' => 'widgets'
 ));

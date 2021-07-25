@@ -1,0 +1,59 @@
+
+.primeraImagen img{
+    width:inherit;
+    height:inherit;
+}
+.primeraImagen{
+    width:100%;
+}
+.seccionContainer,.imagenesLaterales{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.containerTresFotos{
+    display:flex;
+    justify-content:center;
+}
+
+.imagenesLaterales{
+    width:50%;
+}
+.imagenDerecha{
+    width:50%;
+}
+.imagenDerecha img{
+    width:100%;
+    height:100%;
+}
+.imagenizquierda{
+    width:100%;
+    height:50%;
+}
+.imagenizquierda img{
+    width:inherit;
+    height:100%;
+}
+.nombreSeccion{
+    display:flex;
+}
+.slide-seccion{
+    display:none;
+}
+@media (max-width: 800px) {
+    .imagenesLaterales{
+        width:100%;
+    }
+    .responsiveImgSuperior{
+        height:45vw;
+    }
+    .responsiveImgInferior{
+        height:85vw;
+    }
+    .seccionContainer{
+        display:none;
+    }
+    .slide-seccion{
+        display:block;
+    }
+    }

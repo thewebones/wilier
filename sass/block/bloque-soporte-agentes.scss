@@ -1,0 +1,24 @@
+.agente_nombre{
+    font-size: 16px;
+    font-weight: bold;
+    margin:0 !important;
+}
+.btnSliderContainer{
+    display: flex;
+    justify-content:center;
+}
+
+.agenteContainer{
+    height:400px;
+    display: flex;
+    position: relative;
+ 
+}
+
+@media (max-width: 800px) {
+.agenteContainer{
+    height:fit-content;
+    position: initial;
+    flex-direction: column-reverse;
+    }
+}

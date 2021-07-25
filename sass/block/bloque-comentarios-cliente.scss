@@ -1,0 +1,56 @@
+.comentarioInfoContainer{
+    position: absolute;
+    left: 5%;
+    width:40%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: justify;
+}
+.slider-inner-comentarios{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.containerCarousel{
+    height: 400px;
+    background-size: cover;
+}
+#shape-container {
+    height: 400px;
+    width:70vw;
+  }
+.container-slider-item{
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+}
+.vistaMovil{
+    display:none;
+}
+@media (max-width: 800px) {
+    .imagenMovilComent{
+        width:100%;
+        height:300px;
+    }
+    .imagenMovilComent img{
+        width:inherit;
+        height:inherit;
+    }
+    .slider-inner-comentarios{
+        display:none;
+    }
+    .comentarioInfoContainer{
+        position: initial;
+        width:100%;
+    }
+    .containerCarousel{
+        background-image: none !important;
+        height:fit-content;
+    }
+    .vistaMovil{
+        display:block;
+    }
+}
+

@@ -8,16 +8,13 @@
  */
 
 get_header();
-var_dump("dfdf");
+var_dump(get_post_type());
 ?>
 
 	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : 
-			
-			if('post'=== get_post_type())
-			var_dump("postentrdada");
-			
+
 			?>
 			<header class="page-header">
 				<?php

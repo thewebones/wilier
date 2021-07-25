@@ -21,8 +21,7 @@ get_header();
 
 			if ( 'bicicleta' === get_post_type() )
 			get_template_part( 'template-parts/bicicleta-template', get_post_type() );
-
-
+			
 		endwhile; // End of the loop.
 		?>
 

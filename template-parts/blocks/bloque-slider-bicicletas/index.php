@@ -7,10 +7,11 @@
     $cont=0;
     $estilo=get_field("estilo");
     ?>
-    <div class="slider_container <?php if($estilo=="Profesional") echo "slider_container_dark" ?>">
+    <div class="<?php if($estilo=="Profesional") echo "slider_container_dark"; ?>">
+    <div class="slider_container container ">
     <h1 class="slider_title"><?php echo get_field("title_slider") ?></h1>
-    <div id="carouselExampleIndicators" class="carousel slide mt-5 slider_carousel" data-ride="carousel">
-    <button class="btn btn-slider-change <?php if($estilo=='Profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators" data-slide="prev">
+    <div id="carouselExampleIndicators3" class="carousel slide mt-5 slider_carousel" data-ride="carousel">
+    <button class="btn btn-slider-change <?php if($estilo=='Profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators3" data-slide="prev">
         <span>
         <?php if($estilo=="Profesional") {?>
             <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/dark/prev.png"/>
@@ -57,12 +58,13 @@
                 $cont++;
             } ?>
             </div>
-    <button class="btn btn-slider-change <?php if($estilo=='profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators" data-slide="next">
-    <?php if($estilo=="profesional") {?>
+    <button class="btn btn-slider-change <?php if($estilo=='Profesional') echo 'borderWhite'; ?>" data-target="#carouselExampleIndicators3" data-slide="next">
+    <?php if($estilo=="Profesional") {?>
             <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/dark/next.png"/>
         <?php }else {?>
             <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/next.svg"/>
         <?php } ?>
     </button>
+</div>
 </div>
 </div>
