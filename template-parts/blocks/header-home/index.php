@@ -8,7 +8,7 @@
 ?>
 <section class="header-home <?php echo get_field("estilo")?>">
     <?php if (get_field("estilo")=="Amateur") {?>
-        <div class="header-general" style="background: url('<?php echo get_field("background_amateur")?>')"> <?php }?>
+        <div class="header-general" style="background: url('<?php echo get_field("background_amateur")?>')"> <?php }?>">
     <?php if (get_field("estilo")=="Profesional") {?>
        <div class="header-general" style="background: url('<?php echo get_field("background_profesional")?>')"> <?php }?>
        <div class="container header-desk division">

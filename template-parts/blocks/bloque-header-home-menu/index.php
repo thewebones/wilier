@@ -26,7 +26,7 @@ $cats=get_categories($args);
 			<?php foreach($cats as $cat){ ?>
 			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
 			 <?php } ?>	
-		</div>
+		</div> 
         </div>
         
     </div>

@@ -7,5 +7,7 @@
                         <img src="<?php echo $item["imagen"] ?>" alt="">
                     </div>
   <?php }} ?>
+  </div>
+  <div class="fondo" style="background-image: url(<?php echo get_field("fondo")?>)">
 </div>
 </section>

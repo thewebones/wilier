@@ -1,0 +1,65 @@
+.section-visitenos {
+    .visitenos {
+        padding: 50px 0;
+        .titulo {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 56px;    
+        }
+        .contenido {
+            display: flex;
+            flex-direction: row;
+            @media only screen and (max-width: 900px) {
+                flex-direction: column !important;
+            }
+            
+        }
+        .foto {
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+        .descripcion {
+            align-self: center;
+            .destribuidor-visitenos {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.0025em;    
+            }
+            .nombre-visitenos {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 34px;
+                line-height: 46px;
+                /* or 135% */
+
+                letter-spacing: 0.0025em;   
+            }
+            .destribuidor-visitenos {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.005em;
+            }
+        }
+        .fondo-visitenos {
+            position: absolute;
+            z-index: -1;
+            margin-top: -520px;
+            height: 400px;
+            width: 100%;
+            background-repeat-y: no-repeat;
+            background-size: cover;
+            @media only screen and (max-width: 900px) {
+                display: none;
+            }
+          }
+    }
+}

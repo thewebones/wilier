@@ -248,3 +248,25 @@ acf_register_block_type(array(
     'keywords'          => array('fotos','seccion','imagenes'),
     'category' => 'widgets'
 ));
+
+acf_register_block_type(array(
+    'name'              => 'visitenos',
+    'title'             => __('Visitenos'),
+    'description'       => __('visitenos'),
+    'render_template'   => 'template-parts/blocks/visitenos/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('visitenos',),
+    'category' => 'widgets'
+
+));
+
+acf_register_block_type(array(
+    'name'              => 'visitenos-form',
+    'title'             => __('Formulario Visitenos'),
+    'description'       => __('visitenos-form'),
+    'render_template'   => 'template-parts/blocks/visitenos-form/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('visitenos-form',),
+    'category' => 'widgets'
+
+));
