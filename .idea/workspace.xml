@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="756044fc-2664-49d1-a5b0-832581faa594" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass.css" afterPath="$PROJECT_DIR$/sass.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/block/section-bicicleta-template.scss" afterPath="$PROJECT_DIR$/sass/block/section-bicicleta-template.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template-parts/bicicleta-template.php" afterPath="$PROJECT_DIR$/template-parts/bicicleta-template.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -546,7 +543,7 @@
       <workItem from="1627165443472" duration="1800000" />
       <workItem from="1627167622294" duration="1973000" />
       <workItem from="1627169700318" duration="1524000" />
-      <workItem from="1627181411945" duration="69000" />
+      <workItem from="1627181411945" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="sass bloque example">
       <created>1626292265881</created>
@@ -639,11 +636,18 @@
       <option name="project" value="LOCAL" />
       <updated>1627142903574</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="bici">
+      <created>1627181490895</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1627181490895</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132444000" />
+    <option name="totallyTimeSpent" value="132456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1380" height="735" extended-state="0" />
