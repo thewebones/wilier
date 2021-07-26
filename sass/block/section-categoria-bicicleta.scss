@@ -1,0 +1,147 @@
+.section-categoria-bicicleta {
+    display: flex;
+    justify-content: center;
+
+    
+    .categoria-bicicleta {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-family: 'Roboto';
+        max-width: 1250px;
+        @media only screen and (max-width: 600px) {
+        justify-content: center;
+        }  
+        
+
+    .card {
+        width: 405px;
+        height: fit-content;
+        margin: 5px;
+        border: 2px solid #DFDFDF;
+        box-shadow: none;
+        @media only screen and (max-width: 600px) {        
+         width: 390px !important;    
+       }
+       a {
+           text-decoration: none;
+           color: #000;
+       }
+    }
+    .card-image img{
+        object-fit: cover;
+        width: 393px;
+        height: 260px; 
+        @media only screen and (max-width: 600px) {        
+            width: 385px !important;      
+          }
+       }
+       .categoria {
+           font-size: 18px;
+           font-weight: 400;
+       }
+      .card-title {
+          font-size: 48px;
+          font-weight: 700;
+          margin-bottom: 0 !important;
+       }
+       .descripcion {
+           font-size: 18px;
+           font-weight: 400; 
+           text-align: justify;
+      }
+      .card-content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 30px;
+      }
+     
+      .action {
+          display: flex !important;
+          flex-direction: row;
+          align-items: center;         
+          justify-content: space-around;
+          margin-bottom: 20px;
+  
+          .precio {
+              width: 100px;
+               margin-right: 100px;
+              justify-content: start;
+               color: #00873A;
+              font-size: 20px;
+           }
+           .boton {
+               justify-content: end;         
+               .btn-cotizar {
+                  border: 1px solid #000;
+                 color: black;
+                   box-sizing: border-box;
+                  font-size: 18px;
+                  padding: 10px;
+                 font-weight: 500;
+                   font-family: 'Roboto';
+               }
+           }
+      }   
+
+    }
+}
+.seccion-intro {
+    display: flex;
+    justify-content: center;
+
+.por-categoria {
+    display: flex;
+    flex-direction: row !important;
+    max-width: 1250px;
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+
+}
+.izq {    
+    justify-content: flex-start;
+    width: 50%;
+    text-align: justify;
+    align-self: center;
+    padding: 50px;
+    @media only screen and (max-width: 900px) {
+        width: 100%;
+    }    
+    .title{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 30px;
+    }
+    .descripcion {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+    }
+    .fondo {
+        text-align: center;
+        margin-top: 50px;
+        @media only screen and (max-width: 600px) {
+            display: none;
+        } 
+    }
+    
+    
+}
+.foto-der {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    img {
+    object-fit: cover;
+    }
+    @media only screen and (max-width: 995px) {
+        display: none;
+    }  
+}
+}

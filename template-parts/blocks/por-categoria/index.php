@@ -58,9 +58,9 @@
                             $the_query2->the_post();
                             
                         if($cat == get_the_category()[0]->name) { ?> 
-                       
                         
                          <div class="card">
+                             <a href="<?php the_permalink(); ?>">
                             <div class="card-image">
                             <?php if($estilo=="profesional") {?>
                                 <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
@@ -90,6 +90,7 @@
                                     </span>
                                 </div>
                             </div>
+                            </a>
                         </div> 
                     
                         
