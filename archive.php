@@ -36,13 +36,7 @@ get_header();
                 ?>
 
                     <div class="class2">
-                        <div class="class3">
-                            <?php $url = esc_url( get_post_meta( get_the_ID(), 'video_oembed', true ) ); ?>
-                            <?php $embed = wp_oembed_get( $url ); ?>
-                            <div class="class4">
-                                <iframe id="class_frame" width="560" height="315" src="https://www.youtube.com/watch"); ?>" allowfullscreen frameborder="0"></iframe>
-                            </div>
-                        </div>
+
                         <div class="class6">
                             <h1><?php the_title(); ?></h1>
                             <p><?php the_content(); ?></p>
