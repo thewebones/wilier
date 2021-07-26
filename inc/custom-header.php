@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Web_Andres
+ * @package wilier
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses web_andres_header_style()
+ * @uses wilier_header_style()
  */
-function web_andres_custom_header_setup() {
+function wilier_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'web_andres_custom_header_args',
+			'wilier_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'web_andres_header_style',
+				'wp-head-callback'   => 'wilier_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'web_andres_custom_header_setup' );
+add_action( 'after_setup_theme', 'wilier_custom_header_setup' );
 
-if ( ! function_exists( 'web_andres_header_style' ) ) :
+if ( ! function_exists( 'wilier_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see web_andres_custom_header_setup().
+	 * @see wilier_custom_header_setup().
 	 */
-	function web_andres_header_style() {
+	function wilier_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

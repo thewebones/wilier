@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Web_Andres
+ * @package wilier
  */
 
 get_header();

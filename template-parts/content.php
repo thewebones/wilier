@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Web_Andres
+ * @package wilier
  */
 
 ?>
@@ -23,14 +23,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				web_andres_posted_on();
-				web_andres_posted_by();
+				wilier_posted_on();
+				wilier_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php web_andres_post_thumbnail(); ?>
+	<?php wilier_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -59,6 +59,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php web_andres_entry_footer(); ?>
+		<?php wilier_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article>#post-<?php the_ID(); ?>

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Web_Andres
+ * @package wilier
  */
 
 ?>
@@ -14,7 +14,7 @@
 <!--		--><?php //the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php web_andres_post_thumbnail(); ?>
+	<?php wilier_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

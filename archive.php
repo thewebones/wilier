@@ -4,52 +4,59 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Web_Andres
+ * @package wilier
  */
 
 get_header();
-var_dump(get_post_type());
+
 ?>
 
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : 
 
-			?>
 			<header class="page-header">
 				<?php
+                echo get_queried_object_id();
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+        <?php
+        $the_query = new WP_Query( array(
+        'post_type' => 'bicicleta',
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-				?>
-				
-				<?php
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+        )  );
+        ?>
+        <?php if ( $the_query->have_posts() ) : ?>
+            <!-- the loop -->
+            <div class="class1">
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post();
 
-			endwhile;
+                if(get_the_category()[0]->term_id==get_queried_object_id()){
+                ?>
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+                    <div class="class2">
+                        <div class="class3">
+                            <?php $url = esc_url( get_post_meta( get_the_ID(), 'video_oembed', true ) ); ?>
+                            <?php $embed = wp_oembed_get( $url ); ?>
+                            <div class="class4">
+                                <iframe id="class_frame" width="560" height="315" src="https://www.youtube.com/watch"); ?>" allowfullscreen frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="class6">
+                            <h1><?php the_title(); ?></h1>
+                            <p><?php the_content(); ?></p>
+                        </div>
+                    </div>
+                <?php } endwhile; ?>
+                <?php wp_reset_query(); ?>
+            </div>
+            <!-- end of the loop -->
+            <!-- <?php wp_reset_postdata(); ?> -->
+        <?php endif; ?>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

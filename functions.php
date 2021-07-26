@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Web_Andres
+ * @package wilier
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-if ( ! function_exists( 'web_andres_setup' ) ) :
+if ( ! function_exists( 'wilier_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,7 +20,7 @@ if ( ! function_exists( 'web_andres_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function web_andres_setup() {
+	function wilier_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -75,7 +75,7 @@ if ( ! function_exists( 'web_andres_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'web_andres_custom_background_args',
+				'wilier_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -102,7 +102,7 @@ if ( ! function_exists( 'web_andres_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'web_andres_setup' );
+add_action( 'after_setup_theme', 'wilier_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -111,17 +111,17 @@ add_action( 'after_setup_theme', 'web_andres_setup' );
  *
  * @global int $content_width
  */
-function web_andres_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'web_andres_content_width', 640 );
+function wilier_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'wilier_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'web_andres_content_width', 0 );
+add_action( 'after_setup_theme', 'wilier_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function web_andres_widgets_init() {
+function wilier_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'web-andres' ),
@@ -134,12 +134,12 @@ function web_andres_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'web_andres_widgets_init' );
+add_action( 'widgets_init', 'wilier_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function web_andres_scripts() {
+function wilier_scripts() {
 	wp_enqueue_style( 'web-andres-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'web-andres-style', 'rtl', 'replace' );
 
@@ -149,7 +149,7 @@ function web_andres_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'web_andres_scripts' );
+add_action( 'wp_enqueue_scripts', 'wilier_scripts' );
 
 /**
  * Implement the Custom Header feature.

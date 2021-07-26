@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Web_Andres
+ * @package wilier
  */
 	$estilo=get_field("estilo","option");
 	if(is_front_page()){ 
