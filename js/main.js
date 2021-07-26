@@ -32,7 +32,7 @@ function closeNav2() {
     closeNav();
 }
 $(document).ready(function(){
-document.getElementsByClassName("radio_container")[0].children[0].children[0].click();
+document.getElementsByClassName("radio_container")[0].children[0].children[0].click();  
 
 $('p.expandable').expander({
     slicePoint:50,
