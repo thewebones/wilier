@@ -9,6 +9,9 @@
         .card {
             background-color: #000;
             color: #fff;
+            a {
+                color: #fff !important;
+            }
         }
         .action {
             .boton {
@@ -109,6 +112,10 @@
                @media only screen and (max-width: 600px) {        
                 width: 390px !important;    
                 visibility: hidden;
+              }
+              a {
+                  text-decoration: none;
+                  color: #000;
               }
            }
            @media only screen and (max-width: 600px) {           

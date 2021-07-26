@@ -13,6 +13,14 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+    <?php
+        $the_query = new WP_Query( array(
+        'post_type' => 'bicicleta',
+         
+
+        )  );
+        $estilo = get_field("estilo");
+        ?>
 
 			<header class="page-header">
 				<?php
@@ -20,30 +28,89 @@ get_header();
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
+     
 			</header><!-- .page-header -->
-        <?php
-        $the_query = new WP_Query( array(
-        'post_type' => 'bicicleta',
-
-        )  );
-        ?>
+     
         <?php if ( $the_query->have_posts() ) : ?>
             <!-- the loop -->
-            <div class="class1">
+
+<div class="seccion-intro">
+    <div class="por-categoria">
+        <div class="izq">
+            <div class="title">
+                <?php echo the_archive_title(); ?>
+            </div>
+            <div class="descripcion">
+                
+                <?php echo the_archive_description(); ?>
+            </div>
+            <div class="fondo">
+                <?php if($estilo = 'Amateur'){ ?>
+                <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-944.png" alt="">     
+                <?php }else { ?>
+                    <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-629-2.png" alt="">
+                <?php } ?>   
+            </div>
+        </div>
+        
+        <div class="foto-der container">
+        <?php
+        $imagenCat=get_post_meta(get_queried_object_id(),'imagen_post_categoria',true);?>
+            <img src="<?php echo wp_get_attachment_image_src($imagenCat,'medium')[0];?>">
+            <!-- <img class="img-fluid" src="<?php echo the_field('imagen_post_categoria', $category);?>"> -->
+        </div>
+    </div>
+</div>     
+
+
+            <div class="section-categoria-bicicleta">
+              <div class="categoria-bicicleta">
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post();
 
                 if(get_the_category()[0]->term_id==get_queried_object_id()){
+                   
                 ?>
 
-                    <div class="class2">
+                    
+                            
+                            <div class="card">
+                             <a href="<?php the_permalink(); ?>">
+                            <div class="card-image">
+                            <?php if($estilo=="profesional") {?>
+                                <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
+                                <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
+                                <?php }else
+                                            the_post_thumbnail(); ?>
+                            </div>
+                            <div class="card-content">
+                                <span class="categoria"><?php echo get_the_category()[0]->name ?></span>    
+                                <span class="card-title"><?php echo the_title() ?></span>    
+                                <p class="descripcion"><?php echo get_the_excerpt() ?></p>
+                            </div>
+                            <div class="action">
+                                <div class="precio">
+                                    <p class="precio"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
+                                </div>
+                                
+                                <div class="boton">
+                                    <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?></a>
+                                    <span>
+                                        <?php if(get_field("estilo") == 'profesional') { ?>
+                                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
+                                            
+                                        <?php } else{?>
+                                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">   
+                                        <?php } ?>     
+                                    </span>
+                                </div>
+                            </div>
+                            </a>
+                        </div> 
 
-                        <div class="class6">
-                            <h1><?php the_title(); ?></h1>
-                            <p><?php the_content(); ?></p>
-                        </div>
-                    </div>
+                    
                 <?php } endwhile; ?>
                 <?php wp_reset_query(); ?>
+            </div>
             </div>
             <!-- end of the loop -->
             <!-- <?php wp_reset_postdata(); ?> -->
