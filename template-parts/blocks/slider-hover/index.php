@@ -12,6 +12,13 @@
 
     <div class="carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false}'>
     <?php foreach( $categories as $category ) {
+         $argsPost = array(
+            'post_type'=> 'bicicleta',
+            'order'    => 'ASC',
+            'category_name'=> $category->name
+        );
+        $the_query_post = new WP_Query( $argsPost );
+        if($the_query_post->posts){
                         ?>
                       
                       <div class="item text-center">
@@ -20,7 +27,7 @@
                             <h4><?php echo $category->name; ?></h4>
                             </a>  
                       </div>
-                      <?php } ?> 
+                      <?php } }?> 
     </div>                          
                           
    

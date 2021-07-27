@@ -46,7 +46,7 @@ $cats=get_categories($args);
 <div id="sideNavigation" class="sidenav <?php if($estilo=="Profesional") echo "dark_background sidenav_dark"; ?>">
 			<div class="menuHeader">
 				<div>
-					<img src="<?php if($estilo=="amateur") echo get_field("logo_menu_lateral","option"); else echo get_field("logo_menu_lateral_profesional","option"); ?>"/>
+					<img src="<?php if($estilo=="Amateur") echo get_field("logo_menu_lateral","option"); else echo get_field("logo_menu_lateral_profesional","option"); ?>"/>
 				</div>
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 			</div>
@@ -90,9 +90,11 @@ $cats=get_categories($args);
 		</div>				
 	<nav class="topnav container">
 		<div class="logoContainer">
+		<a href="<?php get_site_url(); ?>">
 		<img width="200px" 
 					src=
 					"<?php if($estilo=="Profesional")echo get_field("logo_profesional","option"); else echo get_field("logo_amateur","option");?>"/>
+		</a>
 		</div>
 		<div class="menuContainer <?php if($estilo=="Profesional") echo "menuContainerDark";?>">
 			<?php if(get_field("repeater_menu","option")){
@@ -117,7 +119,7 @@ $cats=get_categories($args);
 
   		</a>
 	</nav>
-    <?php if(get_field("ver_menu_inferior","option")){ ?>
+    <?php if(is_front_page()){ ?>
 		<div class="topnav container mt-3 menuInferior">
 			<div class="logoContainer">
 			<img src="<?php if($estilo=="Amateur") echo get_field("logo_menu_lateral","option"); else echo get_field("logo_menu_lateral_profesional","option"); ?>"/>
