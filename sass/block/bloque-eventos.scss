@@ -21,14 +21,17 @@
     width:100%;
     display:flex;
     justify-content:flex-end;
+   
 }
 .imagenEventoContainer{
     height:100%;
     width:70%;
+   
 }
 .imagenEventoContainer img{
     height:inherit;
     width:100%;
+    border:1px solid #d9d1d1;
 }
 .fechaEventoContainer{
     background-size: cover !important;

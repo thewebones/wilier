@@ -17,7 +17,7 @@
 <div class="eventoContainer container mb-5">
     <div class="imageInfoContainer responsive <?php if($estilo=="Profesional")echo "quitarSombra" ?>" >
     <svg width="100%" height="100%" id="icoOpen">
-        <polygon class="poligon" fill="<?php if($estilo=="Profesional") echo "black"; else echo "white"?>" stroke="<?php if($estilo=="Profesional") echo "white" ?>" stroke-width="2"
+        <polygon class="poligon" fill="<?php if($estilo=="Profesional") echo "black"; else echo "white"?>" stroke="<?php if($estilo=="Profesional") echo "white";else echo "#d9d1d1" ?>" stroke-width="2"
         points="" />
     </svg>
     </div>

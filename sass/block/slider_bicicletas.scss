@@ -46,14 +46,14 @@
 }
 
 .btn-slider{
-    border: 1px solid #0B0B0B;
+    border: 1px solid #0B0B0B !important;
     color:black;
     box-sizing: border-box;
     font-size:18px;
     width: max-content;
 }
 .btn-slider-change{
-    border: 1px solid #0B0B0B;
+    border: 1px solid #0B0B0B !important;
 }
 .imagen_slider_container{
     width:500px;
@@ -74,7 +74,7 @@
     padding: 0 10vw;
 }
 .borderWhite{
-    border: 1px solid white;
+    border: 1px solid white !important;
 }
 .slider_text{
     width: 50vw;

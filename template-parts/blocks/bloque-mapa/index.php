@@ -1,5 +1,5 @@
 <?php
-$estilo=get_field("estilo");
+
 ?>
 
   
@@ -28,10 +28,8 @@ $estilo=get_field("estilo");
 <script language='javascript'> 
 document.getElementsByClassName('radio_container')[0].children[0].children[0].click();  
 
+
 function load(event){
     const imagenLoad=event.currentTarget.parentElement.children[3].value;
     document.getElementsByClassName('showImagen')[0].setAttribute('src',imagenLoad);}
-
-
-
 </script>
