@@ -1,7 +1,9 @@
 .menuFlotanteContainer{
     width:100%;
 }
-
+.quitarSombra{
+    box-shadow: none;
+}
 .imagenMenuFlotante{
     width: 100%;
     box-shadow: 3px 10px 5px #f7f6f6;
@@ -10,6 +12,7 @@
     height:100px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 .menuHeaderHomeContainer a:hover{
     text-decoration: none !important;

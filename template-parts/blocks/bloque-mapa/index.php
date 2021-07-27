@@ -10,7 +10,7 @@ $estilo=get_field("estilo");
             foreach(get_field("repeater_opciones") as $radioItem){
             ?>
             <label class="content-input">
-                <input type="radio" name="radio" id="autovia" onClick="loadmap(event)">
+                <input type="radio" name="radio" id="autovia" onClick="load(event)">
                 <i></i>
                 <span><?php echo $radioItem["name_input_radio"] ?></span>
                 <input type="hidden" value="<?php echo $radioItem["imagen"] ?>"/>

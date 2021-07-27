@@ -3,7 +3,7 @@ $cont=0;
 ?>
 <div class="<?php if($estilo=="Profesional") echo "slider_container_dark" ?>">
 <div class="slider_container container">
-    <h1 class="slider_title"><?php echo get_field("titulo_seccion") ?></h1>
+    <h1 class="slider_title mb-4"><?php echo get_field("titulo_seccion") ?></h1>
     <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner ">
             <?php if(get_field("repeater_agentes"))

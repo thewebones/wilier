@@ -1,7 +1,7 @@
 <?php $estilo=get_field("estilo"); 
 ?>
-
-<div class="container <?php if($estilo=="Profesional") echo "slider_container_dark"?>" >
+<div class="<?php if($estilo=="Profesional") echo "dark"?>">
+<div class="container" >
     <div class="nombreSeccion mb-4">
         <h1 class="slider_title" style="<?php if($estilo=="Profesional") echo "color:white"; ?>"><?php echo get_field("titulo") ?></h1>
     </div>
@@ -51,4 +51,5 @@
         </div>
     </div>
     </div>
+</div>
 </div>

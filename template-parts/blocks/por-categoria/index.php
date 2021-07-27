@@ -9,6 +9,13 @@
         ) );
 
         foreach( $categories as $category ) {
+            $argsPost = array(
+				'post_type'=> 'bicicleta',
+				'order'    => 'ASC',
+				'category_name'=> $category->name
+			);
+			$the_query_post = new WP_Query( $argsPost );
+			if($the_query_post->posts){
     ?>
 
     <div class="por-categoria container">
@@ -113,6 +120,6 @@
                                 </a>
         </div>       
     </div>
-<?php } ?>
+<?php }} ?>
 
 </section>

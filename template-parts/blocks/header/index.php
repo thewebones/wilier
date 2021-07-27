@@ -39,11 +39,19 @@ $cats=get_categories($args);
 			<div class="menuBody">
 			<div class="inner-addon left-addon form-group">
 				 <span class="glyphicon glyphicon-user"></span>
-				 <input class="form-control" id="df" name="Usuario">
+				 <input class="form-control" placeholder="buscar modelo" id="df" name="Usuario">
 			 </div>
-			 <?php foreach($cats as $cat){ ?>
+			 <?php foreach($cats as $cat){ 
+				$argsPost = array(
+				'post_type'=> 'bicicleta',
+				'order'    => 'ASC',
+				'category_name'=> $cat->name
+			);
+			$the_query_post = new WP_Query( $argsPost );
+			if($the_query_post->posts){
+				 ?>
 			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
-			 <?php } ?>	
+			 <?php }} ?>	
 			</div>
 		</div>				
 	<nav class="topnav container">
@@ -81,14 +89,25 @@ $cats=get_categories($args);
 			<img src="<?php if($estilo=="Amateur") echo get_field("logo_menu_lateral"); else echo get_field("logo_menu_lateral_profesional"); ?>"/>
 			</div>
 			<div class="menuContainer <?php if($estilo=="Profesional") echo "menuContainerDark";?>">
-			<?php foreach($cats as $cat){ ?>
+			<?php 
+			foreach($cats as $cat){ 
+			$argsPost = array(
+				'post_type'=> 'bicicleta',
+				'order'    => 'ASC',
+				'category_name'=> $cat->name
+			);
+			$the_query_post = new WP_Query( $argsPost );
+			if($the_query_post->posts){
+				?>
 			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
-			 <?php } ?>	
+			 <?php } }?>	
 			 <div class="inner-addon left-addon form-group">
 				 <span class="glyphicon glyphicon-user"></span>
-				 <input class="form-control" id="df" name="Usuario">
+				 <input class="form-control" placeholder="buscar modelo" id="df" name="Usuario">
 			 </div>
 			</div>
+	
 		</div>
-        <?php } ?>
+		<?php } ?>
+	</div>
 </div>

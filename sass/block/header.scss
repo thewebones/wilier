@@ -41,6 +41,9 @@
     color: white !important;
     border-radius: 0 !important;
 }
+.btnMenu:hover,.btnMenuLateral:hover{
+    color:gray!important;
+}
 .btnMenuLateral{
     background:#EE3031;
     color: white !important;
@@ -180,7 +183,7 @@ body {
  
 /* Change the color of links on hover */
 .topnav a:hover {
-    color: #EE3031 !important;
+    color: #EE3031 ;
     text-decoration:none
 }
  

@@ -5,6 +5,7 @@
 }
 .primeraImagen{
     width:100%;
+    height: 35vh;
 }
 .seccionContainer,.imagenesLaterales{
     display: flex;
@@ -18,9 +19,11 @@
 
 .imagenesLaterales{
     width:50%;
+    height: 90vh;
 }
 .imagenDerecha{
     width:50%;
+    height:90vh;
 }
 .imagenDerecha img{
     width:100%;
@@ -28,7 +31,7 @@
 }
 .imagenizquierda{
     width:100%;
-    height:50%;
+    height:48%;
 }
 .imagenizquierda img{
     width:inherit;

@@ -15,9 +15,7 @@ get_header();
 
     <?php
         $the_query = new WP_Query( array(
-        'post_type' => 'bicicleta',
-         
-
+        'post_type' => 'bicicleta'
         )  );
         $estilo = get_field("estilo");
         ?>
@@ -27,7 +25,7 @@ get_header();
                 echo get_queried_object_id();
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+                ?>
      
 			</header><!-- .page-header -->
      
@@ -38,7 +36,7 @@ get_header();
     <div class="por-categoria">
         <div class="izq">
             <div class="title">
-                <?php echo the_archive_title(); ?>
+                <?php echo get_queried_object()->name ?>
             </div>
             <div class="descripcion">
                 
@@ -55,8 +53,8 @@ get_header();
         
         <div class="foto-der container">
         <?php
-        $imagenCat=get_post_meta(get_queried_object_id(),'imagen_post_categoria',true);?>
-            <img src="<?php echo wp_get_attachment_image_src($imagenCat,'medium')[0];?>">
+        $imagenCat=get_term_meta(get_queried_object_id(),"imagen",true);?>
+        <img src="<?php echo wp_get_attachment_image_src($imagenCat,'medium')[0];?>">
             <!-- <img class="img-fluid" src="<?php echo the_field('imagen_post_categoria', $category);?>"> -->
         </div>
     </div>

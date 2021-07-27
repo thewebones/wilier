@@ -7,7 +7,7 @@
     $estilo=get_field("estilo");
 ?>
 <div class="generalContainer " style="<?php if($estilo=="Profesional") echo "background:black" ?>">
-<div class="container">
+<div class="container mb-4">
 <h1 style="<?php if($estilo=="Profesional") echo "color:white"; ?>"><?php echo get_field("titulo") ?></h1>
 </div>
 <?php if($the_query->have_posts())

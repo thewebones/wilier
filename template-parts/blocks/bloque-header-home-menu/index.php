@@ -16,16 +16,24 @@ $cats=get_categories($args);
        <div class="container header-desk division">
        <h1 class="header-titulo"><?php echo get_field("titulo_header")?></h1>
        <p class="header-texto"><?php echo get_field("texto_header")?></p>
-        <img class="imagen-header" src="<?php echo get_field("imagen_header")?>">
+       <img class="imagen-header" src="<?php if($estilo=="Profesional") echo get_field("imagen_header_profesional"); else echo get_field("imagen_header");?>">
     </div>
     <div class="container empty division"></div>
     <div class="menuFlotanteContainer">
         <div class="imagenMenuFlotante <?php if($estilo =="Profesional") echo "quitarSombra" ?>"  
         style="background: url('<?php if($estilo=="Amateur") echo get_field("imagen_menu_inferior"); else echo get_field("imagen_menu_inferior_profesional"); ?>')"> 
-			<div class="container menuContainer menuHeaderHomeContainer <?php if($estilo=="Profesional") echo "menuHeaderHomeDark";?>">
-			<?php foreach($cats as $cat){ ?>
+			<div class=" menuContainer menuHeaderHomeContainer <?php if($estilo=="Profesional") echo "menuHeaderHomeDark";?>">
+			<?php foreach($cats as $cat){
+                $argsPost = array(
+                    'post_type'=> 'bicicleta',
+                    'order'    => 'ASC',
+                    'category_name'=> $cat->name
+                );
+                $the_query_post = new WP_Query( $argsPost );
+                if($the_query_post->posts){
+                ?>
 			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
-			 <?php } ?>	
+			 <?php }} ?>	
 		</div> 
         </div>
         

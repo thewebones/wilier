@@ -8,14 +8,7 @@
  *
  * @package wilier
  */
-	$estilo=get_field("estilo","option");
-	if(is_front_page()){ 
-		$args=array(
-			'taxonomy'=>'category',
-			'order'    =>'ASC'
-		);
-		$cats=get_categories($args);
-	}
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

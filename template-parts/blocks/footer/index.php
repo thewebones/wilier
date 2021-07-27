@@ -1,5 +1,10 @@
 <?php
  $estilo=get_field("estilo");
+ $args=array(
+    'taxonomy'=>'category',
+    'order'    =>'ASC'
+);
+$cats=get_categories($args);
  ?>
 <div class="footer_container <?php if($estilo=="Profesional")echo "footer_container_dark"; ?>">
 			<div class="footer_links">
@@ -19,6 +24,20 @@
 					<p class="footer_text_description mt-5 "><?php echo get_field("description") ?></p>
 				</div>
 				<div class="footer_container_links">
+				<div class="footer_menu flex_column mr-5">
+					<h3>BIKES</h3>
+					<?php foreach($cats as $cat){
+               		 $argsPost = array(
+                    'post_type'=> 'bicicleta',
+                    'order'    => 'ASC',
+                    'category_name'=> $cat->name
+                	);
+                	$the_query_post = new WP_Query( $argsPost );
+                if($the_query_post->posts){
+                ?>
+			 	<a class="mt-2" href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
+			 	<?php }} ?>	
+				</div>
 				<?php 
 				if(get_field("repeater_menu_links"))
 				foreach(get_field("repeater_menu_links") as $menu){ ?>
