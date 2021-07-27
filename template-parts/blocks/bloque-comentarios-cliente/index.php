@@ -62,4 +62,18 @@
     </button>
 </div>
 </div>
+<script>
 
+const dimensionesSVG=document.getElementsByClassName("svg-slider")[0].getBoundingClientRect();
+const widthSVG=dimensionesSVG.width;
+const x1=widthSVG*0.52;
+const n1=0-(-1.34*x1);
+const x2=(400-n1)/-1.34;
+const x3=x1+0.25*widthSVG;
+const n2=400-(-1.34*x3);
+const x4=(0-n2)/-1.34;
+const polygon=document.getElementsByClassName("polygon-slider");
+for(let i=0;i<polygon.length;i++)
+polygon[i].setAttribute("points",`${x1},0 ${x2},400 ${x3},400 ${x4},0`); 
+
+</script>

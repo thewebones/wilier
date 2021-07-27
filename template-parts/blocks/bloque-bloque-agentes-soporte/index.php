@@ -2,7 +2,7 @@
 $cont=0;
 ?>
 <div class="<?php if($estilo=="Profesional") echo "slider_container_dark" ?>">
-<div class="slider_container container">
+<div class="slider_container">
     <h1 class="slider_title mb-4"><?php echo get_field("titulo_seccion") ?></h1>
     <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner ">
@@ -65,3 +65,13 @@ $cont=0;
 </div>
 </div>
 </div>
+<script>
+
+const dimensionesAgente=document.getElementsByClassName("imageInfoContainer")[0].getBoundingClientRect();
+const widthAgente=dimensionesAgente.width;
+const widthRelativeAgente=widthAgente*0.6;
+const poligonosAgente=document.getElementsByClassName("poligon");
+for(let i=0;i<poligonosAgente.length;i++)
+poligonosAgente[i].setAttribute("points",`0,0 ${widthAgente},0 ${widthRelativeAgente},400 0,400`);
+
+</script>

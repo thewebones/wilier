@@ -2,6 +2,7 @@
 $estilo=get_field("estilo");
 ?>
 
+  
 <div class="bloque_mapa_container <?php if($estilo=="Profesional") echo "bloque_mapa_container_dark" ?>">
     <div class="menu_mapa_container">
         <p class="menu_title"><?php echo get_field("titulo") ?></p>
@@ -21,4 +22,16 @@ $estilo=get_field("estilo");
     <div class="imagen_mapa_container">
         <img class="showImagen" src=""/>
     </div>
+
 </div>
+
+<script language='javascript'> 
+document.getElementsByClassName('radio_container')[0].children[0].children[0].click();  
+
+function load(event){
+    const imagenLoad=event.currentTarget.parentElement.children[3].value;
+    document.getElementsByClassName('showImagen')[0].setAttribute('src',imagenLoad);}
+
+
+
+</script>

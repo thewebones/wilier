@@ -64,4 +64,15 @@
 </div>
 </div>
 <?php } ?>
-                </div>
+</div>
+                
+<script>
+
+const dimensionesEvento=document.getElementsByClassName("imageInfoContainer")[0].getBoundingClientRect();
+const widthEvento=dimensionesEvento.width;
+const widthRelativeEvento=widthEvento*0.6;
+const poligonosEvento=document.getElementsByClassName("poligon");
+for(let i=0;i<poligonosEvento.length;i++)
+poligonosEvento[i].setAttribute("points",`0,0 ${widthEvento},0 ${widthRelativeEvento},400 0,400`);
+
+</script>
