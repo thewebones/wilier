@@ -22,8 +22,10 @@ get_header();
 
 			<header class="page-header">
 				<?php
-                echo get_queried_object_id();
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
+                $id_category=get_queried_object_id();
+              $nombre=get_the_category_by_ID($id_category);
+
+				echo '<h1 class="page-title">'.$nombre.'</h1>';
 				the_archive_description( '<div class="archive-description">', '</div>' );
                 ?>
      
@@ -43,11 +45,10 @@ get_header();
                 <?php echo the_archive_description(); ?>
             </div>
             <div class="fondo">
-                <?php if($estilo = 'Amateur'){ ?>
+
                 <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-944.png" alt="">     
-                <?php }else { ?>
-                    <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-629-2.png" alt="">
-                <?php } ?>   
+
+
             </div>
         </div>
         
@@ -75,7 +76,7 @@ get_header();
                              <a href="<?php the_permalink(); ?>">
                             <div class="card-image">
                             <?php if($estilo=="profesional") {?>
-                                <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
+                                <?php $imagenId=get_post_meta($id_category,'imagen_tema_profesional',true);?>
                                 <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
                                 <?php }else
                                             the_post_thumbnail(); ?>
