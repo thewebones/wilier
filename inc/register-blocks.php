@@ -270,3 +270,14 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
+acf_register_block_type(array(
+    'name'              => 'modal',
+    'title'             => __('Modal'),
+    'description'       => __('ventana emergente'),
+    'render_template'   => 'template-parts/blocks/modal/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('modal',),
+    'category' => 'widgets'
+
+));
