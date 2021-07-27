@@ -24,9 +24,6 @@ get_header();
 				<?php
                 $id_category=get_queried_object_id();
               $nombre=get_the_category_by_ID($id_category);
-
-				echo '<h1 class="page-title">'.$nombre.'</h1>';
-				the_archive_description( '<div class="archive-description">', '</div>' );
                 ?>
      
 			</header><!-- .page-header -->
@@ -54,7 +51,7 @@ get_header();
         
         <div class="foto-der container">
         <?php
-        $imagenCat=get_term_meta(get_queried_object_id(),"imagen",true);?>
+        $imagenCat=get_term_meta(get_queried_object_id(),"imagen_post_categoria",true);?>
         <img src="<?php echo wp_get_attachment_image_src($imagenCat,'medium')[0];?>">
             <!-- <img class="img-fluid" src="<?php echo the_field('imagen_post_categoria', $category);?>"> -->
         </div>
