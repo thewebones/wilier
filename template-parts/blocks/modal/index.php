@@ -50,8 +50,3 @@
             </div>
             </div>
 </section>
-
-
-<script language='javascript'> 
-   
-</script>
