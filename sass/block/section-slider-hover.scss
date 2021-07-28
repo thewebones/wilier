@@ -92,6 +92,9 @@
     height: 400px;    
     background-repeat-y: no-repeat;
     background-size: cover;
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
 
     .boton-slider {
         position: relative;
@@ -102,6 +105,9 @@
         top: 87.5%;
         text-align: -webkit-center;
         margin-top: -50px;
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     .boton-slider a {
