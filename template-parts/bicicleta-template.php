@@ -4,7 +4,14 @@
         'order'    =>'ASC',
     );
     $the_query=new WP_Query($args);
-    $estilo=get_field("estilo");
+    if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+    $estilo="Amateur";
+    else{
+        if(isset($_GET["estilo"])){
+            $estilo=$_GET["estilo"];
+        }else
+            $estilo=$_COOKIE["estilo"];
+        }
 ?>
 
 <section class="section-bicicleta-template <?php echo get_field("estilo")?>">

@@ -5,8 +5,17 @@
  * Date: 7/13/2021
  * Time: 2:56 PM
  */
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
 ?>
-<section class="wilier-section <?php echo get_field("estilo")?>">
+
+<section class="wilier-section <?php echo $estilo?>">
      <div class="container contenidoinside">
         <div class="contenido-wilier division">
          <h1 class="titulo-wilier"><?php echo get_field("titulo_wilier")?></h1>
@@ -23,7 +32,11 @@
      </div>
     <div class="imagen-marca" style="background: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group 945.png')">
         <div class="container marca">
-        <img class="img-fluid marca-wilier" src="<?php echo get_field("wilier_marca")?>">
+            <?php if ($estilo == 'Amateur') {?>
+                <img class="img-fluid marca-wilier" src="<?php echo get_field("wilier_marca_amateur")?>">
+            <?php } else { ?>
+                <img class="img-fluid marca-wilier" src="<?php echo get_field("wilier_marca_profesional")?>">
+            <?php } ?>   
     </div>
     </div>
 </section>

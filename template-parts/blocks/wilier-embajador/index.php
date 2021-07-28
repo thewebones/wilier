@@ -5,8 +5,16 @@
  * Date: 7/13/2021
  * Time: 4:43 PM
  */
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
 ?>
-<section class="embajador-section <?php echo get_field("estilo")?>">
+<section class="embajador-section <?php echo $estilo?>">
     <div class="imagen-embajador division-embajador">
         <h1 class="nombre-embajador2"><?php echo get_field("nombre_embajador")?></h1>
         <h2 class="embajador-wilier2"><?php echo get_field("embajador_wilier")?></h2>

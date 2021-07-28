@@ -5,8 +5,16 @@
  * Date: 7/17/2021
  * Time: 9:08 PM
  */
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
 ?>
-<section class="modelo-bikes-wilier <?php echo get_field("estilo")?>">
+<section class="modelo-bikes-wilier <?php echo $estilo?>">
     <div class="container modelo-bike">
         <div class="division contenido-modelo">
             <h1 class="titulo-modelo"><?php echo get_field("titulo_modelo")?></h1>

@@ -1,4 +1,15 @@
-<section class="section-slider-medio <?php echo get_field("estilo")?>">
+
+<?php
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
+?>
+<section class="section-slider-medio <?php echo $estilo?>">
 <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true}'>
   <?php 
                     if(get_field("repeater-slider-medio")){

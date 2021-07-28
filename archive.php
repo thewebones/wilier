@@ -17,7 +17,14 @@ get_header();
         $the_query = new WP_Query( array(
         'post_type' => 'bicicleta'
         )  );
-        $estilo = get_field("estilo");
+        if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
         ?>
 
 			<header class="page-header">
@@ -57,7 +64,6 @@ get_header();
         </div>
     </div>
 </div>     
-
 
             <div class="section-categoria-bicicleta">
               <div class="categoria-bicicleta">
@@ -113,7 +119,7 @@ get_header();
         <?php endif; ?>
 
 	</main><!-- #main -->
-
+   
 <?php
 //get_sidebar();
 get_footer();

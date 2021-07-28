@@ -13,7 +13,14 @@
 
 	<footer id="colophon" class="site-footer">
 	<?php
+ if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
  $estilo="Amateur";
+ else{
+	 if(isset($_GET["estilo"])){
+		 $estilo=$_GET["estilo"];
+	 }else
+		 $estilo=$_COOKIE["estilo"];
+	 }
  $args=array(
     'taxonomy'=>'category',
     'order'    =>'ASC'
