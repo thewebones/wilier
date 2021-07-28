@@ -1,7 +1,7 @@
 <section class="section-modal">
 
        <!-- Button trigger modal -->
-            <button type="button" class="btn btn-modal" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn-modal" data-toggle="modal" data-target="#exampleModal">
             Launch demo modal
             </button>
 
@@ -22,26 +22,38 @@
                    </div>
                    <div class="contenido">
                         <div class="contenido-izq">
-                            <span><?php echo get_field("titulo");?></span>
-                             <h4><?php echo get_field("pregunta");?></h4>
+                            <span class="title"><?php echo get_field("titulo");?></span>
+                             <h4 class="pregunta"><?php echo get_field("pregunta");?></h4>
+
                              <div class="botones">
-                               <a class="boton_amateur" href=""></a>
-                               <a class="boton_profesional" href=""></a>
-                             <span><?php echo get_field("nota");?></span>  
+                               <a class="boton_amateur" href="<?php echo get_field("boton_amateur")['url'];?>"><?php echo get_field("boton_amateur")['title'];?></a>
+                               <a class="boton_profesional" href="<?php echo get_field("boton_profesional")['url'];?>"><?php echo get_field("boton_profesional")['title'];?></a>
+                            </div>
+
+                             <span class="nota"><?php echo get_field("nota");?></span>  
+
+                             <div class="redes-sociales">
+                            <?php 
+                                if(get_field("redes_sociales")){
+                                foreach (get_field("redes_sociales") as $item) {?>
+                                <div>
+                                    <a class="" href="<?php echo $item["link"]?>">
+                                    <img class="ml-3" src="<?php echo $item["ico"] ?>">
+                                </a>
+                                </div>
+
+                            <?php }} ?>
+                            </div>
                         </div>
                         <div class="contenido-der">
                             <img src="<?php echo get_field("imagen");?>" alt="">
-                        </div>    
-                   </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                        </div> 
+                           
+                    </div>
+                
                 </div>
             </div>
             </div>
-<h3>dasdasdasd</h3>
 </section>
 
 

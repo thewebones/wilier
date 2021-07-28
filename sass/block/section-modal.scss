@@ -4,6 +4,10 @@
             max-width: 1000px !important;
         }
     }
+    .modal-header {
+        border: none !important;
+        padding-bottom: 0;
+    }
     .modal-body {
         padding: 50px 100px;
         .top {
@@ -14,6 +18,73 @@
                 margin-top: 13px;
                 margin-left: 10px;
                 margin-right: 10px;
+            }
+        }
+        .contenido {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            .title {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13.5836px;
+                line-height: 16px;
+                /* identical to box height */
+
+                letter-spacing: -0.005em;
+            }
+            .pregunta {
+                margin-top: 20px;
+                margin-bottom: 30px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 27.1672px;
+                line-height: 32px;
+                letter-spacing: 0.005em;
+                width: 65%;
+            }
+            .nota {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 7.92378px;
+                line-height: 9px;
+                font-size: 10px;
+                letter-spacing: 0.0025em;
+
+                color: rgba(114, 113, 113, 0.75);
+            }
+            .botones {
+                display: flex;
+                width: 77%;
+                justify-content: space-around;
+                margin-bottom: 25px;
+            }
+            .boton_amateur {
+                color: #000;
+                padding: 16px 46px;
+                font-size: 12px; 
+                background-image: url('http://localhost/wilier/wp-content/uploads/2021/07/boton-afic-pro.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-decoration: none;
+            }
+            .boton_profesional {
+                color: #000;
+                padding: 16px 46px;
+                font-size: 12px; 
+                background-image: url('http://localhost/wilier/wp-content/uploads/2021/07/boton-afic-pro.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-decoration: none;
+            }
+            .redes-sociales {
+                display: flex;
+                margin-top: 25px;
             }
         }
     }
