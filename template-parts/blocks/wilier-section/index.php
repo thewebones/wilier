@@ -14,6 +14,7 @@ else{
 		$estilo=$_COOKIE["estilo"];
 	}
 ?>
+
 <section class="wilier-section <?php echo $estilo?>">
      <div class="container contenidoinside">
         <div class="contenido-wilier division">

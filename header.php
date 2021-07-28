@@ -98,7 +98,7 @@ $cats=get_categories($args);
 			 <?php }} ?>	
 			</div>
 		</div>				
-	<nav class="topnav container">
+	<nav class="topnav">
 		<div class="logoContainer">
 		<a href="<?php echo get_site_url(); ?>">
 		<img width="200px" 
@@ -130,7 +130,7 @@ $cats=get_categories($args);
   		</a>
 	</nav>
     <?php if(is_front_page()){ ?>
-		<div class="topnav container mt-3 menuInferior">
+		<div class="topnav mt-3 menuInferior">
 			<div class="logoContainer">
 			<img src="<?php if($estilo=="Amateur") echo get_field("logo_menu_lateral","option"); else echo get_field("logo_menu_lateral_profesional","option"); ?>"/>
 			</div>
