@@ -76,6 +76,18 @@
 .form_button{
     font-size:20px;
 }
+.framemap
+{
+    width: 100%;
+    height: 680px;
+
+
+}
+@media (max-width:768px){
+    .framemap {
+        height: 400px;
+    }
+}
 @media (max-width:1070px){
     .bloque_mapa_container{
         flex-direction: column-reverse;
