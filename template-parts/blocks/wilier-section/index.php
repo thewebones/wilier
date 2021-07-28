@@ -6,7 +6,7 @@
  * Time: 2:56 PM
  */
 ?>
-<section class="wilier-section <?php echo get_field("estilo")?>">
+<section class="wilier-section container <?php echo get_field("estilo")?>">
      <div class="container contenidoinside">
         <div class="contenido-wilier division">
          <h1 class="titulo-wilier"><?php echo get_field("titulo_wilier")?></h1>

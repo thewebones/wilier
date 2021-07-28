@@ -49,6 +49,9 @@
         letter-spacing: 0.0125em;
         text-decoration: none;
         margin-right: 20%;
+        @media (max-width: 691px) {
+            margin-right: 0 !important;
+        }
      }
     
 
