@@ -97,7 +97,7 @@ else{
                                 <div class="boton">
                                     <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?></a>
                                     <span>
-                                        <?php if(get_field("estilo") == 'profesional') { ?>
+                                        <?php if($estilo == 'Profesional') { ?>
                                             <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
                                             
                                         <?php } else{?>

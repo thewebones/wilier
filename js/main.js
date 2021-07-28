@@ -37,3 +37,7 @@ function closeNav2() {
     document.getElementById("sideNavigation2").style.width = "0";
     closeNav();
 }
+
+$( document ).ready(function() {
+    $('#myModal').modal('toggle');
+});
