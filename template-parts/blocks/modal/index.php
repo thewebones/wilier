@@ -1,3 +1,6 @@
+<?php
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"])){
+?>
 
 <section class="section-modal">
             <!-- Modal -->
@@ -50,8 +53,5 @@
             </div>
             </div>
 </section>
+<?php } ?>
 
-
-<script language='javascript'> 
-   
-</script>
