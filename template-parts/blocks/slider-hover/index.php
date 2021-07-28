@@ -1,4 +1,12 @@
 <?php 
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
                   // Listado de categorias
                   
                       $categories = get_categories( array(
@@ -6,7 +14,7 @@
                           'order'   => 'ASC',
                       ) );?>
 
-<section class="section-slider-hover <?php echo get_field("estilo")?>">
+<section class="section-slider-hover <?php echo $estilo?>">
 <h2>Categorias</h2>
                       
 

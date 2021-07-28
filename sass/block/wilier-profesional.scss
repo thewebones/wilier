@@ -46,6 +46,7 @@
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 0.0125em;
+    cursor:pointer;
   }
   .vacio {
     width: 50%;
@@ -84,7 +85,7 @@
     }
   }
   &.Amateur {
-    background: #0B0B0B;
+    background: white;
     padding: 70px 0 100px 0;
   }
 
@@ -94,7 +95,7 @@
       font-weight: 600;
       text-transform: uppercase;
     }
-    background: white;
+    background: #0B0B0B;
 
     .texto-profesional {
     color: black !important;

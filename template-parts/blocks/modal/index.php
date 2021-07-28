@@ -1,12 +1,13 @@
+
 <section class="section-modal">
 
        <!-- Button trigger modal -->
-            <button type="button" class="btn-modal" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" onClick="prueba()" class="btn-modal" data-toggle="modal" data-target="#exampleModal">
             Launch demo modal
             </button>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
@@ -26,8 +27,8 @@
                              <h4 class="pregunta"><?php echo get_field("pregunta");?></h4>
 
                              <div class="botones">
-                               <a class="boton_amateur" href="<?php echo get_field("boton_amateur")['url'];?>"><?php echo get_field("boton_amateur")['title'];?></a>
-                               <a class="boton_profesional" href="<?php echo get_field("boton_profesional")['url'];?>"><?php echo get_field("boton_profesional")['title'];?></a>
+                               <a class="boton_amateur" onClick="amateur()"><?php echo get_field("boton_amateur");?></a>
+                               <a class="boton_profesional" onClick="profesional()"><?php echo get_field("boton_profesional");?></a>
                             </div>
 
                              <span class="nota"><?php echo get_field("nota");?></span>  
@@ -58,6 +59,5 @@
 
 
 <script language='javascript'> 
-document.getElementsByClassName('btn-modal')[0].click();  
-console.log(document.getElementsByClassName('btn-modal')[0]);
+
 </script>

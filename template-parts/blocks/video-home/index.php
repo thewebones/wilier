@@ -1,4 +1,15 @@
-<section class="section-video-home <?php echo get_field("estilo")?>">
+<?php
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
+?>
+
+<section class="section-video-home <?php echo $estilo?>">
     <div class="embed-container text-center">
         <?php the_field('video'); ?>
     </div>

@@ -44,9 +44,10 @@ get_header();
 			
 		endwhile; // End of the loop.
 		?>
-
 	</main><!-- #main -->
-
+    <script>
+        document.getElementsByClassName('btn-modal')[0].click();
+    </script>
 <?php
 //get_sidebar();
 get_footer();

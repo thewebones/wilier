@@ -8,6 +8,15 @@
  *
  * @package wilier
  */
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		setcookie("estilo",$_GET["estilo"]);
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
 
 ?>
 <!doctype html>
@@ -27,13 +36,14 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php 
+
+body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'web-andres' ); ?></a>
 	<header id="masthead" class="site-header">
 	<?php
-$estilo="Amateur";
 
 $args=array(
     'taxonomy'=>'category',
@@ -90,7 +100,7 @@ $cats=get_categories($args);
 		</div>				
 	<nav class="topnav container">
 		<div class="logoContainer">
-		<a href="<?php get_site_url(); ?>">
+		<a href="<?php echo get_site_url(); ?>">
 		<img width="200px" 
 					src=
 					"<?php if($estilo=="Profesional")echo get_field("logo_profesional","option"); else echo get_field("logo_amateur","option");?>"/>
@@ -148,35 +158,9 @@ $cats=get_categories($args);
 	</div>
 </div>
 <script>
-document.getElementById("primary").addEventListener("click",(e)=>{
-    if(document.getElementById("sideNavigation")!=e.target){
-    closeNav();
-    closeNav2();}
-    if(document.getElementsByClassName("openNavButton")[0]==e.target){
-        openNav();
-    }
-    if(document.getElementsByClassName("returnbtn")[0]==e.target){
-        closeNav2();
-        openNav();
-    }
- },true);
-
-function openNav() {
-    document.getElementById("sideNavigation").style.width = "250px";
+function change(){
+    window.location.href="<?php echo home_url($wp->request) ?>"+"?estilo=<?php if($estilo=='Profesional') echo 'Amateur';else echo 'Profesional'; ?>";
 }
  
-function closeNav() {
-    document.getElementById("sideNavigation").style.width = "0";
-}
-
-function openNav2() {
-    document.getElementById("sideNavigation2").style.width = "250px";
-}
-
-function closeNav2() {
-    document.getElementById("sideNavigation2").style.width = "0";
-    closeNav();
-}
-/* localStorage.setItem("prueba","dfdf"); */
 </script>
 	</header>

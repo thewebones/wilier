@@ -5,11 +5,19 @@
  * Date: 7/15/2021
  * Time: 9:17 PM
  */
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
 ?>
-<section class="header-home <?php echo get_field("estilo")?>">
-    <?php if (get_field("estilo")=="Amateur") {?>
+<section class="header-home <?php echo $estilo?>">
+    <?php if ($estilo=="Amateur") {?>
         <div class="header-general" style="background: url('<?php echo get_field("background_amateur")?>')"> <?php }?>">
-    <?php if (get_field("estilo")=="Profesional") {?>
+    <?php if ($estilo=="Profesional") {?>
        <div class="header-general" style="background: url('<?php echo get_field("background_profesional")?>')"> <?php }?>
        <div class="container header-desk division">
        <h1 class="header-titulo"><?php echo get_field("titulo_header")?></h1>
