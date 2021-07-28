@@ -36,7 +36,7 @@
                 <?php echo $category->description; ?>
             </div>
             <div class="fondo">
-                <?php if($estilo = 'Amateur'){ ?>
+                <?php if($estilo == 'Amateur'){ ?>
                 <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-944.png" alt="">     
                 <?php }else { ?>
                     <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-629-2.png" alt="">
@@ -95,15 +95,15 @@
                                 </div>
                                 
                                 <div class="boton">
-                                    <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?></a>
+                                    <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?>               
                                     <span>
-                                        <?php if(get_field("estilo") == 'profesional') { ?>
-                                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
-                                            
-                                        <?php } else{?>
-                                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">   
-                                        <?php } ?>     
+                                        <?php if($estilo=="Profesional"){ ?>
+                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
+                                        <?php }else{?>
+                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
+                                        <?php } ?>        
                                     </span>
+                                    </a>
                                 </div>
                             </div>
                             </a>
