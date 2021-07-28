@@ -19,7 +19,7 @@
     width:50%;
   }
   .texto-profesional {
-    color: white;
+    color: #0B0B0B;
     padding-top: 100px;
     margin-bottom: 50px;
     font-family: Roboto;
@@ -85,7 +85,7 @@
     }
   }
   &.Amateur {
-    background: white;
+    background: #0B0B0B;
     padding: 70px 0 100px 0;
   }
 
@@ -95,10 +95,10 @@
       font-weight: 600;
       text-transform: uppercase;
     }
-    background: #0B0B0B;
+    background: white;
 
     .texto-profesional {
-    color: black !important;
+    color: white !important;
     }
 
   }
