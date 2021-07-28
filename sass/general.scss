@@ -2,3 +2,11 @@
 html{
     font-size:16px;    
 }
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1540px !important;
+    }
+}
+footer{
+    border-top: 4px solid black;
+}

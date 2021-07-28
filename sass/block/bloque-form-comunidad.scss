@@ -24,7 +24,7 @@
     padding: 40px 10px;
 }
 .form_titulo{
-    color:gray;
+    color:#fff;
     font-size:1.2rem;
     font-weight:bold
 }
@@ -69,5 +69,7 @@
        top: 10%;
     }
     
-
+    .btn-danger {
+        border-radius: 0;
+    } 
 }

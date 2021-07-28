@@ -1,6 +1,4 @@
-
-<section class="section-por-categoria <?php echo get_field("estilo")?>">
-    <?php
+<?php
     if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
     $estilo="Amateur";
     else{
@@ -8,7 +6,11 @@
             $estilo=$_GET["estilo"];
         }else
             $estilo=$_COOKIE["estilo"];
-        }  
+        } 
+?>        
+<section class="section-por-categoria <?php echo $estilo ?>">
+
+    <?php
         // Listado de categorias                  
         $categories = get_categories( array(
         'orderby' => 'name',

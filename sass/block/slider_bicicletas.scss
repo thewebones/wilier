@@ -16,6 +16,8 @@
 .slider_title{
     text-align: center;
     font-size:36px;
+    font-weight: bold;
+    font-family: Roboto;
 }
 .slider_item{ 
     display:flex;
@@ -26,7 +28,7 @@
 .slider_price{ 
     color:#009641;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 500;
     width:max-content;
 }
 .slider_button_price{
@@ -54,6 +56,7 @@
 }
 .btn-slider-change{
     border: 1px solid #0B0B0B !important;
+
 }
 .imagen_slider_container{
     width:500px;
@@ -131,4 +134,7 @@
     .imagen_slider_container{
         width:280px;
     }
+}
+.btn{
+    border-radius: 0 !important;
 }

@@ -32,8 +32,12 @@ else{
      </div>
     <div class="imagen-marca" style="background: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group 945.png')">
         <div class="container marca">
-        <img class="img-fluid marca-wilier" src="<?php echo get_field("wilier_marca")?>">
-        </div>
+            <?php if ($estilo == 'Amateur') {?>
+                <img class="img-fluid marca-wilier" src="<?php echo get_field("wilier_marca_amateur")?>">
+            <?php } else { ?>
+                <img class="img-fluid marca-wilier" src="<?php echo get_field("wilier_marca_profesional")?>">
+            <?php } ?>   
+    </div>
     </div>
 </section>
 

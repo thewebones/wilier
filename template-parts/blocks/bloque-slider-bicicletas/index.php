@@ -47,7 +47,7 @@ else{
                             <p class="slider_description mb-5 expandable"><?php echo get_the_excerpt() ?></p>
                             <div class="slider_button_price mt-5">
                                 <p class="slider_price"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
-                                <a href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider ml-3">
+                                <a href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider ml-5">
                                 Consultar 
                                 <span>
                                     <?php if($estilo=="Profesional"){ ?>

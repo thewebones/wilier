@@ -1,16 +1,18 @@
 .section-visitenos {
     .visitenos {
         padding: 50px 0;
-        .titulo {
+        .titulo h2 {
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 500;
             font-size: 48px;
-            line-height: 56px;    
+            line-height: 56px; 
+            margin-left: 96px;   
         }
         .contenido {
             display: flex;
             flex-direction: row;
+            margin-left: 96px;
             @media only screen and (max-width: 900px) {
                 flex-direction: column !important;
             }
@@ -22,6 +24,7 @@
         }
         .descripcion {
             align-self: center;
+            margin-right: -80px;
             .destribuidor-visitenos {
                 font-family: 'Roboto';
                 font-style: normal;
