@@ -9,8 +9,8 @@ else{
 
 <div class="<?php if($estilo=="Profesional") echo "dark";?>">
 <div class="form_comunidad_container">
-    <img src="<?php echo get_field("imagen_fondo_formulario")?>"/>
-    <div class="form_container" style="background: url('<?php echo get_field("imagen_fondo_negra")?>')">
+    <img src="<?php echo get_field("imagen_fondo_formulario","option")?>"/>
+    <div class="form_container" style="background: url('<?php echo get_field("imagen_fondo_negra","option")?>')">
         <!-- <div class="img_form mb-3" ></div> -->
         <p class="form_titulo">FORMÁ PARTE DE NUESTRA COMUNIDAD</p>
         <div class="input_container">
@@ -19,6 +19,6 @@ else{
 </div>
 </div>
 <div class="form_comunidad_footer">
-<img src="<?php echo get_field("imagen_inferior")?>"/>
+<img src="<?php echo get_field("imagen_inferior","option")?>"/>
 </div>
 </div>

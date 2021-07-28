@@ -187,6 +187,11 @@ $cats=get_categories($args);
 function change(){
     window.location.href="<?php echo home_url($wp->request) ?>"+"?estilo=<?php if($estilo=='Profesional') echo 'Amateur';else echo 'Profesional'; ?>";
 }
- 
+function amateur(){
+    window.location.href="<?php echo home_url($wp->request) ?>"+"?estilo=<?php if($estilo=='Profesional') echo 'Amateur';else echo 'Profesional'; ?>";
+}
+function change(){
+    window.location.href="<?php echo home_url($wp->request) ?>"+"?estilo=<?php if($estilo=='Profesional') echo 'Amateur';else echo 'Profesional'; ?>";
+}
 </script>
 	</header>
