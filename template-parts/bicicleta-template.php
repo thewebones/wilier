@@ -51,10 +51,10 @@
                         <?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?>
                     <span>
                         <?php if(get_field("estilo") == 'profesional') { ?>
-                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
+                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
 
                         <?php } else{?>
-                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">
+                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">
                         <?php } ?>
                     </span>
                     </a>
@@ -85,10 +85,10 @@
                      <?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["title"]  ?>
                      <span>
                         <?php if(get_field("estilo") == 'profesional') { ?>
-                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
+                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
 
                         <?php } else{?>
-                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">
+                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">
                         <?php } ?>
                     </span>
                  </a>
