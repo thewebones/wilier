@@ -175,7 +175,6 @@ function load(event){
     document.getElementsByClassName('framemap')[0].setAttribute('src','https://maps.google.com/maps?q='+imagenLoad+'&t=&z=13&ie=UTF8&iwloc=&output=embed');}
 </script>
 	</main><!-- #main -->
-   
 <?php
 //get_sidebar();
 get_footer();
