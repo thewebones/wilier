@@ -68,6 +68,9 @@
     margin-right:3 rem;
 }
 @media (max-width:700px){
+    .footer_imagen {
+        justify-content: center;
+    }
     .footer_social{
         display:none;
     }
