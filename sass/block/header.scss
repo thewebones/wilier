@@ -209,13 +209,6 @@ body {
         display:none;
     }
 }
-a svg{
-  transition:all .5s ease;
- 
-  &:hover{
-    transform:rotate(180deg);
-  }
-}
  
 #ico{
   display: none;

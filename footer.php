@@ -29,7 +29,7 @@ $cats=get_categories($args);
  ?>
 <div class="footer_container <?php if($estilo=="Profesional")echo "footer_container_dark"; ?>">
 			<div class="footer_links">
-				<div class="footer_description_page flex_column mr-5">
+				<div class="footer_description_page flex_column">
 					<div class="footer_imagen">
 					<img width="200px" 
 					src=
@@ -42,7 +42,7 @@ $cats=get_categories($args);
 					<a href="<?php echo $itemSocial["link_social"]["url"] ?>"><img class="ml-3" src="<?php if($estilo=="Profesional") echo $itemSocial["imagen_social_profesional"];else  echo $itemSocial["imagen_social"];?>"/></a>
 					<?php } ?>
 				</div>
-					<p class="footer_text_description mt-5 "><?php echo get_field("description","option") ?></p>
+					<p class="footer_text_description"><?php echo get_field("description","option") ?></p>
 				</div>
 				<div class="footer_container_links">
 				<div class="footer_menu flex_column mr-5">
@@ -62,7 +62,7 @@ $cats=get_categories($args);
 				<?php 
 				if(get_field("repeater_menu_links","option"))
 				foreach(get_field("repeater_menu_links","option") as $menu){ ?>
-				<div class="footer_menu flex_column mr-5">
+				<div class="footer_menu flex_column">
 					<h3><?php echo $menu["title"] ?></h3>
 					<?php if($menu["repeater_items"]) 
 					foreach($menu["repeater_items"] as $item)
