@@ -97,7 +97,7 @@ else{
                                 <div class="boton">
                                     <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?></a>
                                     <span>
-                                        <?php if($estilo == 'Profesional') { ?>
+                                        <?php if(get_field("estilo") == 'profesional') { ?>
                                             <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
                                             
                                         <?php } else{?>
@@ -121,7 +121,7 @@ else{
     <div class="menu_mapa_container">
         <p class="menu_title"><?php echo get_field("titulo","option") ?></p>
         <div class="radio_container">
-            <?php if(get_field("repeater_opciones","option")) 
+            <?php if(get_field("repeater_opciones","option"))
             foreach(get_field("repeater_opciones","option") as $radioItem){
                 $address=$radioItem["imagen"];
                 $adress_url=str_replace(' ','%20',$address);
@@ -166,8 +166,8 @@ else{
 <img src="<?php echo get_field("imagen_inferior","option")?>"/>
 </div>
 </div>
-<script language='javascript'> 
-document.getElementsByClassName('radio_container')[0].children[0].children[0].click();  
+<script language='javascript'>
+document.getElementsByClassName('radio_container')[0].children[0].children[0].click();
 
 
 function load(event){
@@ -175,6 +175,7 @@ function load(event){
     document.getElementsByClassName('framemap')[0].setAttribute('src','https://maps.google.com/maps?q='+imagenLoad+'&t=&z=13&ie=UTF8&iwloc=&output=embed');}
 </script>
 	</main><!-- #main -->
+   
 <?php
 //get_sidebar();
 get_footer();
