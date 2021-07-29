@@ -90,7 +90,7 @@
     .slider_item{ 
        flex-direction: column;
        align-items: center;
-       border:2px solid #e8e7e7 ;
+       border:2px solid #e8e7e7;
     }  
     .slider_button_price{
         justify-content: space-between;
@@ -101,7 +101,7 @@
         width:336px;
     }
     .btn-slider-change{
-        display:none;
+        display:none !important;
     }
     .slider_categoria{
         position:absolute;
@@ -127,8 +127,6 @@
     .slider_title{
         font-size:5vw;
     }
-
-    
 }
 @media (max-width:470px){
     .imagen_slider_container{

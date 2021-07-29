@@ -1,6 +1,6 @@
 <section class="section-visitenos"> 
     <div class="visitenos">
-        <div class="titulo container">
+        <div class="titulo">
             <h2><?php echo get_field('titulo-visitenos') ?></h2>
         </div> 
        <?php 
@@ -8,11 +8,11 @@
        foreach (get_field("repeater-visitenos") as $item) { ?>
             <div class="contenido container mt-5">
                 
-                <div class="foto">
+                <div class="foto container">
                     <img class="img-fluid img-visitenos" src="<?php echo $item["imagen-visitenos"] ?>">
                 </div>
 
-                <div class="descripcion">    
+                <div class="descripcion container">    
                     <span class="destribuidor-visitenos"><?php echo $item["destribuidor-visitenos"] ?></span>
                     <h5 class="nombre-visitenos"><?php echo $item["nombre-visitenos"] ?></h5>
                     <p class="direccion-visitenos"><?php echo $item["direccion-visitenos"] ?></p>
