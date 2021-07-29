@@ -281,3 +281,14 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 ));
+
+acf_register_block_type(array(
+    'name'              => 'feed-instagram',
+    'title'             => __('feed-instagram'),
+    'description'       => __('feed-instagram'),
+    'render_template'   => 'template-parts/blocks/feed-instagram/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('feed-instagram',),
+    'category' => 'widgets'
+
+));
