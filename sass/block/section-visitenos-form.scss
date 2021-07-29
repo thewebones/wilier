@@ -8,6 +8,7 @@
         height: 539px;
         @media only screen and (max-width: 900px) {
             flex-direction: column !important;
+            height: fit-content !important;
         }
 
         .form {
