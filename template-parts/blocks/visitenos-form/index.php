@@ -8,7 +8,7 @@
       </div>
 
       <div class="foto">
-        <img src="<?php echo get_field("imagen-visitenos-form")?>" alt="">
+        <img class="img-fluid" src="<?php echo get_field("imagen-visitenos-form")?>" alt="">
       </div>
   </div>
        
