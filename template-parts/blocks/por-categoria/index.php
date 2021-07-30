@@ -28,7 +28,7 @@
     ?>
 
     <div class="por-categoria container">
-        <div class="izq container">
+        <div class="izq">
             <div class="title">
                 <?php echo $category->name; ?>
             </div>
@@ -44,7 +44,7 @@
             </div>
         </div>
         
-        <div class="foto-der container">
+        <div class="foto-der">
             <img class="img-fluid" src="<?php echo the_field('imagen_post_categoria', $category);?>">
         </div>
     </div> 

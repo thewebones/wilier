@@ -12,11 +12,15 @@
             flex-direction: column !important;
             height: fit-content !important;
         }
-
+        .contenido-form {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
         .form {
             width: 375px;          
             height: 539px;
-            display: flex;
+            display: inline-table;
             flex-direction: column;
             justify-content: center;
             .form_titulo {

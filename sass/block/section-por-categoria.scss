@@ -34,12 +34,13 @@
     }
     .izq {    
         justify-content: flex-start;
-        width: 50%;
+        width: 40%;
         text-align: justify;
         align-self: center;
-        padding: 50px;
+        padding-right: 50px;
         @media only screen and (max-width: 900px) {
             width: 100%;
+            padding: 0 25px;
         }    
         .title{
             font-family: 'Roboto';
@@ -48,6 +49,9 @@
             font-size: 48px;
             line-height: 56px;
             margin-bottom: 30px;
+            @media only screen and (max-width: 900px) {
+                text-align: center;
+            } 
         }
         .descripcion {
             font-family: 'Roboto';
@@ -67,8 +71,8 @@
     }
     .foto-der {
         display: flex;
-        justify-content: end;
-        width: 50%;
+        justify-content: flex-end;
+        width: 60%;
         img {
         object-fit: cover;
         }
