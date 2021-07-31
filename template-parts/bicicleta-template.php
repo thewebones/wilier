@@ -101,4 +101,71 @@
          </div>
         <?php } ?>
     </div>
+
+
+    <div class="titulo-section-productos">
+        <h5><?php echo get_post_meta( get_the_ID(), 'titulo_productos_relacionados', true); ?></h5> 
+    </div>
+
+    <div class="section-productos-relacionados container">
+                           
+
+    <?php $prod_rel = get_post_meta( get_the_ID(), "productos_relacionados", true );
+            for( $i = 0; $i < $prod_rel; $i++ ) { 
+             $item = get_post_meta( get_the_ID(), 'productos_relacionados_' . $i . '_producto', true );  
+              
+              ?>
+             
+
+             <div class="card">
+                             <a href="<?php the_permalink($item); ?>">
+                            <div class="card-image">
+                            <?php if($estilo=="profesional") {?>
+                                <?php $imagenId=get_post_meta($item,'imagen_tema_profesional',true);?>
+                                <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
+                                <?php }else
+                                            the_post_thumbnail($item); ?>
+                            </div>
+                            </a>
+                            <div class="card-content">
+                                <span class="categoria"><?php echo get_the_category($item)[0]->name ?></span>
+                                <a href="<?php the_permalink(); ?>">    
+                                    <span class="card-title"><?php echo get_the_title($item) ?></span> 
+                                </a>   
+                                <p class="descripcion"><?php echo get_the_excerpt($item) ?></p>
+                            </div>
+                            <div class="action">
+                                <div class="precio">
+                                    <p class="precio"><?php echo get_post_meta( $item, 'precio', true ) ?></p>
+                                </div>
+                                
+                                <div class="boton">
+                                    <a class="btn-cotizar" href="<?php echo get_post_meta( $item, 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( $item, 'enlace_whatsapp', true )["title"]  ?>
+                                    <span class="ml-1">
+                                        <?php if($estilo=="Profesional"){ ?>
+                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
+                                        <?php }else{?>
+                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>
+                                        <?php } ?>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                           
+                        </div> 
+
+
+
+              <?php } ?>
+    </div>
+
+
+    <div class="fondo" style="background-image: url(<?php echo get_field("fondo_del_boton")?>)">
+        <div class="boton-modelos">
+            <a class="boton" href="<?php echo get_field("boton")["url"]?>">
+                <?php echo get_field("boton")["title"]?>  
+                <img class="flecha ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
+            </a>
+        </div>                     
+    </div>
 </section>
