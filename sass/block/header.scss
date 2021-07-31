@@ -270,7 +270,7 @@ body {
     text-align: center;
     padding: 10px 2px;
     margin: 3px 0;
-    text-decoration: none;
+    text-decoration: none !important;
     background: #444;
  
     &:nth-child(1){

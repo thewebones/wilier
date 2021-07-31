@@ -17,7 +17,7 @@ else{
 ?>
 
 <section class="wilier-section <?php echo $estilo?>">
-     <div class="container contenidoinside">
+     <div class="contenidoinside">
         <div class="contenido-wilier division">
             <h1 class="titulo-wilier"><?php echo get_field("titulo_wilier")?></h1>
             <p class="texto-wilier"><?php echo get_field("texto_wilier")?></p>

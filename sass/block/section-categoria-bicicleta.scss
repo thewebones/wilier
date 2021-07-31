@@ -14,77 +14,95 @@
         }  
         
 
-    .card {
-        width: 405px;
-        height: fit-content;
-        margin: 5px;
-        border: 2px solid #DFDFDF;
-        box-shadow: none;
-        @media only screen and (max-width: 600px) {        
-         width: 390px !important;    
-       }
-       a {
-           text-decoration: none;
-           color: #000;
-       }
-    }
-    .card-image img{
-        object-fit: cover;
-        width: 393px;
-        height: 260px; 
-        @media only screen and (max-width: 600px) {        
-            width: 385px !important;      
-          }
-       }
-       .categoria {
-           font-size: 18px;
-           font-weight: 400;
-       }
-      .card-title {
-          font-size: 48px;
-          font-weight: 700;
-          margin-bottom: 0 !important;
-       }
-       .descripcion {
-           font-size: 18px;
-           font-weight: 400; 
-           text-align: justify;
-      }
-      .card-content {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 30px;
-      }
-     
-      .action {
-          display: flex !important;
-          flex-direction: row;
-          align-items: center;         
-          justify-content: space-around;
-          margin-bottom: 20px;
-  
-          .precio {
-              width: 100px;
-               margin-right: 100px;
-              justify-content: start;
-               color: #00873A;
-              font-size: 20px;
+        .card {
+            width: 405px;
+            height: 610px;
+            margin: 5px;
+            border: 2px solid #DFDFDF;
+            box-shadow: none;
+            @media only screen and (max-width: 600px) {        
+             width: 390px !important;    
+             visibility: hidden;
            }
-           .boton {
-               justify-content: end;         
-               .btn-cotizar {
-                  border: 1px solid #000;
-                 color: black;
-                   box-sizing: border-box;
-                  font-size: 18px;
-                  padding: 10px;
-                 font-weight: 500;
-                   font-family: 'Roboto';
-               }
+           a {
+               text-decoration: none;
+               color: #000;
            }
-      }   
+        }
+        @media only screen and (max-width: 600px) {           
+         .card {
+             margin-left: 0px !important;       
+         }
+         .card.is-selected {
+             visibility: visible !important;
+         }  
+       }
+        .card-image img{
+         object-fit: cover;
+         width: 393px;
+         height: 260px; 
+         @media only screen and (max-width: 600px) {        
+             width: 385px !important;      
+           }
+        }
+        .categoria {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: -10px;
+        }
+       .card-title {
+           font-size: 48px;
+           font-weight: 700;
+           margin-bottom: 0 !important;
+        }
+        .descripcion {
+            font-size: 18px;
+            font-weight: 400; 
+            text-align: initial;
+            margin-top: 12px;
+       }
+       .card-content {
+           display: flex;
+           flex-direction: column;
+           align-items: flex-start;
+           padding: 12px 30px;
+       }
+      
+       .action {
+           display: flex !important;
+           flex-direction: row;
+           align-items: center;         
+           justify-content: space-between;
+           margin-bottom: 20px;
+           position: absolute;
+           bottom: 0px;
+           width: 100%;
+           padding: 0 30px;  
+           .precio {
+               width: 100px;
+                margin-right: 100px;
+                margin-top: 5%;
+                color: #00873A;
+               font-size: 20px;
+               text-align: initial;
+               display: contents;
+            }
+            .boton {
+                justify-content: end;
+                   border: 1px solid #000;
+                  color: black;
+                    box-sizing: border-box;
+                   font-size: 18px;
+                  font-weight: 500;
+                    font-family: 'Roboto';
+                    width: 140px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
+            }
+       }
     }
 }
 .seccion-intro {

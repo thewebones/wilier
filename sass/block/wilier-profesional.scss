@@ -85,20 +85,21 @@
     }
   }
   &.Amateur {
-    background: #fff;
+    background: black;
     padding: 70px 0 100px 0;
   }
 
   &.Profesional {
+
     .verde {
       color: #009641;
       font-weight: 600;
       text-transform: uppercase;
     }
-    background: #000;
+    background: white;
 
     .texto-profesional {
-    color: white !important;
+    color: black !important;
     }
 
   }

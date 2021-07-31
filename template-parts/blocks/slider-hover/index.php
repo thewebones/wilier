@@ -32,8 +32,8 @@ else{
                       
                       <div class="item text-center">
                             <a href="<?php echo get_category_link( $category->term_id ); ?>">
-                            <img src="<?php echo the_field('imagen', $category); ?>" alt="">
-                            <h4><?php echo $category->name; ?></h4>
+                                <img src="<?php echo the_field('imagen', $category); ?>" alt="">
+                                <h4><?php echo $category->name; ?></h4>
                             </a>  
                       </div>
                       <?php } }?> 

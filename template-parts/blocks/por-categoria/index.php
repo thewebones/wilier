@@ -28,7 +28,7 @@
     ?>
 
     <div class="por-categoria container">
-        <div class="izq container">
+        <div class="izq">
             <div class="title">
                 <?php echo $category->name; ?>
             </div>
@@ -36,7 +36,7 @@
                 <?php echo $category->description; ?>
             </div>
             <div class="fondo">
-                <?php if($estilo == 'Amateur'){ ?>
+                <?php if($estilo = 'Amateur'){ ?>
                 <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-944.png" alt="">     
                 <?php }else { ?>
                     <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-629-2.png" alt="">
@@ -44,7 +44,7 @@
             </div>
         </div>
         
-        <div class="foto-der container">
+        <div class="foto-der">
             <img class="img-fluid" src="<?php echo the_field('imagen_post_categoria', $category);?>">
         </div>
     </div> 
@@ -84,9 +84,12 @@
                                 <?php }else
                                             the_post_thumbnail(); ?>
                             </div>
+                            </a>
                             <div class="card-content">
-                                <span class="categoria"><?php echo get_the_category()[0]->name ?></span>    
-                                <span class="card-title"><?php echo the_title() ?></span>    
+                                <span class="categoria"><?php echo get_the_category()[0]->name ?></span>
+                                <a href="<?php the_permalink(); ?>">    
+                                    <span class="card-title"><?php echo the_title() ?></span> 
+                                </a>   
                                 <p class="descripcion"><?php echo get_the_excerpt() ?></p>
                             </div>
                             <div class="action">
@@ -95,18 +98,18 @@
                                 </div>
                                 
                                 <div class="boton">
-                                    <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?>               
-                                    <span>
+                                    <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?>
+                                    <span class="ml-1">
                                         <?php if($estilo=="Profesional"){ ?>
                                             <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
                                         <?php }else{?>
-                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
-                                        <?php } ?>        
+                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>
+                                        <?php } ?>
                                     </span>
                                     </a>
                                 </div>
                             </div>
-                            </a>
+                           
                         </div> 
                     
                         
