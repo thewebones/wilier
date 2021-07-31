@@ -75,18 +75,21 @@ else{
 
                     
                             
-                            <div class="card">
+                    <div class="card">
                              <a href="<?php the_permalink(); ?>">
                             <div class="card-image">
                             <?php if($estilo=="profesional") {?>
-                                <?php $imagenId=get_post_meta($id_category,'imagen_tema_profesional',true);?>
+                                <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
                                 <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
                                 <?php }else
                                             the_post_thumbnail(); ?>
                             </div>
+                            </a>
                             <div class="card-content">
-                                <span class="categoria"><?php echo get_the_category()[0]->name ?></span>    
-                                <span class="card-title"><?php echo the_title() ?></span>    
+                                <span class="categoria"><?php echo get_the_category()[0]->name ?></span>
+                                <a href="<?php the_permalink(); ?>">    
+                                    <span class="card-title"><?php echo the_title() ?></span> 
+                                </a>   
                                 <p class="descripcion"><?php echo get_the_excerpt() ?></p>
                             </div>
                             <div class="action">
@@ -95,18 +98,18 @@ else{
                                 </div>
                                 
                                 <div class="boton">
-                                    <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?></a>
-                                    <span>
-                                        <?php if(get_field("estilo") == 'profesional') { ?>
-                                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
-                                            
-                                        <?php } else{?>
-                                            <img src="<?php echo get_site_url();?>/wp-contenet/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">   
-                                        <?php } ?>     
+                                    <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?>
+                                    <span class="ml-1">
+                                        <?php if($estilo=="Profesional"){ ?>
+                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
+                                        <?php }else{?>
+                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>
+                                        <?php } ?>
                                     </span>
+                                    </a>
                                 </div>
                             </div>
-                            </a>
+                           
                         </div> 
 
                     

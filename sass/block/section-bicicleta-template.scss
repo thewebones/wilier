@@ -34,7 +34,15 @@
     .flickity-page-dots {
       display: none;
     }
-
+    .flecha {
+      position: relative;
+      margin-top: -200px;
+      text-align: center;
+      margin-bottom: 100px;
+      @media only screen and (max-width: 900px) {
+        display: none;
+      }
+    }
     .categoria-section {
       text-align: -webkit-center;
     }
@@ -56,16 +64,34 @@
       line-height: 56px;
       color: #0B0B0B;
     }
+    .categoria-img {
+      width: 862px;
+      height: 432px;
+      @media only screen and (max-width: 1200px) {
+        width: auto;
+        height: auto;
+      }
+    }
+    .categoria-img img {
+      width: inherit;
+      height: inherit;
+      object-fit: contain;
+    }
     .categoria-descripcion {
       display: flex;
-      flex-wrap: wrap;
-    }
-    .divs {
-      width: 30%;
-      margin: 5% 15% 5% 20%;
+      width: 50%;
+      @media only screen and (max-width: 1200px) {
+        width: 85%;
+        margin: 0 !important;
+        align-items: center;
       }
+    }
+    
     .categoria-texto-precio {
       text-align: -webkit-left;
+      @media only screen and (max-width: 1200px) {
+        padding-left: 15px;
+      }
     }
     .categoria-descripcion-texto {
       font-family: Roboto;
@@ -98,7 +124,9 @@
       .boton-categoria {
         width: 140px;
         height: 40px;
-        margin-top: 6%;
+        display: flow-root;
+        width: 100%;
+        margin-top: 2%;
       }
     @media (max-width: 800px) {
       .categoria-descripcion-texto {
@@ -131,19 +159,54 @@
       color: white !important;
     }
   }
+
+
+
       .modelo-bicicleta {
         background-position: left !important;
         background-repeat: no-repeat !important;
+        margin-top: 100px;
+        padding-bottom: 200px;
+        @media only screen and (max-width: 1200px) {
+          background-image: none;
+        }
       }
      .contenido-modelo {
        display: flex;
-       flex-wrap: wrap;
        align-items: center;
+       height: 700px;
+       
+       @media only screen and (max-width: 1200px) {
+         flex-direction: column;
+         height: fit-content;
+         padding-bottom: 50px;
+         text-align: -webkit-center;
+       }
+     }
+     .img-modelo{
+      width: 60%;
+      padding: 5% 0%;
+      padding-left: 20%;
+      @media only screen and (max-width: 1200px) {
+        width: 100%;
+        padding: 0 !important;
+        height: 100%;
+      }
      }
     .division1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
       width: 40%;
-      margin: 5% 3%;
+      padding: 5% 0%;
       text-align: -webkit-left;
+      position: inherit;
+      @media only screen and (max-width: 1200px) {
+        width: 80%;
+        height: 100%;
+        margin-top: 10px !important;
+      }
     }
     .modelo-nombre {
       font-family: Roboto;
@@ -175,14 +238,19 @@
       align-items: center;
       letter-spacing: 0.005em;
       color: #0B0B0B;
+
     }
-  @media (max-width: 800px) {
+    .btn-modelo {
+      top: 32.5%;
+      position: relative;
+    }
+  @media (max-width: 1200px) {
     .division1 {
       margin-top: 50px;
       width: 100%;
     }
     .modelo-texto {
-      margin-bottom: 50px;
+      margin-bottom: 25px;
     }
     .modelo-bicicleta {
       background: none !important;
@@ -199,6 +267,9 @@
       line-height: 56px;
       color: #0B0B0B;
       text-align: center;
+    }
+    .btn-modelo {
+      text-align: -webkit-center;
     }
   }
     &.Amateur {
@@ -218,4 +289,5 @@
         color: white;
       }
     }
+  
 }

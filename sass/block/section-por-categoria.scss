@@ -24,7 +24,8 @@
     }
     
     .por-categoria {
-        padding: 100px 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
         display: flex;
         flex-direction: row !important;
         @media only screen and (max-width: 600px) {
@@ -109,7 +110,7 @@
          
            .card {
                width: 405px;
-               height: 640px;
+               height: 610px;
                margin: 5px;
                border: 2px solid #DFDFDF;
                box-shadow: none;
@@ -141,6 +142,7 @@
            .categoria {
                font-size: 18px;
                font-weight: 400;
+               margin-bottom: -10px;
            }
           .card-title {
               font-size: 48px;
@@ -150,28 +152,34 @@
            .descripcion {
                font-size: 18px;
                font-weight: 400; 
-               text-align: justify;
+               text-align: initial;
+               margin-top: 12px;
           }
           .card-content {
               display: flex;
               flex-direction: column;
               align-items: flex-start;
-              padding: 30px;
+              padding: 12px 30px;
           }
          
           .action {
               display: flex !important;
               flex-direction: row;
               align-items: center;         
-              justify-content: space-around;
+              justify-content: space-between;
               margin-bottom: 20px;
-      
+              position: inherit;
+              bottom: 0px;
+              width: 100%;
+              padding: 0 30px;  
               .precio {
                   width: 100px;
                    margin-right: 100px;
-                  justify-content: start;
+                   margin-top: 5%;
                    color: #00873A;
                   font-size: 20px;
+                  text-align: initial;
+                  display: contents;
                }
                .boton {
                    justify-content: end;
@@ -179,9 +187,13 @@
                      color: black;
                        box-sizing: border-box;
                       font-size: 18px;
-                      padding: 10px;
                      font-weight: 500;
                        font-family: 'Roboto';
+                       width: 140px;
+                       height: 40px;
+                       display: flex;
+                       align-items: center;
+                       justify-content: center;
 
                }
           }

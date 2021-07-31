@@ -84,9 +84,12 @@
                                 <?php }else
                                             the_post_thumbnail(); ?>
                             </div>
+                            </a>
                             <div class="card-content">
-                                <span class="categoria"><?php echo get_the_category()[0]->name ?></span>    
-                                <span class="card-title"><?php echo the_title() ?></span>    
+                                <span class="categoria"><?php echo get_the_category()[0]->name ?></span>
+                                <a href="<?php the_permalink(); ?>">    
+                                    <span class="card-title"><?php echo the_title() ?></span> 
+                                </a>   
                                 <p class="descripcion"><?php echo get_the_excerpt() ?></p>
                             </div>
                             <div class="action">
@@ -96,7 +99,7 @@
                                 
                                 <div class="boton">
                                     <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?>
-                                    <span>
+                                    <span class="ml-1">
                                         <?php if($estilo=="Profesional"){ ?>
                                             <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
                                         <?php }else{?>
@@ -106,7 +109,7 @@
                                     </a>
                                 </div>
                             </div>
-                            </a>
+                           
                         </div> 
                     
                         
