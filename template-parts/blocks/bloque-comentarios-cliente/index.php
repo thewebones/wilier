@@ -11,7 +11,7 @@ else{
 
 <div class="<?php if($estilo=="Profesional") echo "slider_container_dark" ?>">
 <div class="slider_container">
-    <h1 class="slider_title container mb-4"><?php echo get_field("titulo_seccion") ?></h1>
+    <h1 class="slider_title_bloque_mundo container mb-4 <?php if($estilo=="Profesional") echo "whiteColorText"; ?>"><?php echo get_field("titulo_seccion") ?></h1>
     <div id="carouselExampleIndicators1" class="carousel slide containerCarousel" style="background-image:url(<?php if($estilo=="Profesional") echo get_field("fondo_profesional");else echo get_field("fondo_amateur"); ?>)" data-ride="carousel">
     <div class="carousel-inner">
         <?php if(get_field("repeater_clientes"))

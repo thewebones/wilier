@@ -21,13 +21,14 @@
 	 }else
 		 $estilo=$_COOKIE["estilo"];
 	 }
+
  $args=array(
     'taxonomy'=>'category',
     'order'    =>'ASC'
 );
 $cats=get_categories($args);
  ?>
-<div class="footer_container <?php if($estilo=="Profesional")echo "footer_container_dark"; ?>">
+<div class="footer_container <?php if($estilo=="Profesional")echo "footer_container_dark"; ?>" style="background-image:url(<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/fondoFooterProfesional.png)">
 			<div class="footer_links">
 				<div class="footer_description_page flex_column">
 					<div class="footer_imagen">
@@ -87,7 +88,7 @@ $cats=get_categories($args);
 				<p><?php echo get_field("texto_copyright","option") ?></p>
 				<div class="footer_term_policy">
 					<a class="mr-5" href="<?php echo get_field("term_conditions_link","option")["url"] ?>"><?php echo get_field("term_conditions_link","option")["title"]?></a>
-					<a href="<?php echo get_field("privacy_policy_link","option")["url"]?>"><?php echo get_field("privacy_policy_link","option")["title"]?></a>
+					<a href="<?php echo get_field("privacy_policy_links","option")["url"]?>"><?php echo get_field("privacy_policy_links","option")["title"]?></a>
 				</div>
 			</div>
 		</div>

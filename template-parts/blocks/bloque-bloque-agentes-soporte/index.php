@@ -9,15 +9,15 @@ else{
 $cont=0;
 ?>
 <div class="<?php if($estilo=="Profesional") echo "slider_container_dark" ?>">
-<div class="slider_container">
-    <h1 class="slider_title mb-4"><?php echo get_field("titulo_seccion") ?></h1>
+<div class="slider_container container">
+    <h1 class="slider_title_bloque_mundo mb-4 <?php if($estilo=="Profesional") echo "whiteColorText"; ?>"><?php echo get_field("titulo_seccion") ?></h1>
     <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner ">
             <?php if(get_field("repeater_agentes"))
                 foreach(get_field("repeater_agentes") as $agente){
             ?>
             <div class="carousel-item <?php if($cont==0) echo "active"?>">
-                <div class="agenteContainer container mb-5">
+                <div class="agenteContainer mb-5">
                     <div class="imageInfoContainer responsive <?php if($estilo=="Profesional")echo "quitarSombra" ?>" >
                     <svg width="100%" height="100%" id="icoOpen">
                         <polygon class="poligon" fill="<?php if($estilo=="Profesional") echo "black"; else echo "white"?>" stroke="<?php if($estilo=="Profesional") echo "white"; else echo "#d9d1d1" ?>" stroke-width="2"

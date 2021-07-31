@@ -1,15 +1,25 @@
+.imageSectionContainer img{
+  width:inherit;
+  height:inherit;
+  object-fit: cover;
+}
+.imageSectionContainer{
+  width:602.34px;
+  height:736.08px;
+}
 .wilier-section {
-  padding: 50px 0;
+    padding: 50px 0;
+   
   .contenidoinside {
-    padding: 30px 0 30px 0;
+    padding: 30px 0 0 0;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
+    flex-wrap: wrap;    
     .division{
       width: 50%;
     }
+   
   }
+  
   @media (max-width: 1200px) and (min-width: 994px) {
     .titulo-wilier {
       padding-top: 0 !important;
@@ -84,9 +94,10 @@
   }
   .imagen-marca {
     z-index: 0;
-    position: relative;
     height: 162.91px;
     margin-top: -160px;
+    display: flex;
+    align-items: center;
   }
   .texto-wilier {
     font-family: Roboto;

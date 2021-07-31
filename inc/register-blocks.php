@@ -5,7 +5,7 @@
  * Date: 6/07/21
  * Time: 0:23
  */
-if( function_exists('acf_add_options_page') ) {
+ if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(
         'page_title' 	=> 'Ajustes Generales',
@@ -291,4 +291,4 @@ acf_register_block_type(array(
     'keywords'          => array('feed-instagram',),
     'category' => 'widgets'
 
-));
+)); 
