@@ -1,7 +1,6 @@
 .comentarioInfoContainer{
     position: absolute;
     left: 0;
-    margin-left: 136px;
     width:40%;
     height:100%;
     display: flex;
@@ -11,7 +10,6 @@
 }
 .slider-inner-comentarios{
     display:flex;
-    justify-content:flex-end;
 }
 
 .containerCarousel{
@@ -54,4 +52,8 @@
         display:block;
     }
 }
-
+@media (min-width: 800px) and (max-width: 1000px) {
+    .agenteContainer{
+        height:400px;
+    }
+}

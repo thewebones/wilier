@@ -20,15 +20,17 @@ $cont=0;
                 <div class="agenteContainer mb-5">
                     <div class="imageInfoContainer responsive <?php if($estilo=="Profesional")echo "quitarSombra" ?>" >
                     <svg width="100%" height="100%" id="icoOpen">
-                        <polygon class="poligon" fill="<?php if($estilo=="Profesional") echo "black"; else echo "white"?>" stroke="<?php if($estilo=="Profesional") echo "white"; else echo "#d9d1d1" ?>" stroke-width="2"
+                        <polygon class="poligon" fill="<?php if($estilo=="Profesional") echo "black"; else echo "white"?>" stroke="<?php if($estilo=="Profesional") echo "white"?>" stroke-width="2"
                         points="" filter="#f1"/>
                     </svg>
                     </div>
                     <div class="eventoInfoContainer">
+                            <div>
                         <p class="evento_categoria"><?php echo $agente["puesto_de_trabajo"]?></p>
                         <p class="agente_nombre <?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["nombre"] ?></p>
                         <p class="slider_modelo <?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["apellido"] ?></p>
                         <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["experiencia"] ?> </p>
+                            </div>
                         <a href="<?php echo $agente["link_whatsapp"]["url"] ?>" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
                             <?php echo $agente["link_whatsapp"]["title"] ?> 
                             <span>
@@ -76,9 +78,10 @@ $cont=0;
 
 const dimensionesAgente=document.getElementsByClassName("imageInfoContainer")[0].getBoundingClientRect();
 const widthAgente=dimensionesAgente.width;
+const heightAgente=dimensionesAgente.height;
 const widthRelativeAgente=widthAgente*0.6;
 const poligonosAgente=document.getElementsByClassName("poligon");
 for(let i=0;i<poligonosAgente.length;i++)
-poligonosAgente[i].setAttribute("points",`0,0 ${widthAgente},0 ${widthRelativeAgente},400 0,400`);
+poligonosAgente[i].setAttribute("points",`0,0 ${widthAgente},0 ${widthRelativeAgente},${heightAgente} 0,${heightAgente}`);
 
 </script>

@@ -17,6 +17,7 @@ else{
 ?>
 
 <section class="wilier-section <?php echo $estilo?>">
+    <div class="container">
      <div class="contenidoinside">
         <div class="contenido-wilier division">
             <h1 class="titulo-wilier"><?php echo get_field("titulo_wilier")?></h1>
@@ -31,6 +32,7 @@ else{
             </div>
         </div>
      </div>
+    </div>
     <div class="imagen-marca" style="
     <?php if($estilo="Profesional"){?>
     background: url('<?php echo get_site_url();?> /wp-content/themes/wilier/img/fondo_profesional.jpg')
@@ -51,5 +53,6 @@ else{
 	    	</div>
         </div>
     </div>
+    
 </section>
 

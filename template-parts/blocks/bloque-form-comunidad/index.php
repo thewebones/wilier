@@ -14,11 +14,17 @@ else{
         <!-- <div class="img_form mb-3" ></div> -->
         <p class="form_titulo">FORMÁ PARTE DE NUESTRA COMUNIDAD</p>
         <div class="input_container">
-        <?php Echo do_shortcode ("[mc4wp_form id=183]"); ?>
+        <?php echo do_shortcode ("[mc4wp_form id=183]");
+        ?>
         </div>
 </div>
 </div>
 <div class="form_comunidad_footer">
-<img src="<?php echo get_field("imagen_inferior")?>"/>
+    <?php if ($estilo=="Amateur"){?>
+        <img src="<?php echo get_field("imagen_inferior")?>"/>
+    <?php }else{ ?>
+        <img src="<?php echo get_field("imagen_inferior_profesional")?>"/>  
+    <?php } ?>    
 </div>
 </div>
+<!--   Echo do_shortcode ("[mc4wp_form id=246]");  form real -->
