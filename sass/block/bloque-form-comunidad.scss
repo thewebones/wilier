@@ -15,8 +15,7 @@
     align-items:center;
     justify-content:space-between;
     text-align: center;
-    width:260px;
-
+    width:280px;
     position:absolute;
     top:20%;
     left:5vw;
@@ -46,7 +45,9 @@
     position: absolute;
     top:-4vw;
 }
-
+.form_button_comunidad{
+    font-size: 20px;
+}
 @media (max-width:500px){
     .form_comunidad_container{
         position: initial;
@@ -62,14 +63,22 @@
     .input_container{
         width:260px;
     }
+    .form_input,.form_titulo,.form_button_comunidad{
+        font-size: 12px;
+    }
 }
-@media (min-width:500px) and (max-width:700px){
+@media (min-width:501px) and (max-width:700px){
     .form_container{
        width:200px;
        top: 10%;
+       padding:10px 10px;
     }
     
     .btn-danger {
         border-radius: 0;
     } 
+    .form_input,.form_titulo,.form_button_comunidad{
+        font-size: 12px;
+    }
+
 }

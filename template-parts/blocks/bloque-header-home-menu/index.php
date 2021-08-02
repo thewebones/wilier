@@ -20,11 +20,11 @@ $cats=get_categories($args);
         <div class="header-general" style="background: url('<?php echo get_field("background_amateur")?>')"> <?php }?>
     <?php if (get_field("estilo")=="Profesional") {?>
        <div class="header-general" style="background: url('<?php echo get_field("background_profesional")?>')"> <?php }?>
-       <div class="container header-desk division">
-       <h1 class="header-titulo"><?php echo get_field("titulo_header")?></h1>
-       <p class="header-texto"><?php echo get_field("texto_header")?></p>
-       <img class="imagen-header" src="<?php if($estilo=="Profesional") echo get_field("imagen_header_profesional"); else echo get_field("imagen_header");?>">
-    </div>
+        <div class="container header-desk division">
+            <h1 class="header-titulo"><?php echo get_field("titulo_header")?></h1>
+            <p class="header-texto"><?php echo get_field("texto_header")?></p>
+            <img class="imagen-header" src="<?php if($estilo=="Profesional") echo get_field("imagen_header_profesional"); else echo get_field("imagen_header");?>">
+        </div>
     <div class="container empty division"></div>
     <div class="menuFlotanteContainer">
         <div class="imagenMenuFlotante <?php if($estilo =="Profesional") echo "quitarSombra" ?>"  

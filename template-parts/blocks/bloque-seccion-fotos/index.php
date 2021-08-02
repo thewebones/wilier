@@ -11,7 +11,7 @@ else{
 <div class="<?php if($estilo=="Profesional") echo "dark"?>">
 <div class="container" >
     <div class="nombreSeccion mb-4">
-        <h1 class="slider_title" style="<?php if($estilo=="Profesional") echo "color:white"; ?>"><?php echo get_field("titulo") ?></h1>
+        <h1 class="slider_title_bloque_mundo <?php if($estilo=="Profesional") echo "whiteColorText"; ?>" ><?php echo get_field("titulo") ?></h1>
     </div>
     <div class="seccionContainer">
     <div class="primeraImagen mb-4">

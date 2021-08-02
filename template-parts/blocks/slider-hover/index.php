@@ -15,6 +15,7 @@ else{
                       ) );?>
 
 <section class="section-slider-hover <?php echo $estilo?>">
+<div class="container">
 <h2>Categorias</h2>
                       
 
@@ -47,4 +48,5 @@ else{
             </a>
         </div>                     
     </div>   
+</div>
 </section>   

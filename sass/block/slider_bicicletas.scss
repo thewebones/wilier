@@ -1,5 +1,6 @@
 .slider_container{
-    padding:4vw 0;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
 }
 
 .slider_container_dark{
@@ -23,7 +24,7 @@
     display:flex;
     justify-content: center;
     position: relative;
-    padding:1.2rem 0.5rem;
+    padding: 0;
 }
 .slider_price{ 
     color:#009641;
@@ -44,7 +45,7 @@
     display:flex;
     justify-content: center;
     align-items:center;
-    padding: 0 1.5rem;
+    padding: 0;
 }
 
 .btn-slider{
@@ -56,14 +57,17 @@
 }
 .btn-slider-change{
     border: 1px solid #0B0B0B !important;
-
+    width:55px;
+    height:55px;
 }
 .imagen_slider_container{
-    width:500px;
+    width:630px;
+    height:336px;
 }
 .imagen_slider_container img{
     width:inherit;
-    height: 336px;
+    height:inherit;
+    object-fit: contain;
 }
 .slider_modelo{
     font-size: 36px;
@@ -74,13 +78,16 @@
 }
 .carrusel_container{
     overflow: initial;
-    padding: 0 10vw;
+    padding: 0 5vw;
 }
 .borderWhite{
     border: 1px solid white !important;
 }
 .slider_text{
-    width: 50vw;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
 }
 @media (max-width:1070px){
     .imagen_slider_container img{
@@ -91,6 +98,7 @@
        flex-direction: column;
        align-items: center;
        border:2px solid #e8e7e7;
+       padding:0;
     }  
     .slider_button_price{
         justify-content: space-between;
