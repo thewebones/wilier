@@ -15,7 +15,7 @@ $args=array(
 $cats=get_categories($args);
 ?>
 
-<section class="header-home <?php echo get_field("estilo")?>">
+<section class="header-home <?php echo $estilo?>">
     <?php if (get_field("estilo")=="Amateur") {?>
         <div class="header-general" style="background: url('<?php echo get_field("background_amateur")?>')"> <?php }?>
     <?php if (get_field("estilo")=="Profesional") {?>

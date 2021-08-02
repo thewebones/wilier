@@ -27,4 +27,3 @@ else{
     <?php } ?>    
 </div>
 </div>
-<!--   Echo do_shortcode ("[mc4wp_form id=246]");  form real -->

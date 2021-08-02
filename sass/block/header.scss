@@ -118,6 +118,7 @@
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
     color: gray;
+    text-decoration: none;
 }
 
 /* Position and style the close button (top right corner) */
@@ -161,11 +162,12 @@
 /* When you mouse over the navigation links, change their color */
 .sidenav2 a:hover, .offcanvas a:focus{
     color: gray;
+    text-decoration: none;
 }
  
 /* Position and style the close button (top right corner) */
 .sidenav2 .closebtn {
-    font-size: 36px;
+    font-size: 66px;
 
 }
 .sidenavContainer{

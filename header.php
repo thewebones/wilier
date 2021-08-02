@@ -104,14 +104,12 @@ $cats=get_categories($args);
 		</div>	
 	</div>	
 </div>
-	<div id="sideNavigation2" class="sidenav2 <?php if($estilo=="Profesional") echo "dark_background sidenav_dark"; ?>">
+<div id="sideNavigation2" class="sidenav2 <?php if($estilo=="Profesional") echo "dark_background sidenav_dark"; ?>">
+	<div class="sidenavContainer">	
 		<div class="menuHeader">
-			<div>
-				<a href="javascript:void(0)" class="returnbtn" onClick="returnbtn()"><</a>
-			</div>
-			<div>
+				<a href="javascript:void(0)" class="closebtn returnbtn" onClick="returnBtn()"><</a>
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">×</a>
-			</div>
+		</div>
 			<div class="menuBody">
 			<?php foreach($cats as $cat){ 
 				$argsPost = array(
@@ -125,11 +123,12 @@ $cats=get_categories($args);
 			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
 			 <?php }} ?>	
 			</div>
-		</div>
-		<div class="imagenFondoLateral">
+		
+		<div class="<?php if($estilo=="Profesional") echo "imagenFondoLateralProfesional"; else echo "imagenFondoLateralAmateur"; ?>">
 			<img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/imagenMenuLateral.png"/>
 		</div>	
-	</div>					
+	</div>		
+</div>				
 		<nav class="topnav">
 			<div class="logoContainer">
 				<a href="<?php echo get_site_url(); ?>">

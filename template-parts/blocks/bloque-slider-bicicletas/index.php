@@ -49,8 +49,8 @@ else{
                             </div>
                             <div class="slider_button_price">
                                 <p class="slider_price">Desde <?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
-                                <a href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider ml-5">
-                                Consultar 
+                                <a href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
+                                <span>Consultar</span> 
                                 <span>
                                     <?php if($estilo=="Profesional"){ ?>
                                     <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
@@ -58,7 +58,7 @@ else{
                                     <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
                                     <?php } ?>        
                                 </span>
-                            </a>
+                                </a>
                             </div>
                         </div> 
                     </div>

@@ -13,7 +13,7 @@ else{
 	}else
 		$estilo=$_COOKIE["estilo"];
 	}
-    $estilo="Amateur";
+   
 ?>
 
 <section class="wilier-section <?php echo $estilo?>">
@@ -34,7 +34,7 @@ else{
      </div>
     </div>
     <div class="imagen-marca" style="
-    <?php if($estilo="Profesional"){?>
+    <?php if($estilo=="Profesional"){?>
     background: url('<?php echo get_site_url();?> /wp-content/themes/wilier/img/fondo_profesional.jpg')
     <?php }else{ ?>
     background: url('<?php echo get_site_url();?>/wp-content/themes/wilier/img/fondo_amateur.jpg')
@@ -46,9 +46,9 @@ else{
 	    			<img width="200px" 
 	    				src=
 	    				"<?php if($estilo=="Profesional")
-	    				echo get_field("logo_profesional","option"); 
+	    				echo get_field("wilier_marca_profesional"); 
 	    				else 
-	    				echo get_field("logo_amateur","option");?>"/>
+	    				echo get_field("wilier_marca_amateur");?>"/>
 	    			</a>
 	    	</div>
         </div>

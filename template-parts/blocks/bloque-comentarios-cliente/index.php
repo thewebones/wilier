@@ -13,16 +13,16 @@ else{
 <div class="slider_container">
     <h1 class="slider_title_bloque_mundo container mb-4 <?php if($estilo=="Profesional") echo "whiteColorText"; ?>"><?php echo get_field("titulo_seccion") ?></h1>
     <div id="carouselExampleIndicators1" class="carousel slide containerCarousel" style="background-image:url(<?php if($estilo=="Profesional") echo get_field("fondo_profesional");else echo get_field("fondo_amateur"); ?>)" data-ride="carousel">
-    <div class="carousel-inner">
+    <div class="carousel-inner  ">
         <?php if(get_field("repeater_clientes"))
             foreach(get_field("repeater_clientes") as $cliente){
         ?>
             <div class="carousel-item <?php if($cont==0) echo "active"?>">
+                <div class="comentarioInfoContainer container">
+                    <p class="agente_nombre evento_modelo"><?php echo $cliente["nombre"] ?></p>
+                    <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $cliente["comentario"] ?> </p>
+                </div>    
                 <div class="slider-inner-comentarios"> 
-                    <div class="comentarioInfoContainer">
-                        <p class="agente_nombre evento_modelo"><?php echo $cliente["nombre"] ?></p>
-                        <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $cliente["comentario"] ?> </p>
-                    </div>
                 <div class="svgContainerComent">    
                     <div id="shape-container">
                         <svg class="svg-slider" width="100%" height="100%">

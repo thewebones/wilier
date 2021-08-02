@@ -41,7 +41,7 @@ else{
                 <p class="evento_premio <?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo get_post_meta( get_the_ID(), 'premio', true )?></p>
             </div>
             <a href="#" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
-                Consultar 
+                <span>Consultar</span>
                 <span>
                     <?php if($estilo=="Profesional"){ ?>
                     <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>

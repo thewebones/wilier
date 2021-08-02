@@ -87,6 +87,9 @@
   &.Amateur {
     background: black;
     padding: 70px 0 100px 0;
+    .texto-profesional {
+      color: white !important;
+    }
   }
 
   &.Profesional {
