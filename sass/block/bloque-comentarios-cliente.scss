@@ -1,6 +1,4 @@
 .comentarioInfoContainer{
-    position: absolute;
-    left: 0;
     width:40%;
     height:100%;
     display: flex;
@@ -10,6 +8,7 @@
 }
 .slider-inner-comentarios{
     display:flex;
+    justify-content:space-between;
 }
 
 .containerCarousel{
