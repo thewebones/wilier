@@ -186,7 +186,7 @@
      .img-modelo{
       width: 60%;
       padding: 5% 0%;
-      padding-left: 20%;
+      padding-left: 15%;
       @media only screen and (max-width: 1200px) {
         width: 100%;
         padding: 0 !important;
@@ -198,7 +198,7 @@
       flex-direction: column;
       justify-content: center;
       height: 100%;
-      width: 40%;
+      width: 37%;
       padding: 5% 0%;
       text-align: -webkit-left;
       position: inherit;
@@ -287,6 +287,9 @@
         border: solid;
         border-width: 2px;
         color: white;
+      }
+      .titulo-section-productos {
+        color: white !important;
       }
     }
 
