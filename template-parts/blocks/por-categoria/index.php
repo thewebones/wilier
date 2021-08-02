@@ -36,7 +36,7 @@
                 <?php echo $category->description; ?>
             </div>
             <div class="fondo">
-                <?php if($estilo = 'Amateur'){ ?>
+                <?php if($estilo == 'Amateur'){ ?>
                 <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-944.png" alt="">     
                 <?php }else { ?>
                     <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-629-2.png" alt="">
@@ -78,7 +78,7 @@
                          <div class="card">
                              <a href="<?php the_permalink(); ?>">
                             <div class="card-image">
-                            <?php if($estilo=="profesional") {?>
+                            <?php if($estilo=="Profesional") {?>
                                 <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
                                 <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
                                 <?php }else

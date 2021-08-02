@@ -14,7 +14,7 @@
         }
 ?>
 
-<section class="section-bicicleta-template <?php echo get_field("estilo")?>">
+<section class="section-bicicleta-template <?php echo $estilo ?>">
     <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true}'>
         <?php 
         $galeria_cont = get_post_meta( get_the_ID(), "repeater-slider", true );
@@ -37,7 +37,7 @@
         <h5 class="categoria-titulo"><?php echo get_the_category()[0]->name ?></h5>
         <h1 class="categoria-name"><?php echo the_title() ?></h1>
             <div class="categoria-img">
-                <?php if($estilo=="profesional") {?>
+                <?php if($estilo=="Profesional") {?>
                     <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
                     <img class="img-fluid" src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
                 <?php }else
@@ -52,7 +52,7 @@
                     <a class="boton-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>">
                         <?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?>
                     <span class="ml-1">
-                        <?php if(get_field("estilo") == 'profesional') { ?>
+                        <?php if ($estilo == 'Profesional') { ?>
                             <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
 
                         <?php } else{?>
@@ -88,7 +88,7 @@
                  <a class="boton-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["url"]  ?>">
                      <?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["title"]  ?>
                      <span>
-                        <?php if(get_field("estilo") == 'profesional') { ?>
+                        <?php if($estilo == 'Profesional') { ?>
                             <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
 
                         <?php } else{?>
@@ -120,7 +120,7 @@
              <div class="card">
                              <a href="<?php the_permalink($item); ?>">
                             <div class="card-image">
-                            <?php if($estilo=="profesional") {?>
+                            <?php if($estilo=="Profesional") {?>
                                 <?php $imagenId=get_post_meta($item,'imagen_tema_profesional',true);?>
                                 <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
                                 <?php }else
