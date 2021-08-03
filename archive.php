@@ -37,35 +37,114 @@ else{
      
         <?php if ( $the_query->have_posts() ) : ?>
             <!-- the loop -->
+            <?php
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
 
-<div class="seccion-intro">
-    <div class="por-categoria">
-        <div class="izq">
-            <div class="title">
-                <?php echo get_queried_object()->name ?>
-            </div>
-            <div class="descripcion">
-                
-                <?php echo the_archive_description(); ?>
-            </div>
-            <div class="fondo">
+$args=array(
+    'taxonomy'=>'category',
+    'order'    =>'ASC'
+);
+$cats=get_categories($args);
+?>
 
-                <img src="https://wilier.cubaonlineweb.com/wp-content/uploads/2021/07/Group-944.png" alt="">     
+<div class="header-home <?php echo $estilo ?>">
+    <?php if ($estilo=="Amateur") {
+        $imagenAmateur=get_term_meta(get_queried_object_id(),"background_amateur",true);?>
+        <div class="header-general" style="background: url('<?php echo wp_get_attachment_image_src($imagenAmateur,'full')[0];?>')"> <?php }?>
+    <?php if ($estilo=="Profesional") {
+        $imagenPro=get_term_meta(get_queried_object_id(),"background_profesional",true);?>
+       <div class="header-general" style="background: url('<?php echo wp_get_attachment_image_src($imagenPro,'full')[0];?>')"> <?php }?>
+        <div class="container header-desk division">
+            <h1 class="header-titulo"><?php echo get_term_meta(get_queried_object_id(),"titulo_header",true)?></h1>
+            <p class="header-texto"><?php echo get_term_meta(get_queried_object_id(),"texto_header",true)?></p>
+            <?php $imagenHeader=get_term_meta(get_queried_object_id(),"imagen_header",true);?>
+            <img class="imagen-header" src="<?php echo wp_get_attachment_image_src($imagenHeader,'full')[0];?>">
+        </div>
+    <div class="container empty division"></div>
+    
+</div>
+    <div class="menuFlotanteContainer">
+    <?php $imagenMenu=get_term_meta(get_queried_object_id(),"imagen_menu_inferior",true);?>
+    <?php $imagenMenuPro=get_term_meta(get_queried_object_id(),"imagen_menu_inferior_profesional",true);?>
 
-
-            </div>
+        <div class="imagenMenuFlotante <?php if($estilo =="Profesional") echo "quitarSombra" ?>"  
+        style="background: url('<?php if($estilo=="Amateur") echo wp_get_attachment_image_src($imagenMenu,'full')[0]; 
+        else echo wp_get_attachment_image_src($imagenMenuPro,'full')[0]; ?>')"> 
+			<div class=" menuContainer menuHeaderHomeContainer <?php if($estilo=="Profesional") echo "menuHeaderHomeDark";?>">
+			<?php foreach($cats as $cat){
+                $argsPost = array(
+                    'post_type'=> 'bicicleta',
+                    'order'    => 'ASC',
+                    'category_name'=> $cat->name
+                );
+                $the_query_post = new WP_Query( $argsPost );
+                if($the_query_post->posts){
+                ?>
+			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
+			 <?php }} ?>	
+		</div> 
         </div>
         
-        <div class="foto-der container">
-        <?php
-        $imagenCat=get_term_meta(get_queried_object_id(),"imagen_post_categoria",true);?>
-        <img src="<?php echo wp_get_attachment_image_src($imagenCat,'medium')[0];?>">
-            <!-- <img class="img-fluid" src="<?php echo the_field('imagen_post_categoria', $category);?>"> -->
-        </div>
     </div>
-</div>     
+<!--PARA RESPONSIVE-->
+    <div class="container header-responsive">
+        <div class="img-responsive">
+        <?php $imagenHeaderResp=get_term_meta(get_queried_object_id(),"imagen_header_responsive",true);?>
+        <?php $imagenHeader=get_term_meta(get_queried_object_id(),"imagen_header",true);?>
+            <img class="imagen-header2" src="<?php echo wp_get_attachment_image_src($imagenHeaderResp,'full')[0];?>">
+            <img class="imagen-header3" src="<?php echo wp_get_attachment_image_src($imagenHeader,'full')[0];?>">
+        </div>
+        <div class="texto-responsive2">
+            <p class="header-texto2"><?php echo get_term_meta(get_queried_object_id(),"texto_header",true) ?></p>
+            </div>    
 
+    </div>
+
+
+</div>
+
+
+
+    <div class="seccion-intro container">
+        <div class="por-categoria">
+            <div class="izq">
+                <div class="title">
+                    <?php echo get_queried_object()->name ?>
+                </div>
+                <div class="descripcion">
+                    
+                    <?php echo the_archive_description(); ?>
+                </div>
+                <div class="fondo">
+
+                    <img src="<?php echo get_site_url();?>/wp-content/uploads/2021/07/Group-944.png" alt="">     
+
+
+                </div>
+            </div>
+            
+            <div class="foto-der container">
+            <?php
+            $imagenCat=get_term_meta(get_queried_object_id(),"imagen_post_categoria",true);?>
+            <img src="<?php echo wp_get_attachment_image_src($imagenCat,'full')[0];?>">
+            </div>
+        </div>
+
+    </div>     
+
+    <div class="titulo-modelo-categoria container">
+              <p><?php echo get_term_meta(get_queried_object_id(),"titulo_de_modelos",true)?></p>     
+        </div>
+            
             <div class="section-categoria-bicicleta">
+                
               <div class="categoria-bicicleta">
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post();
 
