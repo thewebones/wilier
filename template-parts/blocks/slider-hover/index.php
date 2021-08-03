@@ -19,7 +19,7 @@ else{
 <h2>Categorias</h2>
                       
 
-    <div class="carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false}'>
+    <div class="carousel container" data-flickity='{ "wrapAround": false, "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false}'>
     <?php foreach( $categories as $category ) {
          $argsPost = array(
             'post_type'=> 'bicicleta',
