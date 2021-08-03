@@ -182,20 +182,26 @@
                   display: contents;
                }
                .boton {
-                   justify-content: end;
-                      border: 1px solid #000;
-                     color: black;
-                       box-sizing: border-box;
-                      font-size: 18px;
-                     font-weight: 500;
-                       font-family: 'Roboto';
-                       width: 140px;
-                       height: 40px;
-                       display: flex;
-                       align-items: center;
-                       justify-content: center;
-
+                    justify-content: end;
+                    border: 1px solid #000;
+                    color: black;
+                    box-sizing: border-box;
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-family: 'Roboto';
+                    width: 140px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor:pointer;
                }
+               .boton:hover{
+                    background:#00873A !important;
+               }
+               .boton:hover a{
+                    color:white !important;
+           }
           }
           
          
@@ -226,6 +232,10 @@
               line-height: 21px;
               letter-spacing: 0.0125em;
               text-decoration: none;
+           }
+           .boton-card-producto a:hover{
+                background: #C12728;
+                text-decoration: none;
            }
       }
 }

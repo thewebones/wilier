@@ -50,7 +50,7 @@ else{
                         <img src="<?php echo get_field("imagen") ?>"/>
                     </div>
                     <div class="comentarioInfoContainer mt-4">
-                    <div class="pComentariosWP">
+                    <div class="pComentariosWP" >
                         <h1 class="texto-profesional"><?php echo get_field("texto_profesional")?></h1>
                         <div class="boton-profesional">
                             <a class="boton-profesional" onClick="change()">

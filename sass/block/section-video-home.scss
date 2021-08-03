@@ -32,6 +32,10 @@
         margin-top: -150px;
         z-index: 9999; 
     }
+    .boton-video:hover{
+        background: #C12728;
+        text-decoration:none;
+    }
     .boton-video-home a {
         width: 313px;
         height: 50px;
@@ -51,6 +55,9 @@
         margin-right: 20%;
         @media (max-width: 691px) {
             margin-right: 0 !important;
+            font-size: 14px;
+            width: 260px;
+            height: 40px;
         }
      }
     

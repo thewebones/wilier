@@ -57,11 +57,11 @@
     font-size: 18px;
     line-height: 23px;
     letter-spacing: 0.0015em;
-    background: #EE3031;
-    color:white;
+    background: #EE3031 !important;
+    color:white !important;
 }
 .form_button_comunidad:hover{
-    background: #C12728;
+    background: #C12728 !important;
 }
 @media (max-width:500px){
     .form_comunidad_container{
