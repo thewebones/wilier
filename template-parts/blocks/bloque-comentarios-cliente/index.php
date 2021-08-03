@@ -13,14 +13,16 @@ else{
 <div class="slider_container">
     <h1 class="slider_title_bloque_mundo container mb-4 <?php if($estilo=="Profesional") echo "whiteColorText"; ?>"><?php echo get_field("titulo_seccion") ?></h1>
     <div id="carouselExampleIndicators1" class="carousel slide containerCarousel" style="background-image:url(<?php if($estilo=="Profesional") echo get_field("fondo_profesional");else echo get_field("fondo_amateur"); ?>)" data-ride="carousel">
-    <div class="carousel-inner  ">
+    <div class="carousel-inner comentarioRelativeContainer ">
         <?php if(get_field("repeater_clientes"))
             foreach(get_field("repeater_clientes") as $cliente){
         ?>
-            <div class="carousel-item <?php if($cont==0) echo "active"?>">
-                <div class="comentarioInfoContainer container">
-                    <p class="agente_nombre evento_modelo"><?php echo $cliente["nombre"] ?></p>
-                    <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $cliente["comentario"] ?> </p>
+            <div class="carousel-item item-cliente <?php if($cont==0) echo "active"?>">
+                <div class="container pInnerComentarios">
+                    <div class="pComentarios">
+                        <p class="agente_nombre evento_modelo"><?php echo $cliente["nombre"] ?></p>
+                        <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $cliente["comentario"] ?> </p>
+                    </div>
                 </div>    
                 <div class="slider-inner-comentarios"> 
                 <div class="svgContainerComent">    
@@ -49,8 +51,8 @@ else{
             } ?>  
     </div>
 </div>
-</div>
-<div class="btnSliderContainer">
+
+<div class="btnSliderContainer mt-5">
     <button class="btn btn-slider-change mr-2 <?php if($estilo=="Profesional") echo "borderWhite"; ?>" data-target="#carouselExampleIndicators1" data-slide="prev">
         <span>
         <?php if($estilo=="Profesional") {?>
@@ -67,6 +69,7 @@ else{
             <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/light/next.svg"/>
         <?php } ?>
     </button>
+</div>
 </div>
 </div>
 <script>
