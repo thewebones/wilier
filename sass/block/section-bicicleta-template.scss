@@ -184,7 +184,7 @@
        }
      }
      .img-modelo{
-      width: 60%;
+      width: 50%;
       padding: 5% 0%;
       padding-left: 15%;
       @media only screen and (max-width: 1200px) {
@@ -291,6 +291,21 @@
       .titulo-section-productos {
         color: white !important;
       }
+      .card {
+        background-color: #000;
+        color: #fff;
+        a {
+            color: #fff !important;
+        }
+    }
+    .action {
+        .boton {
+            border: 1px solid #fff !important;
+            a {
+            color: white !important;
+            }
+        }
+    }
     }
 
     .titulo-section-productos {
@@ -405,7 +420,7 @@
  .fondo {
   margin-top: -250px;
   height: 400px; 
-  margin-bottom: 100px;   
+  padding-bottom: 100px;   
   background-repeat-y: no-repeat;
   background-size: cover;
   @media only screen and (max-width: 600px) {

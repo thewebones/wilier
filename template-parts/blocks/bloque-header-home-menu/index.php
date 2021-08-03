@@ -26,7 +26,8 @@ $cats=get_categories($args);
             <img class="imagen-header" src="<?php if($estilo=="Profesional") echo get_field("imagen_header_profesional"); else echo get_field("imagen_header");?>">
         </div>
     <div class="container empty division"></div>
-    <div class="menuFlotanteContainer">
+</div>
+        <div class="menuFlotanteContainer">
         <div class="imagenMenuFlotante <?php if($estilo =="Profesional") echo "quitarSombra" ?>"  
         style="background: url('<?php if($estilo=="Amateur") echo get_field("imagen_menu_inferior"); else echo get_field("imagen_menu_inferior_profesional"); ?>')"> 
 			<div class=" menuContainer menuHeaderHomeContainer <?php if($estilo=="Profesional") echo "menuHeaderHomeDark";?>">
@@ -45,7 +46,7 @@ $cats=get_categories($args);
         </div>
         
     </div>
-    </div>
+
 <!--PARA RESPONSIVE-->
     <div class="container header-responsive">
         <div class="img-responsive">
