@@ -7,7 +7,7 @@ $('p.expandable').expander({
     userCollapseText:'cerrar'
 });
 
-document.getElementById("primary").addEventListener("click",(e)=>{
+document.getElementById("primary").addEventListener("click",function(e){
     if(document.getElementById("sideNavigation")!=e.target){
     closeNav();
     closeNav2();}
@@ -37,7 +37,7 @@ function closeNav2() {
     document.getElementById("sideNavigation2").style.width = "0";
     closeNav();
 }
-function returnbtn(){
+function returnBtn(){
     document.getElementById("sideNavigation2").style.width = "0";
     openNav();
 }

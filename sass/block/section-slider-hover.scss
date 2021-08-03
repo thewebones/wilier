@@ -40,7 +40,9 @@
     height: fit-content;
     margin: auto !important;
   }
-   
+  .carousel .flickity-viewport{
+      height:536px !important;
+  }
   /* cell number */
   .carousel-cell:before {
     display: block;

@@ -32,7 +32,7 @@ $cont=0;
                         <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["experiencia"] ?> </p>
                             </div>
                         <a href="<?php echo $agente["link_whatsapp"]["url"] ?>" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
-                            <?php echo $agente["link_whatsapp"]["title"] ?> 
+                            <span><?php echo $agente["link_whatsapp"]["title"] ?> </span>
                             <span>
                                 <?php if($estilo=="Profesional"){ ?>
                                 <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>

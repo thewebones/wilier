@@ -13,15 +13,17 @@ else{
 	}else
 		$estilo=$_COOKIE["estilo"];
 	}
-    $estilo="Amateur";
+   
 ?>
 
 <section class="wilier-section <?php echo $estilo?>">
     <div class="container">
      <div class="contenidoinside">
         <div class="contenido-wilier division">
-            <h1 class="titulo-wilier"><?php echo get_field("titulo_wilier")?></h1>
-            <p class="texto-wilier"><?php echo get_field("texto_wilier")?></p>
+            <div>
+                <h1 class="titulo-wilier"><?php echo get_field("titulo_wilier")?></h1>
+                <p class="texto-wilier"><?php echo get_field("texto_wilier")?></p>
+            </div>
         </div>
         <div class="imagencontenedor division">
             <div class="imageSectionContainer">
@@ -34,21 +36,21 @@ else{
      </div>
     </div>
     <div class="imagen-marca" style="
-    <?php if($estilo="Profesional"){?>
+    <?php if($estilo=="Profesional"){?>
     background: url('<?php echo get_site_url();?> /wp-content/themes/wilier/img/fondo_profesional.jpg')
     <?php }else{ ?>
     background: url('<?php echo get_site_url();?>/wp-content/themes/wilier/img/fondo_amateur.jpg')
     <?php } ?>
     ">
-        <div class="container">
+        <div class="container footerMovilSection">
             <div class="logoContainer">
 	    			<a href="<?php echo get_site_url(); ?>">
 	    			<img width="200px" 
 	    				src=
 	    				"<?php if($estilo=="Profesional")
-	    				echo get_field("logo_profesional","option"); 
+	    				echo get_field("wilier_marca_profesional"); 
 	    				else 
-	    				echo get_field("logo_amateur","option");?>"/>
+	    				echo get_field("wilier_marca_amateur");?>"/>
 	    			</a>
 	    	</div>
         </div>

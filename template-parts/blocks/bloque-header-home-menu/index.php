@@ -15,7 +15,7 @@ $args=array(
 $cats=get_categories($args);
 ?>
 
-<section class="header-home <?php echo get_field("estilo")?>">
+<section class="header-home <?php echo $estilo?>">
     <?php if (get_field("estilo")=="Amateur") {?>
         <div class="header-general" style="background: url('<?php echo get_field("background_amateur")?>')"> <?php }?>
     <?php if (get_field("estilo")=="Profesional") {?>
@@ -26,8 +26,22 @@ $cats=get_categories($args);
             <img class="imagen-header" src="<?php if($estilo=="Profesional") echo get_field("imagen_header_profesional"); else echo get_field("imagen_header");?>">
         </div>
     <div class="container empty division"></div>
-</div>
-        <div class="menuFlotanteContainer">
+    </div>
+<!--PARA RESPONSIVE-->
+    <div class="container header-responsive">
+        <div class="img-responsive">
+            <img class="imagen-header2" src="<?php echo get_field("imagen_header_responsive")?>">
+            <img class="imagen-header3" src="<?php echo get_field("imagen_header")?>">
+        </div>
+        <div class="texto-responsive2">
+            <p class="header-texto2"><?php echo get_field("texto_header")?></p>
+            </div>    
+
+    </div>
+
+
+</section>
+<div class="menuFlotanteContainer">
         <div class="imagenMenuFlotante <?php if($estilo =="Profesional") echo "quitarSombra" ?>"  
         style="background: url('<?php if($estilo=="Amateur") echo get_field("imagen_menu_inferior"); else echo get_field("imagen_menu_inferior_profesional"); ?>')"> 
 			<div class=" menuContainer menuHeaderHomeContainer <?php if($estilo=="Profesional") echo "menuHeaderHomeDark";?>">
@@ -46,18 +60,3 @@ $cats=get_categories($args);
         </div>
         
     </div>
-
-<!--PARA RESPONSIVE-->
-    <div class="container header-responsive">
-        <div class="img-responsive">
-            <img class="imagen-header2" src="<?php echo get_field("imagen_header_responsive")?>">
-            <img class="imagen-header3" src="<?php echo get_field("imagen_header")?>">
-        </div>
-        <div class="texto-responsive2">
-            <p class="header-texto2"><?php echo get_field("texto_header")?></p>
-            </div>    
-
-    </div>
-
-
-</section>
