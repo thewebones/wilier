@@ -14,7 +14,7 @@ else{
 		$estilo=$_COOKIE["estilo"];
 	}
 ?>
-<div class="profesional-section  <?php echo $estilo?>">
+<div class="profesional-section <?php echo $estilo?>">
 <div class="carousel slide containerCarousel" style="background-image:url(<?php if($estilo=="Profesional") echo get_field("fondo_profesional");else echo get_field("fondo_amateur"); ?>)">
     <div class="comentarioRelativeContainer">
             <div class="item-cliente">
