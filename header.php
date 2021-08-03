@@ -120,7 +120,7 @@ $cats=get_categories($args);
 			$the_query_post = new WP_Query( $argsPost );
 			if($the_query_post->posts){
 				 ?>
-			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
+			 	<a class="mb-3" href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
 			 <?php }} ?>	
 			</div>
 		

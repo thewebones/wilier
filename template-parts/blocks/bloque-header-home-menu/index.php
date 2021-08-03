@@ -26,25 +26,6 @@ $cats=get_categories($args);
             <img class="imagen-header" src="<?php if($estilo=="Profesional") echo get_field("imagen_header_profesional"); else echo get_field("imagen_header");?>">
         </div>
     <div class="container empty division"></div>
-    <div class="menuFlotanteContainer">
-        <div class="imagenMenuFlotante <?php if($estilo =="Profesional") echo "quitarSombra" ?>"  
-        style="background: url('<?php if($estilo=="Amateur") echo get_field("imagen_menu_inferior"); else echo get_field("imagen_menu_inferior_profesional"); ?>')"> 
-			<div class=" menuContainer menuHeaderHomeContainer <?php if($estilo=="Profesional") echo "menuHeaderHomeDark";?>">
-			<?php foreach($cats as $cat){
-                $argsPost = array(
-                    'post_type'=> 'bicicleta',
-                    'order'    => 'ASC',
-                    'category_name'=> $cat->name
-                );
-                $the_query_post = new WP_Query( $argsPost );
-                if($the_query_post->posts){
-                ?>
-			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
-			 <?php }} ?>	
-		</div> 
-        </div>
-        
-    </div>
     </div>
 <!--PARA RESPONSIVE-->
     <div class="container header-responsive">
@@ -60,3 +41,22 @@ $cats=get_categories($args);
 
 
 </section>
+<div class="menuFlotanteContainer">
+        <div class="imagenMenuFlotante <?php if($estilo =="Profesional") echo "quitarSombra" ?>"  
+        style="background: url('<?php if($estilo=="Amateur") echo get_field("imagen_menu_inferior"); else echo get_field("imagen_menu_inferior_profesional"); ?>')"> 
+			<div class="menuContainer menuHeaderHomeContainer <?php if($estilo=="Profesional") echo "menuHeaderHomeDark";?>">
+			<?php foreach($cats as $cat){
+                $argsPost = array(
+                    'post_type'=> 'bicicleta',
+                    'order'    => 'ASC',
+                    'category_name'=> $cat->name
+                );
+                $the_query_post = new WP_Query( $argsPost );
+                if($the_query_post->posts){
+                ?>
+			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
+			 <?php }} ?>	
+		</div> 
+        </div>
+        
+    </div>
