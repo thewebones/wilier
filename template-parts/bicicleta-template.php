@@ -24,7 +24,7 @@
 
         ?>  
             <div class="carousel-cell">
-                <img class="img" src="<?php echo get_post_meta(get_the_ID(),'imagen-'.$i,true) ?>" alt="slide"  style="width: 100% !important; height: 100%; object-fit: fill;">
+                <img class="img" src="<?php echo get_post_meta(get_the_ID(),'imagen-'.$i,true) ?>" alt="slide" >
             </div>
         <?php } ?>    
     </div>

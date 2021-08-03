@@ -154,8 +154,9 @@
 .foto-der {
     display: flex;
     justify-content: end;
-    width: 50%;
+    width: 100%;
     img {
+    width:inherit;
     object-fit: cover;
     }
     @media only screen and (max-width: 995px) {
