@@ -16,7 +16,7 @@ else{
 
 <section class="section-slider-hover <?php echo $estilo?>">
 <div class="container">
-<h2>Categorias</h2>
+<h2 class="tituloCategoriaHover">Categorias</h2>
                       
 
     <div class="carousel container" data-flickity='{ "wrapAround": false, "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false}'>

@@ -60,12 +60,15 @@
     line-height: 21px;
     letter-spacing: 0.0125em;
   }
+  .boton-header-home:hover,.boton-header-home2:hover{
+    background: #C12728;
+  }
   .boton-header-home2 {
     background: #EE3031;
     height: 35px;
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     color: white;
     font-family: Roboto;
     font-style: normal;
@@ -96,11 +99,9 @@
       display: none;
     }
     .header-general {
-      height: 100% !important;
+      height: 40vh !important;
     }
-    .header-titulo {
-      padding-top: 70px !important;
-    }
+
     .header-desk {
       padding-bottom: 50px !important;
       display: flex;

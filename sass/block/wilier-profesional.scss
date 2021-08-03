@@ -22,6 +22,9 @@
   .texto-profesional {
     width: 80% !important;
   }
+  .boton-profesional:hover{
+    background: #C12728;
+  } 
   .boton-profesional {
     background: #EE3031;
     width: 313px;
@@ -51,7 +54,7 @@
   @media (max-width: 997px) {
     .texto-profesional {
       width: 95% !important;
-      font-size: 32px !important;
+      font-size: 22px !important;
     }
     .pComentariosWP{
       width:100%;

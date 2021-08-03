@@ -19,6 +19,8 @@
     font-size:36px;
     font-weight: bold;
     font-family: Roboto;
+    font-style:normal;
+    line-height:56px;
 }
 .slider_item{ 
     display:flex;
@@ -29,8 +31,12 @@
 .slider_price{ 
     color:#009641;
     font-size: 16px;
-    font-weight: 500;
     width:50%;
+    font-weight: 500;
+    font-family: Roboto;
+    font-style:normal;
+    line-height:28px;
+    letter-spacing: 0.005em;
 }
 .slider_button_price{
     display:flex;
@@ -39,6 +45,11 @@
 .slider_categoria{
     color:#7B91B1;
     font-size:18px;
+    font-weight: normal;
+    font-family: Roboto;
+    font-style:normal;
+    line-height:21px;
+    letter-spacing: 0.005em;
 }
 
 .slider_carousel{
@@ -56,6 +67,11 @@
     display: flex !important;
     justify-content:center;
     width: fit-content;
+    font-weight: 500;
+    font-family: Roboto;
+    font-style:normal;
+    line-height:21px;
+    letter-spacing: 0.0125em;
 }
 .btn-slider span{
     margin:0 3px;
@@ -77,9 +93,18 @@
 .slider_modelo{
     font-size: 36px;
     font-weight: bold;
+    font-family: Roboto;
+    font-style:normal;
+    line-height:46px;
+    letter-spacing: 0.005em;
 }
 .slider_description{
     font-size:18px;
+    font-weight: normal;
+    font-family: Roboto;
+    font-style:normal;
+    line-height:21px;
+    letter-spacing: 0.005em;
 }
 .carrusel_container{
     overflow: initial;
