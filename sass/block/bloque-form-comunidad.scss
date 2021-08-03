@@ -51,7 +51,17 @@
     top:-4vw;
 }
 .form_button_comunidad{
-    font-size: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.0015em;
+    background: #EE3031;
+    color:white;
+}
+.form_button_comunidad:hover{
+    background: #C12728;
 }
 @media (max-width:500px){
     .form_comunidad_container{
@@ -82,7 +92,7 @@
        padding:10px 10px;
     }
     
-    .btn-danger {
+    .btn-formulario {
         border-radius: 0;
     } 
     .form_input,.form_titulo,.form_button_comunidad{
