@@ -12,10 +12,10 @@ else{
   
 <div class="bloque_mapa_container <?php if($estilo=="Profesional") echo "bloque_mapa_container_dark" ?>">
     <div class="menu_mapa_container">
-        <p class="menu_title"><?php echo get_field("titulo") ?></p>
+        <p class="menu_title"><?php echo get_field("titulo","option") ?></p>
         <div class="radio_container">
-            <?php if(get_field("repeater_opciones")) 
-            foreach(get_field("repeater_opciones") as $radioItem){
+            <?php if(get_field("repeater_opciones","option"))
+            foreach(get_field("repeater_opciones","option") as $radioItem){
                 $address=$radioItem["imagen"];
                 $adress_url=str_replace(' ','%20',$address);
             ?>

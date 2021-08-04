@@ -10,3 +10,7 @@ html{
 footer{
     border-top: 4px solid black;
 }
+#sb_instagram #sbi_images img{
+    height: 100% !important;
+    object-fit: cover !important;
+}
