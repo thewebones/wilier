@@ -1,6 +1,6 @@
 .slider_container{
-    padding-top: 4vw;
-    padding-bottom: 4vw;
+    padding-top: 80px;
+    padding-bottom: 141px;
 }
 
 .slider_container_dark{
@@ -16,10 +16,11 @@
 
 .slider_title{
     text-align: center;
-    font-size:36px;
+    font-size:48px;
     font-weight: bold;
     font-family: Roboto;
     font-style:normal;
+    margin-bottom: 95px;
     
 }
 .slider_item{ 
@@ -30,7 +31,7 @@
 }
 .slider_price{ 
     color:#009641;
-    font-size: 16px;
+    font-size: 24px;
     width:50%;
     font-weight: 500;
     font-family: Roboto;
@@ -76,9 +77,10 @@
 .btn-slider:hover{
     color:white !important;
     background:#00873A !important;
+    border-color: white !important;
 }
 .btn-slider span{
-    margin:0 3px;
+    margin:0 7px;
 }
 .btn-slider-change{
     border: 1px solid #0B0B0B !important;
@@ -86,13 +88,12 @@
     height:55px;
 }
 .imagen_slider_container{
-    width:530px;
-    height:336px;
+
 }
 .imagen_slider_container img{
-    width:inherit;
-    height:inherit;
-    object-fit: contain;
+    width:630px !important;
+    height:336px !important;
+    object-fit: cover !important;
 }
 .slider_modelo{
     font-size: 36px;
@@ -101,6 +102,7 @@
     font-style:normal;
     line-height:46px;
     letter-spacing: 0.005em;
+    margin-bottom: 50px;
 }
 .slider_description{
     font-size:18px;
@@ -123,6 +125,15 @@
     flex-direction: column;
     justify-content:space-between;
 }
+.slider_button_price{
+    justify-content: space-between;
+
+    a span{
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
 @media (max-width:1070px){
     .slider_item{ 
        flex-direction: column;
@@ -130,9 +141,7 @@
        border:2px solid #e8e7e7;
        padding:0 0 5vw 0;
     }  
-    .slider_button_price{
-        justify-content: space-between;
-    }
+
     .imagen_slider_container{
         text-align:center;
         margin-top:50px;

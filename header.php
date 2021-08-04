@@ -57,6 +57,10 @@ else{
             font-family: 'OpenSans-Light';
             src: url('http://54.70.40.230/wp-content/themes/wilier/webfonts/OpenSans-Light.ttf') format('truetype');
         }
+        @font-face {
+            font-family: 'OpenSans-ExtraBold';
+            src: url('http://54.70.40.230/wp-content/themes/wilier/webfonts/OpenSans-ExtraBold.ttf') format('truetype');
+        }
     </style>
 	<?php wp_head(); ?>
 </head>

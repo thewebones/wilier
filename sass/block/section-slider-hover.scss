@@ -3,13 +3,14 @@
 
     h4 {
         margin-top: 25px !important;
-        color: gray;
+        color: #768BAA;
     }
     h2 {
         text-align: center;
         font-size: 48px;
-        font-weight: bold;
+        font-weight: 700;
       font-family: Roboto;
+      margin-bottom: 104px;
     } 
 
     
@@ -98,7 +99,7 @@
 }
 
 .fondo {
-    margin-top: -250px;
+    margin-top: -320px;
     height: 400px;    
     background-repeat-y: no-repeat;
     background-size: cover;
@@ -121,7 +122,7 @@
     }
 
     .boton-slider a {
-        width: 313px;
+        width: 220px;
         height: 50px;
         color: white !important;
         background: #EE3031;
@@ -132,7 +133,7 @@
         font-family: Roboto;
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 21px;
         letter-spacing: 0.0125em;
         text-decoration: none;
