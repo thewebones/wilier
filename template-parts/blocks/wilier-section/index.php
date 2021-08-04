@@ -37,9 +37,9 @@ else{
     </div>
     <div class="imagen-marca" style="
     <?php if($estilo=="Profesional"){?>
-    background: url('<?php echo get_site_url();?> /wp-content/themes/wilier/img/fondo_profesional.jpg')
+    background: url('<?php echo get_site_url();?> /wp-content/themes/wilier/img/fondo_profesional.png')
     <?php }else{ ?>
-    background: url('<?php echo get_site_url();?>/wp-content/themes/wilier/img/fondo_amateur.jpg')
+    background: url('<?php echo get_site_url();?>/wp-content/themes/wilier/img/fondo_amateur.png')
     <?php } ?>
     ">
         <div class="container footerMovilSection">

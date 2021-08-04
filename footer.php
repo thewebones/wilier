@@ -29,7 +29,7 @@
 $cats=get_categories($args);
  ?>
  
-<div class="footer_container <?php if($estilo=="Profesional")echo "footer_container_dark"; ?>" style="background-image:url(<?php if($estilo=="Profesional") echo get_site_url()."/wp-content/themes/wilier/img/fondoFooterProfesional.png"?>)">
+<div class="container footer_container <?php if($estilo=="Profesional")echo "footer_container_dark"; ?>" style="background-image:url(<?php if($estilo=="Profesional") echo get_site_url()."/wp-content/themes/wilier/img/fondoFooterProfesional.png"?>)">
 			<div class="footer_links">
 				<div class="footer_description_page flex_column">
 					<div class="footer_imagen">

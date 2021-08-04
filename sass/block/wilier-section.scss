@@ -1,7 +1,7 @@
 
 .imageSectionContainer{
   width:100%;
-  height:120vh;
+  height:750px;
 }
 .imageSectionContainer img{
   width:inherit;
@@ -9,7 +9,7 @@
   object-fit:cover;
 }
 .wilier-section {
-    padding: 50px 0;
+    padding: 160px 0;
    
   .contenidoinside {
     padding: 0;
@@ -17,6 +17,9 @@
     flex-wrap: wrap;    
     .division{
       width: 50%;
+      display: flex;
+      align-items: center;
+      padding-right: 100px;
     }
    
   }
@@ -75,6 +78,8 @@
     }
     .imagen-marca {
       margin-top: 0 !important;
+
+
     }
     .texto-wilier2 {
 
@@ -105,6 +110,7 @@
     margin-top: -160px;
     display: flex;
     align-items: center;
+    background-size: contain;
   }
   .texto-wilier {
     font-family: Roboto;
