@@ -10,15 +10,14 @@ else{
 <div class="<?php if($estilo=="Profesional") echo "dark";?>">
 <div class="form_comunidad_container">
     <img src="<?php echo get_field("imagen_fondo_formulario","option")?>"/>
-    <div class="form_container" style="background: url('<?php echo get_field("imagen_fondo_negra","option")?>')">
+            <div class="form_container" style="background: url('<?php echo get_field("imagen_fondo_negra","option")?>')">
        
             <p class="form_titulo"><?php echo get_field("titulo_formulario","option") ?></p>
             <div class="input_container">
-            <?php echo do_shortcode ("[mc4wp_form id=246]");
-            ?>
-       
+            <?php echo "[mc4wp_form id=246]" ?>
+
+            </div>
         </div>
-</div>
 </div>
 <div class="form_comunidad_footer">
     <?php if ($estilo=="Amateur"){?>
@@ -28,4 +27,4 @@ else{
     <?php } ?>    
 </div>
 </div>
-<!-- formulario pagi oficial 183 -->
+

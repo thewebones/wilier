@@ -41,7 +41,15 @@ function returnBtn(){
     document.getElementById("sideNavigation2").style.width = "0";
     openNav();
 }
-
+function ocultarNombre(){
+    document.getElementsByClassName("containerNombre")[0].style="display:none";
+}
+function ocultarEmail(){
+    document.getElementsByClassName("containerEmail")[0].style="display:none";
+}
+function ocultarTel(){
+    document.getElementsByClassName("containerTel")[0].style="display:none";
+}
 $( document ).ready(function() {
     $('#myModal').modal('toggle');
 });

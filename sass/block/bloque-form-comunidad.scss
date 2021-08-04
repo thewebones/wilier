@@ -1,3 +1,17 @@
+.generalSpanContainer{
+    position:relative;
+}
+.containerEmail,.containerTel,.containerNombre{
+    position:absolute;
+    left:5%;
+    top:0;
+    font-family:Roboto;
+    font-style:normal;
+    font-weight: 500;
+    font-size:16px;
+    line-height: 19px;
+    color:#7B91B1
+}
 .form_comunidad_container{
     position: relative;
     width:100%;
@@ -14,9 +28,10 @@
     display:flex;
     flex-direction: column;
     align-items:center;
-    justify-content:space-between;
+    justify-content:center;
     text-align: center;
-    width:280px;
+    width:375px;
+    height:533px;
     position:absolute;
     top:20%;
     left:5vw;
@@ -24,6 +39,7 @@
     padding: 40px 10px;
 }
 .form_titulo{
+    margin-bottom:15%;
     color:#fff;
     font-size:18px;
     font-weight:bold;
@@ -31,10 +47,16 @@
     font-style: normal;
     line-height: 21px;
     letter-spacing: 0.0125em;
+    width: 80%;
 }
-
+.input_container{
+    width:100%;
+}
+.input_container p{
+    margin:0;
+}
 .form_input{
-    height:30px;
+    height:50px;
     width:80%;
     font-size: 16px;
 }
@@ -55,15 +77,20 @@
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 0.0015em;
+    line-height: 21px;
+    letter-spacing: 0.0125em;
     background: #EE3031 !important;
     color:white !important;
+    width:150px;
+    height:50px;
 }
 .form_button_comunidad:hover{
     background: #C12728 !important;
 }
-@media (max-width:500px){
+@media (max-width:650px){
+    .input_container{
+        width:260px;
+    }
     .form_comunidad_container{
         position: initial;
         display:flex;
@@ -74,20 +101,28 @@
     .form_container{
         position: initial;
         width:100%;
+        height: 40vh;
     }
-    .input_container{
-        width:260px;
-    }
-    .form_input,.form_button_comunidad{
+    .form_button_comunidad{
+        width: 100px;
+        height: 30px;
         font-size: 14px;
     }
+    .form_input{
+        height: 30px;
+    }
     .form_titulo{
-        font-size: 16px; 
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .containerNombre,.containerTel,.containerEmail{
+        font-size: 14px;
     }
 }
-@media (min-width:501px) and (max-width:700px){
+@media (min-width:651px) and (max-width:800px){
     .form_container{
-       width:200px;
+       width:250px;
+       height: 350px;
        top: 10%;
        padding:10px 10px;
     }
@@ -95,8 +130,37 @@
     .btn-formulario {
         border-radius: 0;
     } 
-    .form_input,.form_titulo,.form_button_comunidad{
-        font-size: 12px;
+    .form_button_comunidad{
+        width: 100px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .form_input{
+        height: 30px;
+        font-size: 14px;
+    }
+    .form_titulo{
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .containerNombre,.containerTel,.containerEmail{
+        font-size: 14x;
     }
 
+}
+@media (min-width:801px) and (max-width:1000px){
+    .form_button_comunidad{
+        width: 100px;
+        height: 40px;
+    }
+    .form_input{
+        height: 40px;
+    }
+    .form_titulo{
+        margin-bottom: 0;
+    }
+    .form_container{
+        height: 400px;
+        width: 300px;
+    }
 }
