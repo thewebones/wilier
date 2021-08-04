@@ -12,160 +12,152 @@
         }else
             $estilo=$_COOKIE["estilo"];
         }
+        $cont=0;
 ?>
 
-<section class="section-bicicleta-template <?php echo $estilo ?>">
-    <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true}'>
-        <?php 
+<div id="carouselHeaderBicicletas" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner ">
+        <?php  
         $galeria_cont = get_post_meta( get_the_ID(), "repeater-slider", true );
-        for( $i = 0; $i < $galeria_cont; $i++ ) {
+        for( $i = 0; $i < $galeria_cont; $i++ ) { 
             $item = get_post_meta( get_the_ID(), 'repeater-slider_' . $i . '_imagen', true );
-            update_post_meta(get_the_ID(),'imagen-'.$i,wp_get_attachment_image_src($item,'full')[0]);
-
-        ?>  
-            <div class="carousel-cell">
+            update_post_meta(get_the_ID(),'imagen-'.$i,wp_get_attachment_image_src($item,'full')[0]);?>
+        <div class="carousel-item <?php if($cont==0)echo "active"?>"> 
+           <div class="containerHomeBicicletas">
                 <img class="img" src="<?php echo get_post_meta(get_the_ID(),'imagen-'.$i,true) ?>" alt="slide" >
-            </div>
-        <?php } ?>    
+           </div>
+        </div>
+        <?php 
+    $cont++;
+    } ?>
+    <div class="btnContainerBicicletas">
+        <button class="btn btn-slider-change mr-2 borderWhite" data-target="#carouselHeaderBicicletas" data-slide="prev">
+            <span>
+                <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/dark/prev.png"/>
+            </span>
+        </button>
+        <button class="btn btn-slider-change ml-2 borderWhite" data-target="#carouselHeaderBicicletas" data-slide="next">
+            <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/robe_recursos/dark/next.png"/>
+        </button>
     </div>
-    <div class="flecha">
+    <div class="imagenMedio">
     <?php $imagenId=get_post_meta(get_the_ID(),'flecha_slider',true);?>
         <img class="img-fluid" src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">    
     </div>
-
-    <div class="container categoria-section">
-        <h5 class="categoria-titulo"><?php echo get_the_category()[0]->name ?></h5>
-        <h1 class="categoria-name"><?php echo the_title() ?></h1>
-            <div class="categoria-img">
-                <?php if($estilo=="Profesional") {?>
-                    <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
-                    <img class="img-fluid" src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
-                <?php }else
-                    the_post_thumbnail(); ?>
+    </div>
+</div> 
+<div class="bicicletaContainerHeader">
+    <div class="InfoBicicleta mt-5">
+        <p class="biciCategoria"><?php echo get_the_category()[0]->name ?></p>
+        <p class="biciNombreModelo mb-5"><?php echo the_title() ?></p>
+        <div class="imagenBici mb-5">
+            <?php if($estilo=="Profesional"){ 
+            $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);  
+            ?>
+            <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>"/>
+            <?php }else 
+            the_post_thumbnail(); 
+            ?>  
+        </div>
+        <div class="biciDescripcionPrecio">
+            <div class="descripcionBiciContainer">
+                <p class="biciDescripcion"><?php echo get_the_excerpt() ?></p>
+                <p class="biciPrecio"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
             </div>
-        <div class="categoria-descripcion container">
-            <div class="categoria-texto-precio divs">
-                <p class="categoria-descripcion-texto"><?php echo get_the_excerpt() ?></p>
-                <p class="precio-cat"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
-            </div>
-                <div class="boton-categoria divs2">
-                    <a class="boton-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>">
-                        <?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?>
-                    <span class="ml-1">
-                        <?php if ($estilo == 'Profesional') { ?>
-                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
-
-                        <?php } else{?>
-                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">
-                        <?php } ?>
+            <div>
+                <a href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-bicicleta <?php if($estilo=="Profesional") echo "btn-bicicleta-profesional";else echo "btn-bicicleta-amateur" ?>">
+                    <span><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?></span> 
+                    <span>
+                        <?php if($estilo=="Profesional"){ ?>
+                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
+                        <?php }else{?>
+                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
+                        <?php } ?>        
                     </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="BiciCaracteristicasContainer">
+    <div class="fondoLateralCaracteristica">
+         <img src="<?php echo get_field("background_repeater")?>"/>                   
+    </div>
+<?php $modelo_cont = get_post_meta( get_the_ID(), "repeater_modelo", true );
+    for( $i = 0; $i < $modelo_cont; $i++ ) {
+        $item = get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_imagen_modelo', true );
+        update_post_meta(get_the_ID(),'imagen_modelo-'.$i,wp_get_attachment_image_src($item,'full')[0]);
+    ?>
+    <div class="caracteristica">
+        <div class="imagenCaracteristica">
+            <img src="<?php echo get_post_meta(get_the_ID(),'imagen_modelo-'.$i,true) ?>"/>
+        </div>
+        <div class="InfoCaracteristica">
+            <div>
+                <p class="biciCategoria"><?php echo the_title() ?></p>
+                <p class="biciNombreModelo mb-5"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_modelo', true ); ?> </p>
+                <p class="biciDescripcion"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_texto', true ); ?></p>
+            </div>
+            <div>
+                <a href="<?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["url"]  ?>" class="btn btn-bicicleta <?php if($estilo=="Profesional") echo "btn-bicicleta-profesional";else echo "btn-bicicleta-amateur" ?>">
+                    <span><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["title"]  ?></span> 
+                    <span>
+                        <?php if($estilo=="Profesional"){ ?>
+                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
+                        <?php }else{?>
+                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
+                        <?php } ?>        
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <?php } ?>
+</div>
+<div class="ProductosRelacionadosContainer">
+    <div class="tituloProdRelacionados">
+        <p class="tituloProductosRelacionados">
+            <?php echo get_post_meta( get_the_ID(), 'titulo_productos_relacionados', true); ?>
+        </p>
+    </div>
+    <div class="productosRelacionados">
+        <?php $prod_rel = get_post_meta( get_the_ID(), "productos_relacionados", true );
+        for( $i = 0; $i < $prod_rel; $i++ ) { 
+        $item = get_post_meta( get_the_ID(), 'productos_relacionados_' . $i . '_producto', true );  
+        ?>
+        <div class="SingleproductoRelacionado" >
+             <a href="<?php the_permalink($item); ?>" class="imagenProdRelaci" >
+                <?php if($estilo=="Profesional") {?>
+                <?php $imagenId=get_post_meta($item,'imagen_tema_profesional',true);?>
+                <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
+                <?php }else the_post_thumbnail($item); ?>
+            </a>    
+            <div class="InfoProdRelacionado">
+                <p class="biciCategoria"><?php echo get_the_category($item)[0]->name ?></p>
+                <p class="biciNombreModelo"><?php echo get_the_title($item) ?></p>
+                <p class="biciDescripcion"><?php echo get_the_excerpt($item) ?></p>
+                <div class="precioBotonRelacio">
+                    <p class="biciPrecio"><?php echo get_post_meta( $item, 'precio', true ) ?></p>
+                    <a href="<?php echo get_post_meta( $item, 'enlace_whatsapp', true )["url"] ?>" class="btn btn-bicicleta <?php if($estilo=="Profesional") echo "btn-bicicleta-profesional";else echo "btn-bicicleta-amateur" ?>">
+                        <span><?php echo get_post_meta( $item, 'enlace_whatsapp', true )["title"]  ?></span> 
+                        <span>
+                            <?php if($estilo=="Profesional"){ ?>
+                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
+                            <?php }else{?>
+                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
+                            <?php } ?>        
+                        </span>
                     </a>
                 </div>
-
-
+            </div>            
         </div>
-    </div>    
-
-        
-    <div class="modelo-bicicleta" style="background: url('<?php echo get_field("background_repeater")?>')">  
-    <h1 class="modelo-caract-responsive"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_modelo', true ); ?> </h1> 
-        <?php $modelo_cont = get_post_meta( get_the_ID(), "repeater_modelo", true );
-            for( $i = 0; $i < $modelo_cont; $i++ ) {
-                $item = get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_imagen_modelo', true );
-                update_post_meta(get_the_ID(),'imagen_modelo-'.$i,wp_get_attachment_image_src($item,'full')[0]);
-
-            ?>
-         <div class="container contenido-modelo">
-           <div class="img-modelo">
-           
-            <img class="image-part img-fluid" src="<?php echo get_post_meta(get_the_ID(),'imagen_modelo-'.$i,true) ?>">
-           </div>
-           <div class="division1">
-            <h2 class="modelo-nombre mb-2"><?php echo the_title() ?></h2>
-            <h1 class="modelo-caract mb-4"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_modelo', true ); ?> </h1>
-            <p class="modelo-texto"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_texto', true ); ?> </p>
-             <div class="btn-modelo">
-                 <a class="boton-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["url"]  ?>">
-                     <?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["title"]  ?>
-                     <span>
-                        <?php if($estilo == 'Profesional') { ?>
-                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg" alt="">
-
-                        <?php } else{?>
-                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg" alt="">
-                        <?php } ?>
-                    </span>
-                 </a>
-             </div>
-            </div>
-         </div>
         <?php } ?>
     </div>
-
-
-    <div class="titulo-section-productos">
-        <h5><?php echo get_post_meta( get_the_ID(), 'titulo_productos_relacionados', true); ?></h5> 
+    <div class="botonVerTodoProdRelacio">
+        <a class="btn botonVerTodo" href="<?php echo get_field("boton")["url"]?>">
+            <?php echo get_field("boton")["title"]?>  
+            <img class="flecha-btn ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
+        </a>                      
     </div>
+</div>
 
-    <div class="section-productos-relacionados container">
-                           
-
-    <?php $prod_rel = get_post_meta( get_the_ID(), "productos_relacionados", true );
-            for( $i = 0; $i < $prod_rel; $i++ ) { 
-             $item = get_post_meta( get_the_ID(), 'productos_relacionados_' . $i . '_producto', true );  
-              
-              ?>
-             
-
-             <div class="card">
-                             <a href="<?php the_permalink($item); ?>">
-                            <div class="card-image">
-                            <?php if($estilo=="Profesional") {?>
-                                <?php $imagenId=get_post_meta($item,'imagen_tema_profesional',true);?>
-                                <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
-                                <?php }else
-                                            the_post_thumbnail($item); ?>
-                            </div>
-                            </a>
-                            <div class="card-content">
-                                <span class="categoria"><?php echo get_the_category($item)[0]->name ?></span>
-                                <a href="<?php the_permalink(); ?>">    
-                                    <span class="card-title"><?php echo get_the_title($item) ?></span> 
-                                </a>   
-                                <p class="descripcion"><?php echo get_the_excerpt($item) ?></p>
-                            </div>
-                            <div class="action">
-                                <div class="precio">
-                                    <p class="precio"><?php echo get_post_meta( $item, 'precio', true ) ?></p>
-                                </div>
-                                
-                                <div class="boton">
-                                    <a class="btn-cotizar" href="<?php echo get_post_meta( $item, 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( $item, 'enlace_whatsapp', true )["title"]  ?>
-                                    <span class="ml-1">
-                                        <?php if($estilo=="Profesional"){ ?>
-                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
-                                        <?php }else{?>
-                                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>
-                                        <?php } ?>
-                                    </span>
-                                    </a>
-                                </div>
-                            </div>
-                           
-                        </div> 
-
-
-
-              <?php } ?>
-    </div>
-
-
-    <div class="fondo" style="background-image: url(<?php echo get_field("fondo_del_boton")?>)">
-        <div class="boton-modelos">
-            <a class="boton" href="<?php echo get_field("boton")["url"]?>">
-                <?php echo get_field("boton")["title"]?>  
-                <img class="flecha-btn ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
-            </a>
-        </div>                     
-    </div>
-</section>

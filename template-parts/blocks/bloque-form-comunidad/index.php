@@ -14,7 +14,7 @@ else{
        
             <p class="form_titulo"><?php echo get_field("titulo_formulario","option") ?></p>
             <div class="input_container">
-            <?php echo do_shortcode ("[mc4wp_form id=183]");
+            <?php echo do_shortcode ("[mc4wp_form id=246]");
             ?>
        
         </div>
@@ -28,3 +28,4 @@ else{
     <?php } ?>    
 </div>
 </div>
+<!-- formulario pagi oficial 183 -->

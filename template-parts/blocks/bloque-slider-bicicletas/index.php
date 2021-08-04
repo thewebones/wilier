@@ -45,7 +45,7 @@ else{
                             <div>
                                 <p class="slider_categoria"><?php echo get_the_category()[0]->name ?></p>
                                 <p class="slider_modelo mb-3"><?php echo the_title() ?></p>
-                                <p class="slider_description expandable"><?php echo get_the_excerpt() ?></p>
+                                <p class="slider_description"><?php echo get_the_excerpt() ?></p>
                             </div>
                             <div class="slider_button_price">
                                 <p class="slider_price">Desde <?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
@@ -77,3 +77,7 @@ else{
 </div>
 </div>
 </div>
+<script>
+    if(window.matchMedia("(max-width:850px)").matches)
+    document.getElementsByClassName("slider_description")[0].classList.add("expandable");
+</script>

@@ -1,466 +1,225 @@
-.section-bicicleta-template {
-  
-  .carousel {
-    width: 100%;
-    height: 100%;
-    }
-    
-    .carousel-cell {
-      width: 100%;
-      height: 110vh;
-      @media only screen and (max-width: 600px) {
-        height: 50vh;
-      }
-    }
-    .carousel-cell img{
-      width: 100% !important; 
-      height: 100%; 
-      object-fit: cover;
-    }
-    /* cell number */
-    .carousel-cell:before {
-      display: block;
-      text-align: center;
-      line-height: 200px;
-      font-size: 80px;
-      color: white;
-    }
-    .flickity-prev-next-button{
-      border-radius: 0% !important;
-      background-color: transparent !important;
-      border: 1px solid #fff;
-      margin-left: 3%;
-      margin-right: 3%;
-    }
-    .flickity-prev-next-button svg path{
-      fill: #fff !important;
-    }
-    .flickity-page-dots {
-      display: none;
-    }
-    .flecha {
-      position: relative;
-      margin-top: -200px;
-      text-align: center;
-      margin-bottom: 100px;
-      @media only screen and (max-width: 900px) {
-        display: none;
-      }
-    }
-    .categoria-section {
-      text-align: -webkit-center;
-    }
-    .categoria-titulo {
-      padding-top: 50px;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
-      letter-spacing: 0.005em;
-      color: #7B91B1;
-    }
-    .categoria-name {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 48px;
-      line-height: 56px;
-      color: #0B0B0B;
-    }
-    .categoria-img {
-      width: 862px;
-      height: 432px;
-      @media only screen and (max-width: 1200px) {
-        width: auto;
-        height: auto;
-      }
-    }
-    .categoria-img img {
-      width: inherit;
-      height: inherit;
-      object-fit: contain;
-    }
-    .categoria-descripcion {
-      display: flex;
-      width: 50%;
-      @media only screen and (max-width: 1200px) {
-        width: 85%;
-        margin: 0 !important;
-        justify-content:space-between;
-      }
-    }
-    
-    .categoria-texto-precio {
-      text-align: -webkit-left;
-      @media only screen and (max-width: 1200px) {
-        padding-left: 15px;
-        width: 60%;
-      }
-    }
-    .categoria-descripcion-texto {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
-      letter-spacing: 0.005em;
-      color: #0B0B0B;
-    }
-    .precio-cat {
-      margin-top: 30px;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 23px;
-      letter-spacing: 0.005em;
-      color: #00873A;
-    }
-      .boton-cotizar {
-        border: 1px solid #000;
-        color: black;
-        box-sizing: border-box;
-        font-size: 18px;
-        padding: 10px;
-        font-weight: 500;
-        font-family: 'Roboto';
-      }
-      .boton-categoria {
-        height: 40px;
-        display: flow-root;
-      }
-    @media (max-width: 800px) {
-      .categoria-descripcion-texto {
-        display: none;
-      }
-      .precio-cat {
-        margin-top: 25px;
-      }
-      .categoria-descripcion {
-        margin: 0 3% 0 3%;
-      }
-      .divs2, .divs {
-        width: 50% !important;
-      }
-      .categoria-texto-precio {
-        margin:0 0 0 0;
-        text-align: left;
-      }
-      .boton-categoria {
-        text-align: right;
-      }
-
-      }
-  &.Amateur {
-    background: white;
-  }
-  &.Profesional {
-    background: black;
-    .categoria-name, .categoria-descripcion-texto, .boton-cotizar {
-      color: white !important;
-    }
-  }
-
-
-
-      .modelo-bicicleta {
-        background-position: left !important;
-        background-repeat: no-repeat !important;
-        margin-top: 100px;
-        padding-bottom: 450px;
-        @media only screen and (max-width: 1200px) {
-          background-image: none;
-        }
-      }
-     .contenido-modelo {
-       display: flex;
-       align-items: center;
-       height: 700px;
-       
-       @media only screen and (max-width: 1200px) {
-         flex-direction: column;
-         height: fit-content;
-         padding-bottom: 50px;
-         text-align: -webkit-center;
-       }
-     }
-     .img-modelo{
-      width: 50%;
-      padding: 5% 0%;
-      padding-left: 15%;
-      @media only screen and (max-width: 1200px) {
-        width: 100%;
-        padding: 0 !important;
-        height: 100%;
-      }
-     }
-    .division1 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-      width: 37%;
-      padding: 5% 0%;
-      text-align: -webkit-left;
-      position: inherit;
-      @media only screen and (max-width: 1200px) {
-        width: 80%;
-        height: 100%;
-        margin-top: 10px !important;
-      }
-    }
-    .modelo-nombre {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
-      letter-spacing: 0.005em;
-      color: #7B91B1;
-    }
-    .modelo-caract {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 48px;
-      line-height: 56px;
-      color: #0B0B0B;
-    }
-    .modelo-caract-responsive {
-      display: none;
-    }
-    .modelo-texto {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
-      display: flex;
-      align-items: center;
-      letter-spacing: 0.005em;
-      color: #0B0B0B;
-
-    }
-    .btn-modelo {
-      top: 32.5%;
-      position: relative;
-    }
-  @media (max-width: 1200px) {
-    .division1 {
-      margin-top: 50px;
-      width: 100%;
-    }
-    .modelo-texto {
-      margin-bottom: 25px;
-    }
-    .modelo-bicicleta {
-      background: none !important;
-    }
-    .modelo-nombre, .modelo-caract {
-      display: none;
-    }
-    .modelo-caract-responsive {
-      display: block;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 38px;
-      line-height: 56px;
-      color: #0B0B0B;
-      text-align: center;
-    }
-    .btn-modelo {
-      text-align: -webkit-center;
-    }
-  }
-    &.Amateur {
-      background: white;
-    }
-    &.Profesional {
-      background: black;
-      .modelo-caract-responsive, .modelo-caract, .modelo-texto, .boton-cotizar {
-        color: white !important;
-      }
-      .boton-cotizar {
-        background: #EE3031;
-      }
-      .image-part {
-        border: solid;
-        border-width: 2px;
-        color: white;
-      }
-      .titulo-section-productos {
-        color: white !important;
-      }
-      .card {
-        background-color: #000;
-        color: #fff;
-        a {
-            color: #fff !important;
-        }
-    }
-    .action {
-        .boton {
-            border: 1px solid #fff !important;
-            a {
-            color: white !important;
-            }
-        }
-    }
-    }
-
-    .titulo-section-productos {
-      margin-top: -250px;
-      margin-bottom: 50px;
-      display: flex;
-      justify-content: center;
-      h5 {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 48px;
-        line-height: 56px; 
-      }
-    }
-    .section-productos-relacionados {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .card {
-      width: 405px;
-      height: 610px;
-      margin: 5px;
-      border: 2px solid #DFDFDF;
-      box-shadow: none;
-      @media only screen and (max-width: 600px) {        
-       width: 390px !important;    
-       visibility: hidden;
-     }
-     a {
-         text-decoration: none;
-         color: #000;
-     }
-  }
-  @media only screen and (max-width: 600px) {           
-   .card {
-       margin-left: 0px !important;       
-   }
-   .card.is-selected {
-       visibility: visible !important;
-   }  
- }
-  .card-image img{
-   object-fit: cover;
-   width: 393px;
-   height: 260px; 
-   @media only screen and (max-width: 600px) {        
-       width: 385px !important;      
-     }
-  }
-  .categoria {
-      font-size: 18px;
-      font-weight: 400;
-      margin-bottom: -10px;
-  }
- .card-title {
-     font-size: 48px;
-     font-weight: 700;
-     margin-bottom: 0 !important;
-  }
-  .descripcion {
-      font-size: 18px;
-      font-weight: 400; 
-      text-align: initial;
-      margin-top: 12px;
- }
- .card-content {
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
-     padding: 12px 30px;
- }
-
- .action {
-     display: flex !important;
-     flex-direction: row;
-     align-items: center;         
-     justify-content: space-between;
-     margin-bottom: 20px;
-     position: absolute;
-     bottom: 0px;
-     width: 100%;
-     padding: 0 30px;  
-     .precio {
-         width: 100px;
-          margin-right: 100px;
-          margin-top: 5%;
-          color: #00873A;
-         font-size: 20px;
-         text-align: initial;
-         display: contents;
-      }
-      .boton {
-          justify-content: end;
-             border: 1px solid #000;
-            color: black;
-              box-sizing: border-box;
-             font-size: 18px;
-            font-weight: 500;
-              font-family: 'Roboto';
-              width: 140px;
-              height: 40px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-      }
- }
-
-
- .fondo {
-  margin-top: -250px;
-  height: 400px; 
-  padding-bottom: 100px;   
-  background-repeat-y: no-repeat;
-  background-size: cover;
-  @media only screen and (max-width: 600px) {
-      display: none;
-  }
-
-  .boton-modelos {
-      position: relative;
-      // display: flex;
-      // justify-content: center;
-      // margin-top: 50px !important;
-      // padding-bottom: 10px !important;
-      top: 87.5%;
-      text-align: -webkit-center;
-      margin-top: -50px;
-      @media only screen and (max-width: 600px) {
-          display: none;
-      }
-  }
-
-  .boton-modelos a {
-      width: 313px;
-      height: 50px;
-      color: white !important;
-      background: #EE3031;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white !important;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 21px;
-      letter-spacing: 0.0125em;
-      text-decoration: none;
-  }
-
+.containerHomeBicicletas{
+  height: 100vh;
+  width:100%;
 }
-  
+.containerHomeBicicletas img{
+  height:inherit;
+  object-fit:cover;
+  width:inherit;
+}
+.btnContainerBicicletas{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  align-items: center;
+  padding:0 5%;
+}
+.imagenMedio{
+    position: absolute;
+    bottom: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.biciNombreModelo{
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Roboto;
+  font-style: normal;
+  line-height: 56px;
+  letter-spacing: 0.005em;
+} 
+.biciCategoria{
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Roboto;
+  font-style: normal;
+  line-height: 21px;
+  letter-spacing: 0.005em;
+  color:#7B91B1;
+  margin: 0;
+}
+.imagenBici{
+  width:862px;
+  height:432px;
+}
+.imagenBici img{
+  width:inherit;
+  height:inherit;
+  object-fit:contain;
+}
+.biciDescripcion{
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Roboto;
+  font-style: normal;
+  line-height: 21px;
+  letter-spacing: 0.005em;
+}
+.biciPrecio{
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Roboto;
+  font-style: normal;
+  line-height: 23px;
+  letter-spacing: 0.005em;
+  color:#00873A;
+}
+.btn-bicicleta{
+  border: 1px solid #0B0B0B !important;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Roboto;
+  font-style: normal;
+  line-height: 21px;
+  letter-spacing: 0.0125em;
+}
+.btn-bicicleta-amateur:hover{
+color:white !important;
+background:#00873A !important;
+}
+.btn-bicicleta-profesional{
+  background:#EE3031 !important;
+}
+.btn-bicicleta-profesional:hover{
+  background: #C12728 !important;
+}
+.bicicletaContainerHeader{
+  display:flex;
+  justify-content:center;
+}
+.InfoBicicleta{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+.biciDescripcionPrecio{
+  display: flex;
+  justify-content:space-between;
+  width: 862px;
+}
+.descripcionBiciContainer{
+  width:60%;
+}
+.caracteristica{
+  display:flex;
+  justify-content:center;
+  padding:5% 0;
+}
+.InfoCaracteristica{
+  padding-left: 5%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  padding-top: 10%;
+}
+.BiciCaracteristicasContainer{
+  position:relative;
+}
+.BiciCaracteristicasContainer:last-child{
+  padding-top:0;
+}
+.fondoLateralCaracteristica{
+  position: absolute;
+  left: 0;
+  top:4%;
+  height: 100%;
+}
+.fondoLateralCaracteristica img{
+  height:inherit;
+}
+.tituloProductosRelacionados{
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Roboto;
+  font-style: normal;
+  line-height: 56px;
+}
+.ProductosRelacionadosContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.imagenProdRelaci{
+  width:393px;
+  height:260px;
+}
+.imagenProdRelaci img{
+  width:inherit;
+  height:inherit;
+  object-fit:contain;
+}
+.productosRelacionados{
+  width:100%;
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+.SingleproductoRelacionado{
+  border: 2px solid #DFDFDF;
+  width: 405px;
+  height: 608px;
+  margin: 10px 7px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+}
+.botonVerTodoProdRelacio{
+  padding: 5% 0;
+}
+.botonVerTodo{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.0015em;
+  background: #EE3031 !important;
+  color:white !important;
+}
+.botonVerTodo:hover{
+  background: #C12728 !important;
+}
+.precioBotonRelacio{
+  display: flex;
+  justify-content: space-between;
+}
+.imagenCaracteristica{
+  width:416px;
+  height:623px;
+}
+.imagenCaracteristica img{
+  width:inherit;
+  height:inherit;
+  object-fit:cover;
+}
+@media (min-width: 950px) and (max-width: 1300px) {
+  .SingleproductoRelacionado{
+    width:300px;
+    height:500px;
+    justify-content:center;
+  }
+  .imagenProdRelaci{
+    width:300px;
+    height:150px;
+  }
+  .biciNombreModelo{
+    font-size: 30px;
+  }
+  .biciDescripcion{
+    font-size: 14px;
+  }
+}
+@media (max-width: 950px) {
+.imagenBici{
+  width: 500px;
+  height: 300px;
+}
+.biciDescripcionPrecio{
+  width:500px;
+}
 }

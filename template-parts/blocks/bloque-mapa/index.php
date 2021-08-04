@@ -10,7 +10,7 @@ else{
 ?>
 
   
-<div class="bloque_mapa_container <?php if($estilo=="Profesional") echo "bloque_mapa_container_dark" ?>">
+<div class="bloque_mapa_container <?php if($estilo=="Profesional") echo "bloque_mapa_container_dark" ?>" style="background: url('<?php echo get_site_url();?>/wp-content/themes/wilier/img/fondo_bloque_mapa.png')">
     <div class="menu_mapa_container">
         <p class="menu_title"><?php echo get_field("titulo") ?></p>
         <div class="radio_container">

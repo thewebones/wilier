@@ -13,25 +13,48 @@
         }
         .contenido {
             display: flex;
-            flex-direction: row;
+            justify-content:center;
             @media only screen and (max-width: 900px) {
                 flex-direction: column !important;
-            }
-            @media only screen and (max-width: 900px) {
-                margin: 0 !important;
-            }
-            
+            }            
+        }
+        .generalContainerVisita{
+            position:relative;
         }
         .foto {
-            margin-right: auto;
+            width:50%;
             margin-bottom: 20px;
-            padding-left: 0;
+            display:flex;
+            justify-content:center;
+            @media only screen and (max-width: 900px) {
+                width:100%;
+            }
+        }
+        .fotoContainer{
+            width: 624px;
+            height:624px;
+        @media (min-width: 900px) and (max-width: 1300px) {
+            width: 100%;
+            height:100%;
+        }
+        @media only screen and (max-width: 900px) {
+            width:100%;
+            height: 80vh;
+        }
+        }
+        .fotoContainer img{
+            width:inherit;
+            height:inherit;
+            object-fit:cover;
         }
         .descripcion {
-            align-self: center;
-            margin-right: -80px;
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            padding-left: 5%;
             @media only screen and (max-width: 900px) {
-                margin: 0 !important;
+                width:100%;
             }
             .destribuidor-visitenos {
                 font-family: 'Roboto';
@@ -63,13 +86,17 @@
         .fondo-visitenos {
             position: absolute;
             z-index: -1;
-            margin-top: -520px;
+            margin-top: 50%px;
             height: 400px;
             width: 100%;
+            top:18%;
             background-repeat-y: no-repeat;
             background-size: cover;
-            @media only screen and (max-width: 900px) {
+            @media only screen and (max-width: 990px) {
                 display: none;
+            }
+            @media only screen and (max-width: 1200px) {
+                height: 300px;
             }
           }
     }
