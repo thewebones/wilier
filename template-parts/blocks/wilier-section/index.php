@@ -25,7 +25,7 @@ else{
                 <p class="texto-wilier"><?php echo get_field("texto_wilier")?></p>
             </div>
         </div>
-        <div class="imagencontenedor division">
+        <div class="imagencontenedor">
             <div class="imageSectionContainer">
                 <img class="imagen-wilier" src="<?php echo get_field("imagen_wilier")?>">
             </div>

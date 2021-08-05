@@ -88,12 +88,13 @@
     height:55px;
 }
 .imagen_slider_container{
-
+    width:630px;
+    height:336px;
 }
 .imagen_slider_container img{
-    width:630px !important;
-    height:336px !important;
-    object-fit: cover !important;
+    width:inherit;
+    height:inherit;
+    object-fit: cover;
 }
 .slider_modelo{
     font-size: 36px;
