@@ -31,7 +31,7 @@ $cont=0;
                         <p class="slider_modelo <?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["apellido"] ?></p>
                         <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["experiencia"] ?> </p>
                             </div>
-                        <a href="<?php echo $agente["link_whatsapp"]["url"] ?>" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
+                        <a onmouseover="hover(event)" onmouseout="out(event)" href="<?php echo $agente["link_whatsapp"]["url"] ?>" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
                             <span><?php echo $agente["link_whatsapp"]["title"] ?> </span>
                             <span>
                                 <?php if($estilo=="Profesional"){ ?>

@@ -40,7 +40,7 @@ else{
                 </div>
                 <p class="evento_premio <?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo get_post_meta( get_the_ID(), 'premio', true )?></p>
             </div>
-            <a href="#" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
+            <a onmouseover="hover(event)" onmouseout="out(event)" href="#" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
                 <span>Consultar</span>
                 <span>
                     <?php if($estilo=="Profesional"){ ?>

@@ -197,6 +197,12 @@ function amateur(){
 function profesional(){
 	window.location.href="<?php echo home_url($wp->request) ?>"+"?estilo=<?php echo 'Profesional';?>";
 }
+function hover(event){
+    event.currentTarget.children[1].children[0].setAttribute("src","<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg");
+}
+function out(event){
+    event.currentTarget.children[1].children[0].setAttribute("src","<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg");
+}
  
 </script>
 </header>
