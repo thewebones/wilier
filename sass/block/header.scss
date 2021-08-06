@@ -25,7 +25,8 @@
     line-height: 23px;
     letter-spacing: 0.0015em;
     color: #7B91B1;
-    margin: 0 12px;
+    margin: 0 0 0 50px;
+    text-transform: uppercase;
 }
 .menuContainer input:focus{
     border-color: #adb5bd !important;
@@ -52,7 +53,9 @@
     margin-right: 0 ;
     color: white !important;
     border-radius: 0 ;
-    padding:13px;
+    padding:15px 30px;
+    text-transform: inherit !important;
+    font-size: 18px !important;
 }
 .btnMenu:hover,.btnMenuLateral:hover{
     background: #C12728;

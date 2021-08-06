@@ -35,31 +35,31 @@ else{
     <style>
         @font-face {
             font-family: 'Roboto';
-            src: url('http://54.70.40.230/wp-content/themes/wilier/webfonts/Roboto-Regular.ttf') format('truetype');
+            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/Roboto-Regular.ttf') format('truetype');
         }
         @font-face {
             font-family: 'Roboto-Bold';
-            src: url('http://54.70.40.230/wp-content/themes/wilier/webfonts/Roboto-Bold.ttf') format('truetype');
+            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/Roboto-Bold.ttf') format('truetype');
         }
         @font-face {
             font-family: 'Roboto-Light';
-            src: url('http://54.70.40.230/wp-content/themes/wilier/webfonts/Roboto-Light_1.ttf') format('truetype');
+            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/Roboto-Light_1.ttf') format('truetype');
         }
         @font-face {
             font-family: 'Open Sans';
-            src: url('http://54.70.40.230/wp-content/themes/wilier/webfonts/OpenSans-Regular.ttf') format('truetype');
+            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/OpenSans-Regular.ttf') format('truetype');
         }
         @font-face {
             font-family: 'OpenSans-Bold';
-            src: url('http://54.70.40.230/wp-content/themes/wilier/webfonts/OpenSans-Bold.ttf') format('truetype');
+            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/OpenSans-Bold.ttf') format('truetype');
         }
         @font-face {
             font-family: 'OpenSans-Light';
-            src: url('http://54.70.40.230/wp-content/themes/wilier/webfonts/OpenSans-Light.ttf') format('truetype');
+            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/OpenSans-Light.ttf') format('truetype');
         }
         @font-face {
             font-family: 'OpenSans-ExtraBold';
-            src: url('http://54.70.40.230/wp-content/themes/wilier/webfonts/OpenSans-ExtraBold.ttf') format('truetype');
+            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/OpenSans-ExtraBold.ttf') format('truetype');
         }
     </style>
 	<?php wp_head(); ?>

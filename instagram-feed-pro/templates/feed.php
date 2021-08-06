@@ -45,8 +45,14 @@ else{
         $estilo=$_COOKIE["estilo"];
 }
 ?>
-    <div class="container" <?php if($estilo=="Profesional") echo 'style="background:black"' ?>>
-        <h4 style="font-family: Roboto;font-weight: 700;font-size: 48px;margin: 65px 0">#lovemywilier</h4>
+    <style>
+        .love{
+            font-family: Roboto;font-weight: 700;font-size: 48px;margin-bottom: 65px
+        }
+    </style>
+<div <?php if($estilo=="Profesional") echo 'style="background:black;padding-top:65px"' ?>>
+    <div class="container" >
+        <h4 class="love" <?php if($estilo=="Profesional") echo 'style="color:white"' ?>>#lovemywilier</h4>
         <div id="sb_instagram" class="sbi <?php echo esc_attr( $mobilecols_class ); ?> sbi_col_<?php echo esc_attr( $cols_setting ); ?> <?php echo esc_attr( $additional_classes ); ?>"<?php echo $feed_styles; ?> data-feedid="<?php echo esc_attr( $feed_id ); ?>" data-res="<?php echo esc_attr( $image_resolution_setting ); ?>" data-cols="<?php echo esc_attr( $cols_setting ); ?>" data-colsmobile="<?php echo esc_attr( $colsmobile_setting ); ?>" data-num="<?php echo esc_attr( $num_setting ); ?>" data-nummobile="<?php echo esc_attr( $nummobile_setting ); ?>" data-shortcode-atts="<?php echo esc_attr( $shortcode_atts ); ?>" <?php echo $other_atts; ?>>
             <?php
             if ( $settings['showheader'] && ! empty( $header_data ) && !$settings['headeroutside'] ) {
@@ -78,5 +84,6 @@ else{
 
         </div>
     </div>
+</div>
 
 <?php do_action( 'sbi_after_feed', $posts, $settings );?>
