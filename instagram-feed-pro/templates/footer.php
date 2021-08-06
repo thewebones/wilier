@@ -31,9 +31,12 @@ $load_button_text = __( $settings['buttontext'], 'instagram-feed' );
             }
             .instagram-texto{display: none !important;}
         }
+        .texto-instagram{
+            font-family: Roboto;font-style: normal;font-weight: normal;font-size: 18px;line-height: 21px;letter-spacing: 0.005em;color: #0B0B0B;
+        }
     </style>
     <div class="instagram-texto" style="width: 60%; text-align: left">
-<p style="font-family: Roboto;font-style: normal;font-weight: normal;font-size: 18px;line-height: 21px;letter-spacing: 0.005em;color: #0B0B0B;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus mus cum eget tristique lectus ultricies quis enim, ultrices. </p>
+<p class="texto-instagram" <?php if($estilo=="Profesional") echo 'style="color:white"' ?>>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus mus cum eget tristique lectus ultricies quis enim, ultrices. </p>
     </div>
     <div class="instagram-boton" style="width: 40%;text-align: end" >
     <?php if ( $use_pagination ) : ?>
