@@ -50,6 +50,20 @@ function ocultarEmail(){
 function ocultarTel(){
     document.getElementsByClassName("containerTel")[0].style="display:none";
 }
+function mostrarNombre(){
+    if(document.getElementsByClassName("inputnombre")[0].value=="")
+    document.getElementsByClassName("containerNombre")[0].style="display:flex";
+    
+}
+function mostrarEmail(){
+    if(document.getElementsByClassName("inputemail")[0].value=="")
+    document.getElementsByClassName("containerEmail")[0].style="display:flex";
+}
+function mostrarTel(){
+    if(document.getElementsByClassName("inputtel")[0].value=="")
+    document.getElementsByClassName("containerTel")[0].style="display:flex";
+}
+
 $( document ).ready(function() {
     $('#myModal').modal('toggle');
 });

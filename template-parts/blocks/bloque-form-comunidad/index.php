@@ -14,8 +14,7 @@ else{
        
             <p class="form_titulo"><?php echo get_field("titulo_formulario","option") ?></p>
             <div class="input_container">
-            <?php echo "[mc4wp_form id=246]" ?>
-
+                <?php echo "[mc4wp_form id=246]"?>
             </div>
         </div>
 </div>
