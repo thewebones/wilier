@@ -8,6 +8,7 @@ else{
 	}
 $cont=0;
 ?>
+ 
 <div class="<?php if($estilo=="Profesional") echo "slider_container_dark" ?>">
 <div class="slider_container container">
     <h1 class="slider_title_bloque_mundo mb-4 <?php if($estilo=="Profesional") echo "whiteColorText"; ?>"><?php echo get_field("titulo_seccion") ?></h1>
@@ -31,14 +32,9 @@ $cont=0;
                         <p class="slider_modelo <?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["apellido"] ?></p>
                         <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["experiencia"] ?> </p>
                             </div>
-                        <a onmouseover="hover(event)" onmouseout="out(event)" href="<?php echo $agente["link_whatsapp"]["url"] ?>" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
+                        <a href="<?php echo $agente["link_whatsapp"]["url"] ?>" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
                             <span><?php echo $agente["link_whatsapp"]["title"] ?> </span>
-                            <span>
-                                <?php if($estilo=="Profesional"){ ?>
-                                <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
-                                <?php }else{?>
-                                <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
-                                <?php } ?>        
+                            <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                             </span>
                         </a>
                     </div>

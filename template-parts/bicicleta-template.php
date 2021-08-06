@@ -140,12 +140,7 @@
                     <p class="biciPrecio"><?php echo get_post_meta( $item, 'precio', true ) ?></p>
                     <a href="<?php echo get_post_meta( $item, 'enlace_whatsapp', true )["url"] ?>" class="btn btn-bicicleta <?php if($estilo=="Profesional") echo "btn-bicicleta-profesional";else echo "btn-bicicleta-amateur" ?>">
                         <span><?php echo get_post_meta( $item, 'enlace_whatsapp', true )["title"]  ?></span> 
-                        <span>
-                            <?php if($estilo=="Profesional"){ ?>
-                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
-                            <?php }else{?>
-                            <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
-                            <?php } ?>        
+                        <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                         </span>
                     </a>
                 </div>

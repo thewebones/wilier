@@ -42,12 +42,7 @@ else{
             </div>
             <a onmouseover="hover(event)" onmouseout="out(event)" href="#" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
                 <span>Consultar</span>
-                <span>
-                    <?php if($estilo=="Profesional"){ ?>
-                    <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
-                    <?php }else{?>
-                    <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
-                    <?php } ?>        
+                <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                 </span>
             </a>
         </div>

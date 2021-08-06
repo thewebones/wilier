@@ -14,6 +14,7 @@ else{
 		$estilo=$_COOKIE["estilo"];
 	}
     ?>
+   
     <div class="<?php if($estilo=="Profesional") echo "slider_container_dark"; ?>">
     <div class="slider_container container ">
     <h1 class="slider_title"><?php echo get_field("title_slider") ?></h1>
@@ -49,14 +50,9 @@ else{
                             </div>
                             <div class="slider_button_price">
                                 <p class="slider_price">Desde <?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
-                                <a onmouseover="hover(event)" onmouseout="out(event)" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
-                                <span>Consultar</span> 
-                                <span>
-                                    <?php if($estilo=="Profesional"){ ?>
-                                    <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
-                                    <?php }else{?>
-                                    <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
-                                    <?php } ?>        
+                                <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
+                                    <span>Consultar</span> 
+                                    <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                                 </span>
                                 </a>
                             </div>
@@ -81,3 +77,4 @@ else{
     if(window.matchMedia("(max-width:850px)").matches)
     document.getElementsByClassName("slider_description")[0].classList.add("expandable");
 </script>
+

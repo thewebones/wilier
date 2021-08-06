@@ -81,6 +81,19 @@ $args=array(
 $cats=get_categories($args);
 
 ?>
+<style type="text/css">
+        .iconWhatsapp{
+            width:20px;
+            height:20px;
+            background-image:url(<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg);
+        }
+        .iconWhatsappProfesional{
+            background-image:url(<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg);
+        }
+        .btn-slider:hover .iconWhatsapp{
+            background-image:url(<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg);
+        }
+    </style>
 <div class="<?php if($estilo=="Profesional") echo "dark_background"; ?>">
 <div class="container">
 <div id="sideNavigation" class="sidenav <?php if($estilo=="Profesional") echo "dark_background sidenav_dark"; ?>">
