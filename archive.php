@@ -166,10 +166,12 @@ $cats=get_categories($args);
                             </a>
                             <div class="card-content">
                                 <span class="categoria"><?php echo get_the_category()[0]->name ?></span>
-                                <a href="<?php the_permalink(); ?>">    
-                                    <span class="card-title"><?php echo the_title() ?></span> 
+                                <a class="card-title" href="<?php the_permalink(); ?>">    
+                                    <?php echo the_title() ?>
                                 </a>   
-                                <p class="descripcion"><?php echo get_the_excerpt() ?></p>
+                                <div class="descriptionBici">
+                                <?php echo get_the_content() ?>
+                                </div>
                             </div>
                             <div class="action">
                                 <div class="precio">

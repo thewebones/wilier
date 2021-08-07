@@ -14,8 +14,11 @@ else{
 		$estilo=$_COOKIE["estilo"];
 	}
     ?>
+    <div>
+    
    
-    <div class="<?php if($estilo=="Profesional") echo "slider_container_dark"; ?>">
+   </div> 
+   <div class="<?php if($estilo=="Profesional") echo "slider_container_dark"; ?>">
     <div class="slider_container container ">
     <h1 class="slider_title"><?php echo get_field("title_slider") ?></h1>
     <div id="carouselExampleIndicators3" class="carousel slide mt-5 slider_carousel" data-ride="carousel">
@@ -46,10 +49,10 @@ else{
                             <div>
                                 <p class="slider_categoria"><?php echo get_the_category()[0]->name ?></p>
                                 <p class="slider_modelo mb-3"><?php echo the_title() ?></p>
-                                <p class="slider_description"><?php echo get_the_excerpt() ?></p>
+                                <p class="slider_description"><?php echo get_the_content() ?></p>
                             </div>
                             <div class="slider_button_price">
-                                <p class="slider_price">Desde <?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
+                                <p class="slider_price"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
                                 <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
                                     <span>Consultar</span> 
                                     <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    

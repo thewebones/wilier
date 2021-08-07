@@ -1,12 +1,16 @@
 .profesional-section {
   background: black;
   padding: 100px 0;
+  position:relative;
+  z-index:-2;
   .pComentariosWP{
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position:absolute;
+    z-index: 1;
   }
   
   .texto-profesional {
@@ -52,13 +56,40 @@
     height: 10.5px;
     margin-left: 10px;
   }
+  .containerCarouselPA{
+    height:400px;
+    position:relative;
+    background-size: cover;
+    background-position:100% 100%;
+}
+
+.imagenCliente{
+  height:100%;
+  padding:2px 0;
+  position:absolute;
+  right:0;
+  z-index: -1;
+}
+.imagenCliente img{
+  height:inherit;
+  object-fit: cover;
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .containerCarouselPA{
+    background-position: 90% 100%;
+  }
+}
   @media (max-width: 997px) {
     .texto-profesional {
       width: 95% !important;
       font-size: 22px !important;
     }
+   .containerCarouselPA{
+    background:none !important;
+   }
     .pComentariosWP{
       width:100%;
+      position:initial;
     }
     .imagenMovilComent{
       width:100%;
@@ -68,7 +99,7 @@
       width:inherit;
       height:inherit;
   }
-  .slider-inner-comentarios,.pInnerComentarios{
+  .imagenCliente,.pInnerComentarios{
       display:none;
   }
   .comentarioInfoContainer{
@@ -78,10 +109,7 @@
       flex-direction: column;
       text-align: justify;
   }
-  .containerCarousel{
-      background-image: none !important;
-      height:fit-content;
-  }
+  
   .vistaMovil{
       display:block;
   }
