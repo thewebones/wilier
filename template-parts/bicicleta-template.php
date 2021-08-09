@@ -61,18 +61,13 @@
         </div>
         <div class="biciDescripcionPrecio">
             <div class="descripcionBiciContainer">
-                <p class="biciDescripcion"><?php echo get_the_excerpt() ?></p>
+                <?php echo get_the_content() ?>
                 <p class="biciPrecio"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
             </div>
             <div>
-                <a href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-bicicleta <?php if($estilo=="Profesional") echo "btn-bicicleta-profesional";else echo "btn-bicicleta-amateur" ?>">
-                    <span><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?></span> 
-                    <span>
-                        <?php if($estilo=="Profesional"){ ?>
-                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
-                        <?php }else{?>
-                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
-                        <?php } ?>        
+                <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
+                    <span>Consultar</span> 
+                    <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                     </span>
                 </a>
             </div>
@@ -96,17 +91,12 @@
             <div>
                 <p class="biciCategoria"><?php echo the_title() ?></p>
                 <p class="biciNombreModelo mb-5"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_modelo', true ); ?> </p>
-                <p class="biciDescripcion"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_texto', true ); ?></p>
+                <p class=""><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_texto', true ); ?></p>
             </div>
             <div>
-                <a href="<?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["url"]  ?>" class="btn btn-bicicleta <?php if($estilo=="Profesional") echo "btn-bicicleta-profesional";else echo "btn-bicicleta-amateur" ?>">
-                    <span><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_boton_modelo', true )["title"]  ?></span> 
-                    <span>
-                        <?php if($estilo=="Profesional"){ ?>
-                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
-                        <?php }else{?>
-                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
-                        <?php } ?>        
+            <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
+                    <span>Consultar</span> 
+                    <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                     </span>
                 </a>
             </div>
@@ -114,7 +104,8 @@
     </div>
     <?php } ?>
 </div>
-<div class="ProductosRelacionadosContainer">
+<div class="container">
+<div class="ProductosRelacionadosContainer ">
     <div class="tituloProdRelacionados">
         <p class="tituloProductosRelacionados">
             <?php echo get_post_meta( get_the_ID(), 'titulo_productos_relacionados', true); ?>
@@ -134,12 +125,12 @@
             </a>    
             <div class="InfoProdRelacionado">
                 <p class="biciCategoria"><?php echo get_the_category($item)[0]->name ?></p>
-                <p class="biciNombreModelo"><?php echo get_the_title($item) ?></p>
-                <p class="biciDescripcion"><?php echo get_the_excerpt($item) ?></p>
+                <p class="biciNombreModelo cortarTexto"><?php echo get_the_title($item);?>
+                </p><?php echo get_the_content("read",true,$item)?>
                 <div class="precioBotonRelacio">
                     <p class="biciPrecio"><?php echo get_post_meta( $item, 'precio', true ) ?></p>
-                    <a href="<?php echo get_post_meta( $item, 'enlace_whatsapp', true )["url"] ?>" class="btn btn-bicicleta <?php if($estilo=="Profesional") echo "btn-bicicleta-profesional";else echo "btn-bicicleta-amateur" ?>">
-                        <span><?php echo get_post_meta( $item, 'enlace_whatsapp', true )["title"]  ?></span> 
+                    <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
+                        <span>Consultar</span> 
                         <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                         </span>
                     </a>
@@ -155,4 +146,18 @@
         </a>                      
     </div>
 </div>
-
+</div>
+<script>
+    const array=document.getElementsByClassName("InfoProdRelacionado");
+    for(let i=0;i<array.length;i++){
+    array[i].children[2].classList.add("biciDescripcion");
+    array[i].children[2].classList.add("expandable");
+}
+   const arrayModelos=document.getElementsByClassName("cortarTexto");
+   console.log(window.screen.width);
+   for(let i=0;i<arrayModelos.length;i++){
+       arrayModelos[i].innerText=arrayModelos[i].innerText.toLowerCase();
+       if(window.screen.width>990 && arrayModelos[i].innerText.length>18)
+       arrayModelos[i].innerText=arrayModelos[i].innerText.substring(0,6)+"...";
+   }
+    </script>

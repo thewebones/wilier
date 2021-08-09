@@ -147,13 +147,7 @@ $cats=get_categories($args);
                 
               <div class="categoria-bicicleta">
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post();
-
-                if(get_the_category()[0]->term_id==get_queried_object_id()){
-                   
-                ?>
-
-                    
-                            
+                if(get_the_category()[0]->term_id==get_queried_object_id()){?>       
                     <div class="card">
                              <a href="<?php the_permalink(); ?>">
                             <div class="card-image">

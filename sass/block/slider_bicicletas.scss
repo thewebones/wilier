@@ -117,6 +117,9 @@
     font-style:normal;
     line-height:21px;
     letter-spacing: 0.005em;
+    height: 170px;
+    overflow:auto;
+    padding-right: 18px;
 }
 .carrusel_container{
     overflow: initial;
@@ -162,6 +165,7 @@
     }
     .slider_text{
         width: 94%;
+        margin:0 !important;
     }
     .carrusel_container{
         padding:0;
@@ -179,14 +183,20 @@
     .slider_title{
         font-size:5vw;
     }
+    .slider_description{
+        height:fit-content;
+        padding:0;
+    }
 }
 @media (max-width:850px){
     .imagen_slider_container{
         width:100%;
         height: auto;
     }
-}
 
-.btn{
-    border-radius: 0 !important;
+}
+@media (min-width:1070px) and (max-width:1200px){
+    .imagen_slider_container{
+        width:530px;
+    }
 }

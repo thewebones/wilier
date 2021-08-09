@@ -1,8 +1,4 @@
 .section-modal {
-    display: none;
-    .modal{
-        display: none !important;
-    }
     .modal-dialog{
         align-self: center;
     }
@@ -17,9 +13,7 @@
     .contenido-izq{
         align-self: flex-end;
     }
-    .modal-backdrop{
-        display: none !important;
-    }
+
     @media (min-width: 576px){
         .modal-dialog {
             max-width: 1000px !important;

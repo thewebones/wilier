@@ -46,10 +46,10 @@ else{
                             the_post_thumbnail(); ?>
                         </div>
                         <div class="slider_text ml-3">
-                            <div>
+                            <div class="textosSliderBicicletas">
                                 <p class="slider_categoria"><?php echo get_the_category()[0]->name ?></p>
                                 <p class="slider_modelo mb-3"><?php echo the_title() ?></p>
-                                <p class="slider_description"><?php echo get_the_content() ?></p>
+                                <?php echo get_the_content() ?>
                             </div>
                             <div class="slider_button_price">
                                 <p class="slider_price"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
@@ -77,7 +77,8 @@ else{
 </div>
 </div>
 <script>
-    if(window.matchMedia("(max-width:850px)").matches)
-    document.getElementsByClassName("slider_description")[0].classList.add("expandable");
+        document.getElementsByClassName("textosSliderBicicletas")[0].children[2].classList.add("slider_description");
+    if(window.matchMedia("(max-width:850px)").matches){
+    document.getElementsByClassName("textosSliderBicicletas")[0].children[2].classList.add("expandable");
+}
 </script>
-

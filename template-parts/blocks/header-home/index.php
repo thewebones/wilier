@@ -28,9 +28,7 @@ else{
             <?php if(!get_field("boton_whatsapp")){
                         ?>
                     <img class="flecha" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
-                    <?php }elseif($estilo=="Profesional"){ ?>
-                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
-                        <?php }else{?>
+                    <?php }else{?>
                         <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
                         <?php } ?> 
         </a>

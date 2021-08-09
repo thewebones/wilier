@@ -1,7 +1,7 @@
 
 
 $('p.expandable').expander({
-    slicePoint:50,
+    slicePoint:130,
     expandText:'leer mas',
     collapseTimer:5000,
     userCollapseText:'cerrar'

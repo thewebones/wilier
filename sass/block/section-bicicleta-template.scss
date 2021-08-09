@@ -56,6 +56,7 @@
   font-style: normal;
   line-height: 21px;
   letter-spacing: 0.005em;
+  min-height: 90px;
 }
 .biciPrecio{
   font-size: 20px;
@@ -87,6 +88,10 @@ background:#00873A !important;
 .btn-bicicleta-profesional:hover{
   background: #C12728 !important;
 }
+.InfoProdRelacionado{
+  width: 100%;
+  height:fit-content;
+}
 .bicicletaContainerHeader{
   display:flex;
   justify-content:center;
@@ -94,7 +99,7 @@ background:#00873A !important;
 .InfoBicicleta{
   display:flex;
   flex-direction: column;
-  align-items:center;
+  align-items:baseline;
 }
 .biciDescripcionPrecio{
   display: flex;
@@ -161,14 +166,14 @@ background:#00873A !important;
 }
 .SingleproductoRelacionado{
   border: 2px solid #DFDFDF;
-  width: 405px;
-  height: 608px;
+  width: 32.2%;
+  height: fit-content;
   margin: 10px 7px;
-  padding: 0 15px;
+  padding: 15px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items:center;
+  justify-content: space-between;
 }
 .botonVerTodoProdRelacio{
   padding: 5% 0;
@@ -189,6 +194,7 @@ background:#00873A !important;
 .precioBotonRelacio{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .imagenCaracteristica{
   width:416px;
@@ -199,15 +205,13 @@ background:#00873A !important;
   height:inherit;
   object-fit:cover;
 }
-@media (min-width: 950px) and (max-width: 1300px) {
+@media (min-width: 950px) and (max-width: 1200px) {
   .SingleproductoRelacionado{
-    width:300px;
-    height:500px;
-    justify-content:center;
+    width:32%;
   }
   .imagenProdRelaci{
     width:300px;
-    height:150px;
+    height:auto;
   }
   .biciNombreModelo{
     font-size: 30px;
@@ -216,7 +220,7 @@ background:#00873A !important;
     font-size: 14px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 991px) {
 .imagenBici{
   width: 500px;
   height: 300px;
@@ -224,4 +228,25 @@ background:#00873A !important;
 .biciDescripcionPrecio{
   width:500px;
 }
+.SingleproductoRelacionado{
+  width:40%;
+}
+.imagenProdRelaci{
+  width:100%;
+  height:auto;
+}
+.biciNombreModelo{
+  font-size: 20px;
+}
+.biciDescripcion{
+  font-size: 12px;
+}
+.biciPrecio{
+  font-size: 16px;
+}
+}
+@media (max-width: 770px){
+  .SingleproductoRelacionado{
+    width:100%;
+  }
 }
