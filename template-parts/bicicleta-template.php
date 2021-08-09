@@ -125,8 +125,8 @@
             </a>    
             <div class="InfoProdRelacionado">
                 <p class="biciCategoria"><?php echo get_the_category($item)[0]->name ?></p>
-                <p class="biciNombreModelo cortarTexto"><?php echo get_the_title($item);?>
-                </p><?php echo get_the_content("read",true,$item)?>
+                <p class="biciNombreModelo cortarTexto"><?php echo get_the_title($item);?></p>
+                <?php echo get_the_content("",false,$item)?>
                 <div class="precioBotonRelacio">
                     <p class="biciPrecio"><?php echo get_post_meta( $item, 'precio', true ) ?></p>
                     <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
@@ -148,13 +148,15 @@
 </div>
 </div>
 <script>
+    const arrayDescripcionPrincipal=document.getElementsByClassName("descripcionBiciContainer");
+    for(let i=0;i<arrayDescripcionPrincipal.length;i++)
+    arrayDescripcionPrincipal[i].children[0].classList.add("biciDescripcion");
     const array=document.getElementsByClassName("InfoProdRelacionado");
     for(let i=0;i<array.length;i++){
     array[i].children[2].classList.add("biciDescripcion");
     array[i].children[2].classList.add("expandable");
 }
    const arrayModelos=document.getElementsByClassName("cortarTexto");
-   console.log(window.screen.width);
    for(let i=0;i<arrayModelos.length;i++){
        arrayModelos[i].innerText=arrayModelos[i].innerText.toLowerCase();
        if(window.screen.width>990 && arrayModelos[i].innerText.length>18)

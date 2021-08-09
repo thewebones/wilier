@@ -29,7 +29,7 @@ else{
                         ?>
                     <img class="flecha" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
                     <?php }else{?>
-                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
+                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>   
                         <?php } ?> 
         </a>
         </div>

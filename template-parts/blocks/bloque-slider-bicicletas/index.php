@@ -77,8 +77,11 @@ else{
 </div>
 </div>
 <script>
-        document.getElementsByClassName("textosSliderBicicletas")[0].children[2].classList.add("slider_description");
-    if(window.matchMedia("(max-width:850px)").matches){
-    document.getElementsByClassName("textosSliderBicicletas")[0].children[2].classList.add("expandable");
-}
+    const arrayTextosSlider=document.getElementsByClassName("textosSliderBicicletas");
+    for(let i=0;i<arrayTextosSlider.length;i++){
+        arrayTextosSlider[i].children[2].classList.add("slider_description");
+        if(window.matchMedia("(max-width:850px)").matches){
+            arrayTextosSlider[i].children[2].classList.add("expandable");
+        }
+    }
 </script>
