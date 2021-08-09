@@ -19,7 +19,7 @@ else{
     </div>
     <div class="containerTresFotos">
         <div class="imagenesLaterales mr-4">
-            <div class="imagenizquierda mb-4">
+            <div class="imagenizquierda">
                 <img src="<?php echo get_field("imagen_izquierda_superior") ?>"/>
             </div>
             <div class="imagenizquierda">

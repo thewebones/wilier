@@ -38,13 +38,14 @@ else{
     </div>                          
                           
    
+
+</div>
     <div class="fondo" style="background-image: url(<?php echo get_field("fondo")?>)">
         <div class="boton-slider">
             <a class="boton" href="<?php echo get_field("boton")["url"]?>">
-                <?php echo get_field("boton")["title"]?>  
+                <?php echo get_field("boton")["title"]?>
                 <img class="flecha ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
             </a>
-        </div>                     
-    </div>   
-</div>
+        </div>
+    </div>
 </section>   

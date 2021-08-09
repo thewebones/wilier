@@ -37,9 +37,9 @@ else{
     </div>
     <div class="imagen-marca" style="
     <?php if($estilo=="Profesional"){?>
-    background: url('<?php echo get_site_url();?> /wp-content/themes/wilier/img/fondo_profesional.png')
+    background: url('<?php echo get_site_url();?> /wp-content/themes/wilier/img/Recursos_SecciónWillier_Profesional.png')
     <?php }else{ ?>
-    background: url('<?php echo get_site_url();?>/wp-content/themes/wilier/img/fondo_amateur.png')
+    background: url('<?php echo get_site_url();?>/wp-content/themes/wilier/img/Recursos_SecciónWillier_Amateur.png')
     <?php } ?>
     ">
         <div class="container footerMovilSection">
