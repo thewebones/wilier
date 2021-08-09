@@ -1,6 +1,6 @@
 
 
-$('p.expandable').expander({
+$('pre.expandable').expander({
     slicePoint:130,
     expandText:'leer mas',
     collapseTimer:5000,

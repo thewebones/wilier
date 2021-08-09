@@ -6,15 +6,15 @@
             $estilo=$_GET["estilo"];
         }else
             $estilo=$_COOKIE["estilo"];
-        } 
+        }
+var_dump("dfdf"); 
 ?>        
 <section class="section-por-categoria <?php echo $estilo ?>">
-
     <?php
         // Listado de categorias                  
         $categories = get_categories( array(
         'orderby' => 'name',
-        'order'   => 'ASC',
+        'order'   => 'ASC'
         ) );
 
         foreach( $categories as $category ) {
@@ -43,48 +43,34 @@
             <?php } ?>   
             </div>
         </div>
-        
         <div class="foto-der">
             <img class="img-fluid" src="<?php echo the_field('imagen_post_categoria', $category);?>">
         </div>
     </div> 
-
-
-
-
     <div class="post-bicicleta">
-
-            <?php 
-                $cat = $category->name; 
-
-                $args2 = array(
-                'post_type'=> 'bicicleta',
-                'order'    => 'ASC',
-                
-                );
-                $the_query2 = new WP_Query( $args2 );
-            ?>
-                  
-            <div class="card-producto text-center row">
-
-                <div class="carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-                
-                      <?php if($the_query2->have_posts()) :
-                        while($the_query2->have_posts()) :
-                            $the_query2->the_post();
-                            
+    <?php 
+    $cat = $category->name; 
+    $args2 = array(
+    'post_type'=> 'bicicleta',
+    'order'    => 'ASC'
+    );
+    $the_query2 = new WP_Query( $args2 );?>
+    <div class="card-producto text-center row">
+        <div class="carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+            <?php if($the_query2->have_posts()) :
+                while($the_query2->have_posts()) :
+                    $the_query2->the_post();
                         if($cat == get_the_category()[0]->name) { ?> 
-                        
-                         <div class="card">
-                             <a href="<?php the_permalink(); ?>">
-                            <div class="card-image">
-                            <?php if($estilo=="Profesional") {?>
-                                <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
-                                <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
-                                <?php }else
-                                            the_post_thumbnail(); ?>
-                            </div>
-                            </a>
+                        <div class="card">
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="card-image">
+                                        <?php if($estilo=="Profesional") {?>
+                                        <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
+                                        <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
+                                        <?php }
+                                        else the_post_thumbnail(); ?>
+                                    </div>
+                                </a>
                             <div class="card-content">
                                 <span class="categoria"><?php echo get_the_category()[0]->name ?></span>
                                 <a href="<?php the_permalink(); ?>">    
@@ -96,7 +82,6 @@
                                 <div class="precio">
                                     <p class="precio"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
                                 </div>
-                                
                                 <div class="boton">
                                     <a class="btn-cotizar" href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>"><?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["title"]  ?>
                                     <span class="ml-1">
@@ -109,29 +94,17 @@
                                     </a>
                                 </div>
                             </div>
-                           
                         </div> 
-                    
-                        
-                        <?php 
-                        }
-                        endwhile;
-                       
-                    endif;
-                        ?>   
-                        
-
-                </div>
-             
+                    <?php }
+                endwhile;
+            endif;?>   
         </div>
-        <div class="boton-card-producto">
-
-                                <a class="boton" href="<?php echo esc_url(get_category_link(get_cat_ID($cat))) ?>">
-                                    Ver todos los modelos
-                                    <img class="flecha ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
-                                </a>
-        </div>       
     </div>
-<?php }} ?>
-
+    <div class="boton-card-producto">
+        <a class="boton" href="<?php echo esc_url(get_category_link(get_cat_ID($cat))) ?>">
+        Ver todos los modelos
+        <img class="flecha ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">            </a>
+    </div>       
+    </div>
+    <?php }} ?>
 </section>
