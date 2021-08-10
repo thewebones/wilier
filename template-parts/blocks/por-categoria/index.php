@@ -54,7 +54,7 @@
                         ?> 
                         <div class="ContainerProductSlider">
                             <div class="SingleProductSlider" >
-                                <a href="<?php the_permalink();?>" class="imagenProdRelaci">
+                                <a href="<?php the_permalink();?>" class="imagenProdSlider">
                                     <?php if($estilo=="Profesional") {?>
                                     <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
                                     <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
@@ -90,7 +90,7 @@
     const array=document.getElementsByClassName("InfoProdRelacionado");
    const arrayModelos=document.getElementsByClassName("cortarTexto");
    for(let i=0;i<arrayModelos.length;i++){
-    array[i].children[2].classList.add("biciDescripcion");
+    array[i].children[2].classList.add("biciDescripcionSingle");
     if("<?php echo $estilo ?>"=="Profesional")
     array[i].children[2].classList.add("colorWhite");
     if(array[i].children[2].innerText.length>110)

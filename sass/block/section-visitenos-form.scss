@@ -1,3 +1,6 @@
+.relativeVisitenosForm{
+    position: relative;
+}
 .section-visitenos-form {
     padding-left: 5%;
     padding-bottom: 70px;
@@ -20,6 +23,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @media (max-width: 1000px) {
+                width:100%;
+                .input_container_visitenos{
+                    width:100%;
+                }
+            }
         }
         .form {
             display: flex;
@@ -34,6 +43,8 @@
             }
         }
         .foto{
+            position: absolute;
+            right:0;
             width:1026px;
             height:539px;
             @media (min-width: 1300px) and (max-width: 1600px) {
@@ -44,6 +55,9 @@
             }
             @media (max-width: 1000px) {
                 width:100%;
+            }
+            @media (max-width: 1600px) {
+                position: initial;
             }
         }
         .foto img{

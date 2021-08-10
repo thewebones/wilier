@@ -1,8 +1,18 @@
-
+<?php
+if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"]))
+$estilo="Amateur";
+else{
+	if(isset($_GET["estilo"])){
+		$estilo=$_GET["estilo"];
+	}else
+		$estilo=$_COOKIE["estilo"];
+	}
+?>
+<div class="<?php if($estilo=="Profesional")echo "dark"; ?>">
 <section class="section-visitenos "> 
     <div class="visitenos">
         <div class="titulo container">
-            <h2><?php echo get_field('titulo-visitenos') ?></h2>
+            <h2 class=" <?php if($estilo=="Profesional")echo "colorWhite"; ?>"><?php echo get_field('titulo-visitenos') ?></h2>
         </div> 
        <?php 
        if(get_field("repeater-visitenos")){
@@ -16,9 +26,9 @@
                 </div>
 
                 <div class="descripcion">    
-                    <span class="destribuidor-visitenos"><?php echo $item["destribuidor-visitenos"] ?></span>
-                    <h5 class="nombre-visitenos"><?php echo $item["nombre-visitenos"] ?></h5>
-                    <p class="direccion-visitenos"><?php echo $item["direccion-visitenos"] ?></p>
+                    <span class="destribuidor-visitenos <?php if($estilo=="Profesional")echo "colorWhite"; ?>"><?php echo $item["destribuidor-visitenos"] ?></span>
+                    <h5 class="nombre-visitenos <?php if($estilo=="Profesional")echo "colorWhite"; ?>"><?php echo $item["nombre-visitenos"] ?></h5>
+                    <p class="direccion-visitenos <?php if($estilo=="Profesional")echo "colorWhite"; ?>"><?php echo $item["direccion-visitenos"] ?></p>
                 </div>
                 
             </div>
@@ -30,3 +40,4 @@
   
        
 </section>
+</div>

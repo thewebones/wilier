@@ -116,11 +116,12 @@
     letter-spacing: 0.0015em;
     color: #0B0B0B;
     z-index: 99;
+    cursor: pointer;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: gray;
+    color: #EE3031 !important;
     text-decoration: none;
 }
 
@@ -164,7 +165,7 @@
 
 /* When you mouse over the navigation links, change their color */
 .sidenav2 a:hover, .offcanvas a:focus{
-    color: gray;
+    color: #EE3031;
     text-decoration: none;
 }
  

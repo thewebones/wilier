@@ -47,7 +47,7 @@
     </div>
 </div> 
 <div class="<?php if($estilo=="Profesional") echo "dark"; ?>">
-<div class="bicicletaContainerHeader">
+<div class="bicicletaContainerHeader container">
     <div class="InfoBicicleta mt-5">
         <p class="biciCategoria "><?php echo get_the_category()[0]->name ?></p>
         <p class="biciNombreModelo mb-5 <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo the_title() ?></p>
@@ -75,7 +75,7 @@
         </div>
     </div>
 </div>
-<div class="BiciCaracteristicasContainer">
+<div class="BiciCaracteristicasContainer container">
     <div class="fondoLateralCaracteristica">
          <img src="<?php echo get_field("background_repeater")?>"/>                   
     </div>
@@ -117,7 +117,7 @@
         for( $i = 0; $i < $prod_rel; $i++ ) { 
         $item = get_post_meta( get_the_ID(), 'productos_relacionados_' . $i . '_producto', true );  
         ?>
-        <div class="SingleproductoRelacionado" >
+        <div class="SingleproductoRelacionado <?php if($estilo=="Profesional")echo "quitarFondo"; ?>" >
              <a href="<?php the_permalink($item); ?>" class="imagenProdRelaci" >
                 <?php if($estilo=="Profesional") {?>
                 <?php $imagenId=get_post_meta($item,'imagen_tema_profesional',true);?>
@@ -146,16 +146,25 @@
             <img class="flecha-btn ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
         </a>                      
     </div>
+    <div class="ContainerFondoFooterSingleBici">
+        <div class="fondoBiciFooter">
+            <?php if($estilo=="Profesional"){ ?>
+                <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/fondo_profesional.png"/>
+            <?php }else?>
+            <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/fondo_amateur.png"/>
+        </div>
+    </div>
 </div>
 </div>
 </div>
 <script>
-    document.getElementsByClassName("descripcionBiciContainer")[0].children[0].classList.add("biciDescripcion");
+    document.getElementsByClassName("descripcionBiciContainer")[0].children[0].classList.add("biciDescripcionSingle");
+    document.getElementsByClassName("descripcionBiciContainer")[0].children[0].classList.add("biciDescripcionSingleHide");
     if("<?php echo $estilo ?>"=="Profesional")
     document.getElementsByClassName("descripcionBiciContainer")[0].children[0].classList.add("colorWhite");
     const array=document.getElementsByClassName("InfoProdRelacionado");
     for(let i=0;i<array.length;i++){
-    array[i].children[2].classList.add("biciDescripcion");
+    array[i].children[2].classList.add("biciDescripcionSingle");
     array[i].children[2].classList.add("expandable");
     if("<?php echo $estilo ?>"=="Profesional")
     array[i].children[2].classList.add("colorWhite");

@@ -1,0 +1,31 @@
+.ContainerDosFotos{
+    display: flex;
+    justify-content:center;
+    padding:60px 0;
+}
+.fotoIzquierdaDI{
+    width:49%;
+    margin-right: 2%;
+    height:auto;
+}
+.fotoIzquierdaDI{
+    width:49%;
+    height:auto;
+}
+.fotoDerechaDI img,.fotoIzquierdaDI img{
+    width:100%;
+    height:inherit;
+    object-fit:cover;
+}
+
+@media (max-width:800){
+    .ContainerDosFotos{
+        padding:5vw 0;
+        flex-direction: column;
+        align-items:center;
+    }
+    .fotoIzquierdaDI,.fotoDerechaDI{
+        width:100%;
+    }
+
+}

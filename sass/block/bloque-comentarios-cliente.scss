@@ -51,6 +51,23 @@
     flex-direction: column;
     justify-content: center;
 }
+.nombreDelCliente{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight:bold;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.0025px;
+    color:#EE3031;
+}
+.comentarioDelCliente{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight:normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+
 .container-slider-item{
     width:100%;
     display:flex;

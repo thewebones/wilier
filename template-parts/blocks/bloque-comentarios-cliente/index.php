@@ -23,8 +23,8 @@ else{
                 </div>  
                 <div class="container pInnerComentarios">
                     <div class="pComentarios">
-                        <p class="agente_nombre evento_modelo"><?php echo $cliente["nombre"] ?></p>
-                        <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $cliente["comentario"] ?> </p>
+                        <p class="nombreDelCliente"><?php echo $cliente["nombre"] ?></p>
+                        <p class="comentarioDelCliente <?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $cliente["comentario"] ?> </p>
                     </div>
                 </div>    
             </div>

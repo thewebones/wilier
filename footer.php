@@ -104,8 +104,11 @@ $cats=get_categories($args);
 
 <?php wp_footer(); ?>
 <script>
-if("<?php echo $estilo?>"=="Profesional")
+if("<?php echo $estilo?>"=="Profesional"){
 	document.getElementsByClassName("main-cont-ig")[0].classList.add("dark");
+	document.getElementsByClassName("textoInstagram")[0].classList.add("colorWhite");
+	document.getElementsByClassName("textoInstagram")[1].classList.add("colorWhite");
+}
 </script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/popper.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/jquery.min.js"></script>

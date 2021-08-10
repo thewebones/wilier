@@ -109,9 +109,7 @@ $cats=get_categories($args);
 				foreach(get_field("repeater_menu","option") as $menu){ ?>
 				<a class="mb-3" href="<?php echo $menu["item_menu"]["url"] ?>"><?php echo $menu["item_menu"]["title"] ?></a>	
 			<?php }}?>
-			<?php if(is_front_page()){ ?>
-			<button onClick="openNav2()">menu2</button>
-			<?php } ?>
+			<a onClick="openNav2()">Ver Categorías</a>
 		</div>
 		<div class="btnLateralContainer">
 			<a class="btnMenuLateral" href="<?php echo get_field("boton_menu","option")["url"] ?>"><?php echo get_field("boton_menu","option")["title"] ?></a>

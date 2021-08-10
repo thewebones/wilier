@@ -1,6 +1,15 @@
 
 .section-por-categoria {
+    .imagenSingleCatFlotante{
+        position:absolute;
+        left: 0;
+        top:0;
+        @media (max-width: 800px) {
+            display:none;
+        }
+    }
     padding-bottom: 50px;
+    position:relative;
     &.Profesional {
         background-color: #000;
         .izq {
@@ -22,9 +31,21 @@
             }
         }
     }
+    .imagenProdSlider{
+        width:100%;
+        height:auto;
+    }
+    .imagenProdSlider img{
+        width:100%;
+        height:inherit;
+        object-fit:cover;
+    }
     .ContainerProductSlider{
-        width:32.3% !important;
+        width:300px !important;
         margin: 0 8px;
+        @media only screen and (max-width: 400px) {
+            width:100% !important;
+        }
     }
     .SingleProductSlider{
         border: 2px solid #DFDFDF;

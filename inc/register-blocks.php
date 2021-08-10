@@ -292,3 +292,13 @@ acf_register_block_type(array(
     'category' => 'widgets'
 
 )); 
+acf_register_block_type(array(
+    'name'              => 'dos-imagenes',
+    'title'             => __('dos-imagenes'),
+    'description'       => __('dos-imagenes'),
+    'render_template'   => 'template-parts/blocks/dos-imagenes/index.php',
+    'icon'              => 'admin-comments',
+    'keywords'          => array('image',),
+    'category' => 'widgets'
+
+)); 

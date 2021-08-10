@@ -134,9 +134,23 @@
     text-align: justify;
     align-self: center;
     padding-right: 150px;
-    @media only screen and (max-width: 900px) {
+    .foto-izq{
+        margin-bottom: 5vw;
+        display:none;
+    }
+    .foto-izq img{
+        width:100%;
+        height: inherit;
+        object-fit: cover;
+    }
+    @media only screen and (max-width: 995px) {
         width: 100%;
         padding-right: 0 !important;
+        .foto-izq{
+            display:block;
+            height: auto;
+            width: 100%;
+        }
     }    
     .title{
         font-family: 'Roboto';

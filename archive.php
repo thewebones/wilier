@@ -94,7 +94,7 @@ $cats=get_categories($args);
         </div>
         <div class="texto-responsive2">
             <p class="header-texto2"><?php echo get_term_meta(get_queried_object_id(),"texto_header",true) ?></p>
-            </div>    
+        </div>    
 
     </div>
 
@@ -102,45 +102,58 @@ $cats=get_categories($args);
 </div>
 
 <div class="<?php if($estilo=="Profesional") echo "dark"; ?>">
-
+<div class="imagenSingleCatFlotante">
+    <?php if($estilo=="Profesional"){ ?>
+    <img src="<?php echo get_post_meta(get_the_ID(),'imagen_flotante-'.$i,true) ?>"/>
+    <?php }else{ ?>
+    <img src="<?php echo get_post_meta(get_the_ID(),'imagen_flotante_profesional-'.$i,true) ?>"/>  
+    <?php } ?>
+</div>
 <div class="seccion-intro container">
     <div class="por-categoria">
         <div class="izq">
             <p class="title <?php  if($estilo=="Profesional") echo "colorWhite"; ?>">
                 <?php echo get_queried_object()->name ?>
             </p>
-            <div class="ContainerDescripcionSingCat">
-                <?php echo the_archive_description(); ?>
-            </div>
-                <div class="fondo">
-
-                    <img src="<?php echo get_site_url();?>/wp-content/uploads/2021/07/Group-944.png" alt="">     
-
-
-                </div>
-        </div>
-            
-            <div class="foto-der container">
+            <div class="foto-izq container">
             <?php
             $imagenCat=get_term_meta(get_queried_object_id(),"imagen_post_categoria",true);?>
             <img src="<?php echo wp_get_attachment_image_src($imagenCat,'full')[0];?>">
+        </div>
+            <div class="ContainerDescripcionSingCat">
+                <?php echo the_archive_description(); ?>
             </div>
+            <div class="fondo">
+                <img src="<?php echo get_site_url();?>/wp-content/uploads/2021/07/Group-944.png" alt="">     
+            </div>
+        </div>
+        <div class="foto-der container">
+            <?php
+            $imagenCat=get_term_meta(get_queried_object_id(),"imagen_post_categoria",true);?>
+            <img src="<?php echo wp_get_attachment_image_src($imagenCat,'full')[0];?>">
+        </div>
     </div>
 
 </div>     
 
         <div class="titulo-modelo-categoria container">
-              <p class="<?php if($estilo=="Profesional") echo "colorWhite";?>"<?php echo get_term_meta(get_queried_object_id(),"titulo_de_modelos",true)?></p>     
+              <p class="<?php if($estilo=="Profesional") echo "colorWhite";?>"><?php echo get_term_meta(get_queried_object_id(),"titulo_de_modelos",true)?></p>     
         </div>
             
         <div class="ProductosRelacionadosContainer container">
             <div class="productosRelacionados">
                 <?php 
-                if($the_query->have_posts()):
-                while ( $the_query->have_posts() ) : 
-                    $the_query->the_post();
+                $argsPost = array(
+                    'post_type'=> 'bicicleta',
+                    'order'    => 'ASC',
+                    'category_name'=> $nombre
+                );
+                $the_query_post2 = new WP_Query( $argsPost );
+                if($the_query_post2->have_posts()):
+                while ( $the_query_post2->have_posts() ) : 
+                    $the_query_post2->the_post();
                     if(get_the_category()[0]->term_id==get_queried_object_id()){?>       
-                        <div class="SingleproductoRelacionado" >
+                        <div class="SingleproductoRelacionado <?php if($estilo=="Profesional")echo "quitarFondo";?>" >
                             <a href="<?php the_permalink(); ?>" class="imagenProdRelaci" >
                                 <?php if($estilo=="Profesional") {?>
                                 <?php $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);?>
@@ -153,7 +166,7 @@ $cats=get_categories($args);
                                 <?php echo get_the_content()?>
                                 <div class="precioBotonRelacio">
                                     <p class="biciPrecio"><?php echo get_post_meta(get_the_ID(), 'precio', true ) ?></p>
-                                    <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "colorWhite" ?>">
+                                    <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
                                         <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                                         <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>"></span>
                                     </a>
@@ -208,19 +221,23 @@ $cats=get_categories($args);
 </div>
 
 <div class="<?php if($estilo=="Profesional") echo "dark";?>">
-<div class="form_comunidad_container">
-    <img src="<?php echo get_field("imagen_fondo_formulario","option")?>"/>
-    <div class="form_container" style="background: url('<?php echo get_field("imagen_fondo_negra","option")?>')">
-        <!-- <div class="img_form mb-3" ></div> -->
-        <p class="form_titulo">FORMÁ PARTE DE NUESTRA COMUNIDAD</p>
-        <div class="input_container">
-        <?php Echo do_shortcode ("[mc4wp_form id=183]"); ?>
+    <div class="form_comunidad_container" style="background-image:url(<?php echo get_field("imagen_fondo_formulario","option")?>;)">
+        <div class="container">
+            <div class="form_container" style="background-image: url('<?php echo get_field("imagen_fondo_negra","option")?>')">
+                <p class="form_titulo"><?php echo get_field("titulo_formulario","option") ?></p>
+                <div class="input_container">
+                    <?php Echo do_shortcode ("[mc4wp_form id=183]");?>
+                </div>
+            </div>
         </div>
-</div>
-</div>
-<div class="form_comunidad_footer">
-<img src="<?php echo get_field("imagen_inferior","option")?>"/>
-</div>
+    </div>
+    <div class="form_comunidad_footer">
+        <?php if ($estilo=="Amateur"){?>
+            <img src="<?php echo get_field("imagen_inferior","option")?>"/>
+        <?php }else{ ?>
+            <img src="<?php echo get_field("imagen_inferior_profesional","option")?>"/>  
+        <?php } ?>    
+    </div>
 </div>
 <script language='javascript'>
 document.getElementsByClassName('radio_container')[0].children[0].children[0].click();
@@ -230,7 +247,7 @@ document.getElementsByClassName("ContainerDescripcionSingCat")[0].children[0].cl
 
 const array=document.getElementsByClassName("InfoProdRelacionado");
     for(let i=0;i<array.length;i++){
-    array[i].children[2].classList.add("biciDescripcion");
+    array[i].children[2].classList.add("biciDescripcionSingle");
     array[i].children[2].classList.add("expandable");
     if("<?php echo $estilo ?>"=="Profesional")
     array[i].children[2].classList.add("colorWhite");
