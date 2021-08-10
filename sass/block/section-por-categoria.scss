@@ -22,7 +22,21 @@
             }
         }
     }
-    
+    .ContainerProductSlider{
+        width:32.3% !important;
+        margin: 0 8px;
+    }
+    .SingleProductSlider{
+        border: 2px solid #DFDFDF;
+        width: 100%;
+        height: fit-content;
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-between;
+    }
+
     .por-categoria {
         padding-top: 100px;
         padding-bottom: 100px;

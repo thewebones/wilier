@@ -35,11 +35,8 @@ $cats=get_categories($args);
         </div>
         <div class="texto-responsive2">
             <p class="header-texto2"><?php echo get_field("texto_header")?></p>
-            </div>    
-
+            </div>   
     </div>
-
-
 </section>
 <div class="menuFlotanteContainer">
 

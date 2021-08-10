@@ -1,6 +1,4 @@
 <section class="section-visitenos-form">
-
-
   <div class="visitenos-form">
       <div class="form" style="background-image: url(<?php echo get_field("fondo-form")?>); background-size: cover">
         <div class="contenido-form">

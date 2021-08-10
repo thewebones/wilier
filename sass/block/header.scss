@@ -77,7 +77,7 @@
 .menuHeader{
     display: flex;
     justify-content:space-between;
-    padding:0 16px;
+    padding:0 20px 0 16px;
 }
 .menuBody{
     padding:0 10px;
@@ -226,7 +226,7 @@ body {
  
 /* Change the color of links on hover */
 .topnav a:hover {
-    color: #EE3031 ;
+    color: #EE3031 !important;
     text-decoration:none
 }
  

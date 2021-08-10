@@ -16,7 +16,7 @@ else{
 <div class="generalContainer" style="<?php if($estilo=="Profesional") echo "background:black" ?>">
 <div class="container">
     <div class="mb-4">
-        <h1 xlass="slider_title_bloque_mundo <?php if($estilo=="Profesional") echo "whiteColorText"; ?>"><?php echo get_field("titulo") ?></h1>
+        <h1 class="slider_title_bloque_mundo <?php if($estilo=="Profesional") echo "whiteColorText"; ?>"><?php echo get_field("titulo") ?></h1>
     </div>
     <?php if($the_query->have_posts())
     while($the_query->have_posts()){

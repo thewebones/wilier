@@ -2,6 +2,12 @@
 .itemComentariosCliente .carousel-item-next,.itemComentariosCliente .carousel-item-left,.itemComentariosCliente .carousel-item-prev,.itemComentariosCliente .carousel-item-right{
     z-index: -1;
 }
+.slider_container_comentarioCli{
+    padding-top: 80px;
+    padding-bottom: 141px;
+    position: sticky;
+}
+
 .carousel-item-next .item-cliente {
     display:none;
 }

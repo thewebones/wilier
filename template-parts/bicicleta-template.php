@@ -46,10 +46,11 @@
     </div>
     </div>
 </div> 
+<div class="<?php if($estilo=="Profesional") echo "dark"; ?>">
 <div class="bicicletaContainerHeader">
     <div class="InfoBicicleta mt-5">
-        <p class="biciCategoria"><?php echo get_the_category()[0]->name ?></p>
-        <p class="biciNombreModelo mb-5"><?php echo the_title() ?></p>
+        <p class="biciCategoria "><?php echo get_the_category()[0]->name ?></p>
+        <p class="biciNombreModelo mb-5 <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo the_title() ?></p>
         <div class="imagenBici mb-5">
             <?php if($estilo=="Profesional"){ 
             $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);  
@@ -65,8 +66,8 @@
                 <p class="biciPrecio"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
             </div>
             <div>
-                <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
-                    <span>Consultar</span> 
+                <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                    <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                     <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                     </span>
                 </a>
@@ -90,12 +91,12 @@
         <div class="InfoCaracteristica">
             <div>
                 <p class="biciCategoria"><?php echo the_title() ?></p>
-                <p class="biciNombreModelo mb-5"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_modelo', true ); ?> </p>
-                <p class=""><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_texto', true ); ?></p>
+                <p class="biciNombreModelo mb-5 <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_modelo', true ); ?> </p>
+                <p class="<?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_texto', true ); ?></p>
             </div>
             <div>
-            <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
-                    <span>Consultar</span> 
+            <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                    <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                     <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                     </span>
                 </a>
@@ -107,7 +108,7 @@
 <div class="container">
 <div class="ProductosRelacionadosContainer ">
     <div class="tituloProdRelacionados">
-        <p class="tituloProductosRelacionados">
+        <p class="tituloProductosRelacionados <?php if($estilo=="Profesional")echo "colorWhite" ?>">
             <?php echo get_post_meta( get_the_ID(), 'titulo_productos_relacionados', true); ?>
         </p>
     </div>
@@ -125,12 +126,12 @@
             </a>    
             <div class="InfoProdRelacionado">
                 <p class="biciCategoria"><?php echo get_the_category($item)[0]->name ?></p>
-                <p class="biciNombreModelo cortarTexto"><?php echo get_the_title($item);?></p>
+                <p class="biciNombreModelo cortarTexto <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_the_title($item);?></p>
                 <?php echo get_the_content("",false,$item)?>
                 <div class="precioBotonRelacio">
                     <p class="biciPrecio"><?php echo get_post_meta( $item, 'precio', true ) ?></p>
-                    <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
-                        <span>Consultar</span> 
+                    <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                        <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                         <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                         </span>
                     </a>
@@ -147,14 +148,17 @@
     </div>
 </div>
 </div>
+</div>
 <script>
-    const arrayDescripcionPrincipal=document.getElementsByClassName("descripcionBiciContainer");
-    for(let i=0;i<arrayDescripcionPrincipal.length;i++)
-    arrayDescripcionPrincipal[i].children[0].classList.add("biciDescripcion");
+    document.getElementsByClassName("descripcionBiciContainer")[0].children[0].classList.add("biciDescripcion");
+    if("<?php echo $estilo ?>"=="Profesional")
+    document.getElementsByClassName("descripcionBiciContainer")[0].children[0].classList.add("colorWhite");
     const array=document.getElementsByClassName("InfoProdRelacionado");
     for(let i=0;i<array.length;i++){
     array[i].children[2].classList.add("biciDescripcion");
     array[i].children[2].classList.add("expandable");
+    if("<?php echo $estilo ?>"=="Profesional")
+    array[i].children[2].classList.add("colorWhite");
 }
    const arrayModelos=document.getElementsByClassName("cortarTexto");
    for(let i=0;i<arrayModelos.length;i++){

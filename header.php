@@ -201,6 +201,9 @@ $cats=get_categories($args);
 </div>
 </div>
 <script>
+	if("<?php echo $estilo?>"=="Profesional")
+	document.getElementsByClassName("main-cont-ig").classList.add("dark");
+
 function change(){
     window.location.href="<?php echo home_url($wp->request) ?>"+"?estilo=<?php if($estilo=='Profesional') echo 'Amateur';else echo 'Profesional'; ?>";
 }
@@ -216,6 +219,5 @@ function hover(event){
 function out(event){
     event.currentTarget.children[1].children[0].setAttribute("src","<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg");
 }
- 
 </script>
 </header>

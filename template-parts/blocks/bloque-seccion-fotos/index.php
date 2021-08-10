@@ -9,20 +9,20 @@ else{
 	}
 ?>
 <div class="<?php if($estilo=="Profesional") echo "dark"?>">
-<div class="container">
+<div class="container containerSeccionFotos">
     <div class="nombreSeccion mb-4">
         <h1 class="slider_title_bloque_mundo <?php if($estilo=="Profesional") echo "whiteColorText"; ?>" ><?php echo get_field("titulo") ?></h1>
     </div>
     <div class="seccionContainer">
-    <div class="primeraImagen mb-4">
+    <div class="primeraImagen">
         <img src="<?php echo get_field("imagen_arriba") ?>"/>
     </div>
     <div class="containerTresFotos">
-        <div class="imagenesLaterales mr-4">
-            <div class="imagenizquierda">
+        <div class="imagenesLaterales">
+            <div class="imagenizquierda imagenizquierdaArriba">
                 <img src="<?php echo get_field("imagen_izquierda_superior") ?>"/>
             </div>
-            <div class="imagenizquierda">
+            <div class="imagenizquierda imagenizquierdaAbajo">
                 <img src="<?php echo get_field("imagen_izquierda_inferior") ?>"/>
             </div>
         </div>

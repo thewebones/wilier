@@ -91,6 +91,8 @@ background:#00873A !important;
 .InfoProdRelacionado{
   width: 100%;
   height:fit-content;
+  text-align: start;
+  padding-top: 1vw;
 }
 .bicicletaContainerHeader{
   display:flex;
@@ -99,7 +101,7 @@ background:#00873A !important;
 .InfoBicicleta{
   display:flex;
   flex-direction: column;
-  align-items:baseline;
+  align-items:center;
 }
 .biciDescripcionPrecio{
   display: flex;
@@ -177,6 +179,7 @@ background:#00873A !important;
 }
 .botonVerTodoProdRelacio{
   padding: 5% 0;
+  text-align: center;
 }
 .botonVerTodo{
   font-family: Roboto;
