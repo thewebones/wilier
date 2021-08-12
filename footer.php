@@ -91,7 +91,7 @@ $cats=get_categories($args);
 				</div>
 			</div>
 			<div class="footer_derechos mt-5">
-				<p><?php echo get_field("texto_copyright","option") ?></p>
+				<p><?php echo "© ".date('Y') .". Todos los derechos reservados."; ?></p>
 				<div class="footer_term_policy">
 					<a class="mr-5" href="<?php echo get_field("term_conditions_link","option")["url"] ?>"><?php echo get_field("term_conditions_link","option")["title"]?></a>
 					<a href="<?php echo get_field("privacy_policy_links","option")["url"]?>"><?php echo get_field("privacy_policy_links","option")["title"]?></a>
@@ -103,13 +103,7 @@ $cats=get_categories($args);
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script>
-if("<?php echo $estilo?>"=="Profesional"){
-	document.getElementsByClassName("main-cont-ig")[0].classList.add("dark");
-	document.getElementsByClassName("textoInstagram")[0].classList.add("colorWhite");
-	document.getElementsByClassName("textoInstagram")[1s].classList.add("colorWhite");
-}
-</script>
+
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/popper.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/jquery.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/swiper-bundle.min.js"></script>
@@ -119,5 +113,20 @@ if("<?php echo $estilo?>"=="Profesional"){
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/js/main.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/template-parts/blocks/slider-hover/slider-hover.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+
+        if("<?php echo $estilo?>"=="Profesional") {
+            jQuery(".div-instagram").addClass("dark");
+            jQuery(".textoInstagram").addClass("colorWhite");
+            jQuery(".textoInstagram").addClass("colorWhite");
+
+        }
+
+
+    })
+
+</script>
 </body>
 </html>

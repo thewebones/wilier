@@ -1,10 +1,10 @@
 .section-video-home {
-    background: linear-gradient(180deg, rgba(255,255,255,1) 70%, #0B0B0B 30%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 70%, black 30%);
     height: 100%;
     padding-top: 100px;
 
     &.Profesional {
-    background: linear-gradient(180deg,  #0B0B0B 70%, rgba(255,255,255,1) 30%) !important;
+    background: linear-gradient(180deg,  black 70%, rgba(255,255,255,1) 30%) !important;
     }
     .embed-container {
         position: relative;  

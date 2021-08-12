@@ -1,6 +1,11 @@
 <?php
 if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"])){
 ?>
+    <style>
+        .boton_amateur:hover,.boton_profesional:hover{
+            background-image: url(<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/hover-modal.png) !important;
+        }
+    </style>
  <section class="section-modal">
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
         <div class="modal-dialog" role="document">

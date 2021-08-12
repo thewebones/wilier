@@ -35,32 +35,37 @@ else{
     <style>
         @font-face {
             font-family: 'Roboto';
-            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/Roboto-Regular.ttf') format('truetype');
+            src: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/webfonts/Roboto-Regular.ttf') format('truetype');
         }
         @font-face {
             font-family: 'Roboto-Bold';
-            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/Roboto-Bold.ttf') format('truetype');
+            src: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/webfonts/Roboto-Bold.ttf') format('truetype');
         }
         @font-face {
             font-family: 'Roboto-Light';
-            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/Roboto-Light_1.ttf') format('truetype');
+            src: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/webfonts/Roboto-Light_1.ttf') format('truetype');
         }
         @font-face {
             font-family: 'Open Sans';
-            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/OpenSans-Regular.ttf') format('truetype');
+            src: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/webfonts/OpenSans-Regular.ttf') format('truetype');
         }
         @font-face {
             font-family: 'OpenSans-Bold';
-            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/OpenSans-Bold.ttf') format('truetype');
+            src: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/webfonts/OpenSans-Bold.ttf') format('truetype');
         }
         @font-face {
             font-family: 'OpenSans-Light';
-            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/OpenSans-Light.ttf') format('truetype');
+            src: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/webfonts/OpenSans-Light.ttf') format('truetype');
         }
         @font-face {
             font-family: 'OpenSans-ExtraBold';
-            src: url('http://34.208.239.250/wp-content/themes/wilier/webfonts/OpenSans-ExtraBold.ttf') format('truetype');
+            src: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/webfonts/OpenSans-ExtraBold.ttf') format('truetype');
         }
+        @font-face {
+            font-family: 'DM-Sans';
+            src: url('<?php echo get_site_url(); ?>/wp-content/themes/wilier/webfonts/DMSans-Regular.ttf') format('truetype');
+        }
+
     </style>
 	<?php wp_head(); ?>
 </head>
@@ -199,8 +204,6 @@ $cats=get_categories($args);
 </div>
 </div>
 <script>
-	if("<?php echo $estilo?>"=="Profesional")
-	document.getElementsByClassName("main-cont-ig").classList.add("dark");
 
 function change(){
     window.location.href="<?php echo home_url($wp->request) ?>"+"?estilo=<?php if($estilo=='Profesional') echo 'Amateur';else echo 'Profesional'; ?>";
