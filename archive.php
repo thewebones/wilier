@@ -78,7 +78,7 @@ $cats=get_categories($args);
                 $the_query_post = new WP_Query( $argsPost );
                 if($the_query_post->posts){
                 ?>
-			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
+			 	<a class="linkMenu" href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
 			 <?php }} ?>	
 		</div> 
         </div>
@@ -102,11 +102,17 @@ $cats=get_categories($args);
 </div>
 
 <div class="<?php if($estilo=="Profesional") echo "dark"; ?>">
+<div class="generalContainerSingleCat">
 <div class="imagenSingleCatFlotante">
-    <?php if($estilo=="Profesional"){ ?>
-    <img src="<?php echo get_post_meta(get_the_ID(),'imagen_flotante-'.$i,true) ?>"/>
-    <?php }else{ ?>
-    <img src="<?php echo get_post_meta(get_the_ID(),'imagen_flotante_profesional-'.$i,true) ?>"/>  
+    <?php 
+    
+    if($estilo=="Amateur"){
+    $imagenFlot=get_term_meta(get_queried_object_id(),"imagen_flotante",true);?>
+    <img src="<?php echo wp_get_attachment_image_src($imagenFlot,'full')[0];?>"/>
+    <?php }else{ 
+    $imagenFlot=get_term_meta(get_queried_object_id(),"imagen_flotante_profesional",true);
+    ?>
+    <img src="<?php echo wp_get_attachment_image_src($imagenFlot,'full')[0];?>"/>
     <?php } ?>
 </div>
 <div class="seccion-intro container">
@@ -162,11 +168,13 @@ $cats=get_categories($args);
                             </a>    
                             <div class="InfoProdRelacionado">
                                 <p class="biciCategoria"><?php echo get_the_category()[0]->name ?></p>
-                                <p class="biciNombreModelo cortarTexto <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_the_title();?></p>
-                                <?php echo get_the_content()?>
+                                <a class="linkTextosModelo" href="<?php the_permalink();?>">
+                                    <p class="biciNombreModelo <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_the_title();?></p>
+                                    <?php echo get_the_content()?>
+                                </a>
                                 <div class="precioBotonRelacio">
                                     <p class="biciPrecio"><?php echo get_post_meta(get_the_ID(), 'precio', true ) ?></p>
-                                    <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                                    <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
                                         <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                                         <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>"></span>
                                     </a>
@@ -180,6 +188,7 @@ $cats=get_categories($args);
             <?php wp_reset_query(); ?>
             </div>
         </div>
+    </div>
 </div>
             <!-- end of the loop -->
             <!-- <?php wp_reset_postdata(); ?> -->
@@ -247,17 +256,12 @@ document.getElementsByClassName("ContainerDescripcionSingCat")[0].children[0].cl
 
 const array=document.getElementsByClassName("InfoProdRelacionado");
     for(let i=0;i<array.length;i++){
-    array[i].children[2].classList.add("biciDescripcionSingle");
-    array[i].children[2].classList.add("expandable");
+    array[i].children[1].children[1].classList.add("biciDescripcionSingle");
     if("<?php echo $estilo ?>"=="Profesional")
-    array[i].children[2].classList.add("colorWhite");
+    array[i].children[1].children[1].classList.add("colorWhite");
+    if(array[i].children[1].children[1].innerText.length>110)
+    array[i].children[1].children[1].innerText=array[i].children[1].children[1].innerText.substring(0,90)+"...";
 }
-   const arrayModelos=document.getElementsByClassName("cortarTexto");
-   for(let i=0;i<arrayModelos.length;i++){
-       arrayModelos[i].innerText=arrayModelos[i].innerText.toLowerCase();
-       if(window.screen.width>990 && arrayModelos[i].innerText.length>18)
-       arrayModelos[i].innerText=arrayModelos[i].innerText.substring(0,6)+"...";
-   }
 function load(event){
     const imagenLoad=event.currentTarget.parentElement.children[3].value;
     document.getElementsByClassName('framemap')[0].setAttribute('src','https://maps.google.com/maps?q='+imagenLoad+'&t=&z=13&ie=UTF8&iwloc=&output=embed');}

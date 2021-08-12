@@ -25,10 +25,10 @@ else{
                     </div>
                 </div>
 
-                <div class="descripcion">    
+                <div class="descripcion <?php if($estilo=="Profesional")echo "descripcionDarkVisitenos"; ?>">    
                     <span class="destribuidor-visitenos <?php if($estilo=="Profesional")echo "colorWhite"; ?>"><?php echo $item["destribuidor-visitenos"] ?></span>
                     <h5 class="nombre-visitenos <?php if($estilo=="Profesional")echo "colorWhite"; ?>"><?php echo $item["nombre-visitenos"] ?></h5>
-                    <p class="direccion-visitenos <?php if($estilo=="Profesional")echo "colorWhite"; ?>"><?php echo $item["direccion-visitenos"] ?></p>
+                    <?php echo $item["direccion-visitenos"] ?>
                 </div>
                 
             </div>

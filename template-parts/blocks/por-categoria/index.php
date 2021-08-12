@@ -62,11 +62,13 @@
                                 </a>    
                                 <div class="InfoProdRelacionado">
                                     <p class="biciCategoria"><?php echo get_the_category()[0]->name ?></p>
-                                    <p class="biciNombreModelo cortarTexto <?php if($estilo=="Profesional")echo "colorWhite"; ?>"><?php echo get_the_title();?></p>
-                                    <?php echo get_the_content()?>
+                                    <a class="linkTextosModelo" href="<?php the_permalink(); ?>">
+                                        <p class="biciNombreModelo <?php if($estilo=="Profesional")echo "colorWhite"; ?>"><?php echo get_the_title();?></p>
+                                        <?php echo get_the_content()?>
+                                    </a>
                                     <div class="precioBotonRelacio">
                                         <p class="biciPrecio"><?php echo get_post_meta(get_the_ID(), 'precio', true ) ?></p>
-                                        <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"] ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite"; ?>">
+                                        <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite"; ?>">
                                             <span class="<?php if($estilo=="Profesional")echo "colorWhite"; ?>">Consultar</span> 
                                             <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>"></span>
                                         </a>
@@ -78,8 +80,8 @@
                 endwhile;?>  
         </div>          
         <div class="botonVerTodoProdRelacio">
-            <a class="btn botonVerTodo" href="<?php echo get_category_link(get_cat_ID($category->term_id))?>">
-            Ver todo los productos
+            <a class="btn botonVerTodo" href="<?php echo get_category_link($category->term_id)?>">
+                Ver todo los productos
             <img class="flecha-btn ml-3" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
             </a>                      
         </div>   
@@ -88,15 +90,11 @@
 </section>
 <script>
     const array=document.getElementsByClassName("InfoProdRelacionado");
-   const arrayModelos=document.getElementsByClassName("cortarTexto");
-   for(let i=0;i<arrayModelos.length;i++){
-    array[i].children[2].classList.add("biciDescripcionSingle");
+   for(let i=0;i<array.length;i++){
+    array[i].children[1].children[1].classList.add("biciDescripcionSingle");
     if("<?php echo $estilo ?>"=="Profesional")
-    array[i].children[2].classList.add("colorWhite");
-    if(array[i].children[2].innerText.length>110)
-    array[i].children[2].innerText=array[i].children[2].innerText.substring(0,90)+"...";
-    arrayModelos[i].innerText=arrayModelos[i].innerText.toLowerCase();
-    if(window.screen.width>990 && arrayModelos[i].innerText.length>18)
-        arrayModelos[i].innerText=arrayModelos[i].innerText.substring(0,6)+"...";
+    array[i].children[1].children[1].classList.add("colorWhite");
+    if(array[i].children[1].children[1].innerText.length>110)
+    array[i].children[1].children[1].innerText=array[i].children[1].children[1].innerText.substring(0,90)+"...";
    }
 </script>

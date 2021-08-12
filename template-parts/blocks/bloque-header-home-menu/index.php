@@ -22,7 +22,7 @@ $cats=get_categories($args);
        <div class="header-general" style="background: url('<?php echo get_field("background_profesional")?>')"> <?php }?>
         <div class="container header-desk division">
             <h1 class="header-titulo"><?php echo get_field("titulo_header")?></h1>
-            <p class="header-texto"><?php echo get_field("texto_header")?></p>
+            <p class="header-texto"><?php if($estilo=="Amateur") echo get_field("texto_header"); else echo get_field("encabezado_texto_profesional");?></p>
             <img class="imagen-header" src="<?php if($estilo=="Profesional") echo get_field("imagen_header_profesional"); else echo get_field("imagen_header");?>">
         </div>
     <div class="container empty division"></div>
@@ -52,7 +52,7 @@ $cats=get_categories($args);
                 $the_query_post = new WP_Query( $argsPost );
                 if($the_query_post->posts){
                 ?>
-			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
+			 	<a class="linkMenu" href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
 			 <?php }} ?>	
 		</div> 
     </div>

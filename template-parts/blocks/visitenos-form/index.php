@@ -15,7 +15,7 @@ else{
         <div class="contenido-form">
           <p class="form_titulo">FORMÁ PARTE DE NUESTRA COMUNIDAD</p>
           <div class="input_container_visitenos">
-            <?php echo "[mc4wp_form id=246]" ?>
+            <?php echo "[mc4wp_form id=183]" ?>
           </div>
         </div>
       </div>

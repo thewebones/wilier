@@ -115,6 +115,23 @@
        }
     }
 }
+.imagenSingleCatFlotante{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width:fit-content;
+    height: 100%;
+    z-index: -1;
+    @media only screen and (max-width: 1000px) {
+        display:none;
+    }
+}
+.imagenSingleCatFlotante img{
+    height:100%;
+}
+.generalContainerSingleCat{
+    position:sticky;
+}
 .seccion-intro {
     display: flex;
     justify-content: center;
@@ -126,8 +143,8 @@
     @media only screen and (max-width: 600px) {
         flex-direction: column;
     }
-
 }
+
 .izq {    
     justify-content: flex-start;
     width: 50%;

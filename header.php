@@ -102,17 +102,17 @@ $cats=get_categories($args);
 			<div class="logoContainerMenuInferior">
 				<img src="<?php if($estilo=="Amateur") echo get_field("logo_menu_lateral","option"); else echo get_field("logo_menu_lateral_profesional","option"); ?>"/>
 			</div>
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a href="javascript:void(0)" class="closebtn linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" onclick="closeNav()">×</a>
 		</div>
 		<div class="menuBody">
   			<?php if(get_field("repeater_menu","option")){
 				foreach(get_field("repeater_menu","option") as $menu){ ?>
-				<a class="mb-3" href="<?php echo $menu["item_menu"]["url"] ?>"><?php echo $menu["item_menu"]["title"] ?></a>	
+				<a class="mb-3 linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" href="<?php echo $menu["item_menu"]["url"] ?>"><?php echo $menu["item_menu"]["title"] ?></a>	
 			<?php }}?>
-			<a onClick="openNav2()">Ver Categorías</a>
+			<a class="linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" onClick="openNav2()">VER CATEGORÍAS</a>
 		</div>
 		<div class="btnLateralContainer">
-			<a class="btnMenuLateral" href="<?php echo get_field("boton_menu","option")["url"] ?>"><?php echo get_field("boton_menu","option")["title"] ?></a>
+			<a class="btnMenuLateral " href="<?php echo get_field("boton_menu","option")["url"] ?>"><?php echo get_field("boton_menu","option")["title"] ?></a>
 		</div>
 		<div class="<?php if($estilo=="Profesional") echo "imagenFondoLateralProfesional"; else echo "imagenFondoLateralAmateur"; ?>">
 			<img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/imagenMenuLateral.png"/>
@@ -122,8 +122,8 @@ $cats=get_categories($args);
 <div id="sideNavigation2" class="sidenav2 <?php if($estilo=="Profesional") echo "dark_background sidenav_dark"; ?>">
 	<div class="sidenavContainer">	
 		<div class="menuHeader">
-				<a href="javascript:void(0)" class="closebtn returnbtn" onClick="returnBtn()"><</a>
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">×</a>
+				<a href="javascript:void(0)" class="linkMenuLateral closebtn returnbtn <?php if($estilo=="Profesional") echo "colorWhite"; ?>" onClick="returnBtn()"><</a>
+				<a href="javascript:void(0)" class="linkMenuLateral closebtn <?php if($estilo=="Profesional") echo "colorWhite"; ?>" onclick="closeNav2()">×</a>
 		</div>
 			<div class="menuBody">
 			<?php foreach($cats as $cat){ 
@@ -135,7 +135,7 @@ $cats=get_categories($args);
 			$the_query_post = new WP_Query( $argsPost );
 			if($the_query_post->posts){
 				 ?>
-			 	<a class="mb-3" href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
+			 	<a class="mb-3 linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
 			 <?php }} ?>	
 			</div>
 		
@@ -158,9 +158,9 @@ $cats=get_categories($args);
 			<div class="menuContainer <?php if($estilo=="Profesional") echo "menuContainerDark";?>">
 				<?php if(get_field("repeater_menu","option")){
 				foreach(get_field("repeater_menu","option") as $menu){ ?>
-			 		<a href="<?php echo $menu["item_menu"]["url"] ?>"><?php echo $menu["item_menu"]["title"] ?></a>	
+			 		<a class="linkMenu" href="<?php echo $menu["item_menu"]["url"] ?>"><?php echo $menu["item_menu"]["title"] ?></a>	
 				<?php }}?>
-		    	<a class="btnMenu" href="<?php echo get_field("boton_menu","option")["url"] ?>"><?php echo get_field("boton_menu","option")["title"] ?></a>
+		    		<a class="btnMenu" href="<?php echo get_field("boton_menu","option")["url"] ?>"><?php echo get_field("boton_menu","option")["title"] ?></a>
 			</div>
   			<a class="openNavButton" href="#" onclick="openNav()">
     		<svg width="30" height="30" id="icoOpen">
@@ -191,7 +191,7 @@ $cats=get_categories($args);
 				);
 				$the_query_post = new WP_Query( $argsPost );
 				if($the_query_post->posts){?>
-			 	<a href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
+			 	<a class="linkMenu" href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
 			 	<?php } }?>	
 			</div>
 		</div>

@@ -4,7 +4,7 @@
 .containerEmail,.containerTel,.containerNombre{
     position:absolute;
     left:5%;
-    top:0;
+    top:5%;
     font-family:Roboto;
     font-style:normal;
     font-weight: 500;
@@ -90,6 +90,7 @@
     color:white !important;
     width:150px;
     height:50px;
+    border:none;
 }
 .form_button_comunidad:hover{
     background: #C12728 !important;

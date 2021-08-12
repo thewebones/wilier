@@ -14,7 +14,6 @@
         margin-bottom: 50px !important;
     }
     
-  
     .boton-video-home {
         display: flex;
         justify-content: flex-end;
@@ -33,8 +32,8 @@
         z-index: 9999; 
     }
     .boton-video:hover{
-        background: #C12728;
-        text-decoration:none;
+        background: #C12728 !important;
+        text-decoration:none!important;
     }
     .boton-video-home a {
         width: 313px;

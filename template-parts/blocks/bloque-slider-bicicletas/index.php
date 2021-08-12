@@ -14,10 +14,6 @@ else{
 		$estilo=$_COOKIE["estilo"];
 	}
     ?>
-    <div>
-    
-   
-   </div> 
    <div class="<?php if($estilo=="Profesional") echo "slider_container_dark"; ?>">
     <div class="slider_container container ">
     <h1 class="slider_title"><?php echo get_field("title_slider") ?></h1>
@@ -48,21 +44,27 @@ else{
                         <div class="slider_text ml-3">
                             <div class="textosSliderBicicletas">
                                 <p class="slider_categoria"><?php echo get_the_category()[0]->name ?></p>
-                                <p class="slider_modelo mb-3"><?php echo the_title() ?></p>
-                                <?php echo get_the_content() ?>
+                                <a class="linkTextosModelo" href="<?php the_permalink(); ?>">    
+                                    <p class="slider_modelo mb-3 "><?php echo the_title() ?></p>
+                                    <?php echo get_the_content() ?>
+                                </a>
                             </div>
                             <div class="slider_button_price">
-                                <p class="slider_price"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
-                                <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider">
+                                <p class="slider_price">Desde <?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
+                                <?php $mensajeWhatsapp=get_post_meta( get_the_ID(), 'mensaje', true ); 
+                                ?>
+                                <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" class="btn btn-slider">
                                     <span>Consultar</span> 
                                     <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                                 </span>
                                 </a>
+                                
                             </div>
                         </div> 
                     </div>
                 </div>
                 <?php 
+               
                 $cont++;
             } ?>
             </div>
@@ -79,9 +81,11 @@ else{
 <script>
     const arrayTextosSlider=document.getElementsByClassName("textosSliderBicicletas");
     for(let i=0;i<arrayTextosSlider.length;i++){
-        arrayTextosSlider[i].children[2].classList.add("slider_description");
-        if(window.matchMedia("(max-width:850px)").matches){
-            arrayTextosSlider[i].children[2].classList.add("expandable");
-        }
+        arrayTextosSlider[i].children[1].children[1].classList.add("slider_description");
+        if("<?php echo $estilo ?>"=="Profesional")
+        arrayTextosSlider[i].children[1].children[1].classList.add("colorWhite");
+        if(arrayTextosSlider[i].children[1].children[1].innerText.length>350)
+        arrayTextosSlider[i].children[1].children[1].innerText=arrayTextosSlider[i].children[1].children[1].innerText.substring(0,350)+"...";
     }
+    
 </script>

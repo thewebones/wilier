@@ -47,10 +47,11 @@
     </div>
 </div> 
 <div class="<?php if($estilo=="Profesional") echo "dark"; ?>">
+<div class="sticky">
 <div class="bicicletaContainerHeader container">
     <div class="InfoBicicleta mt-5">
         <p class="biciCategoria "><?php echo get_the_category()[0]->name ?></p>
-        <p class="biciNombreModelo mb-5 <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo the_title() ?></p>
+        <p class="biciNombreModelo mb-5 <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo the_title(); ?></p>
         <div class="imagenBici mb-5">
             <?php if($estilo=="Profesional"){ 
             $imagenId=get_post_meta(get_the_ID(),'imagen_tema_profesional',true);  
@@ -63,10 +64,10 @@
         <div class="biciDescripcionPrecio">
             <div class="descripcionBiciContainer">
                 <?php echo get_the_content() ?>
-                <p class="biciPrecio"><?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
+                <p class="biciPrecio">Desde <?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
             </div>
             <div>
-                <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
                     <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                     <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                     </span>
@@ -88,14 +89,14 @@
         <div class="imagenCaracteristica">
             <img src="<?php echo get_post_meta(get_the_ID(),'imagen_modelo-'.$i,true) ?>"/>
         </div>
-        <div class="InfoCaracteristica">
-            <div>
+        <div class="InfoCaracteristica ">
+            <div class="InfoCar <?php if($estilo=="Profesional") echo "InfoCarDark"; ?>">
                 <p class="biciCategoria"><?php echo the_title() ?></p>
                 <p class="biciNombreModelo mb-5 <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_modelo', true ); ?> </p>
                 <p class="<?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_texto', true ); ?></p>
             </div>
             <div>
-            <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+            <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
                     <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                     <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                     </span>
@@ -126,11 +127,13 @@
             </a>    
             <div class="InfoProdRelacionado">
                 <p class="biciCategoria"><?php echo get_the_category($item)[0]->name ?></p>
-                <p class="biciNombreModelo cortarTexto <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_the_title($item);?></p>
-                <?php echo get_the_content("",false,$item)?>
+                <a class="linkTextosModelo" href="<?php the_permalink($item); ?>">
+                    <p class="biciNombreModelo <?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_the_title($item);?></p>
+                    <?php echo get_the_content("",false,$item)?>
+                </a>
                 <div class="precioBotonRelacio">
                     <p class="biciPrecio"><?php echo get_post_meta( $item, 'precio', true ) ?></p>
-                    <a  href="<?php echo get_post_meta( get_the_ID(), 'enlace_whatsapp', true )["url"]  ?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                    <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title($item);?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
                         <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                         <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                         </span>
@@ -150,10 +153,12 @@
         <div class="fondoBiciFooter">
             <?php if($estilo=="Profesional"){ ?>
                 <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/fondo_profesional.png"/>
-            <?php }else?>
+            <?php }else{?>
             <img src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/fondo_amateur.png"/>
+            <?php } ?>
         </div>
     </div>
+</div>
 </div>
 </div>
 </div>
@@ -164,15 +169,10 @@
     document.getElementsByClassName("descripcionBiciContainer")[0].children[0].classList.add("colorWhite");
     const array=document.getElementsByClassName("InfoProdRelacionado");
     for(let i=0;i<array.length;i++){
-    array[i].children[2].classList.add("biciDescripcionSingle");
-    array[i].children[2].classList.add("expandable");
+    array[i].children[1].children[1].classList.add("biciDescripcionSingle");
     if("<?php echo $estilo ?>"=="Profesional")
-    array[i].children[2].classList.add("colorWhite");
+    array[i].children[1].children[1].classList.add("colorWhite");
+    if(array[i].children[1].children[1].innerText.length>110)
+    array[i].children[1].children[1].innerText=array[i].children[1].children[1].innerText.substring(0,90)+"...";
 }
-   const arrayModelos=document.getElementsByClassName("cortarTexto");
-   for(let i=0;i<arrayModelos.length;i++){
-       arrayModelos[i].innerText=arrayModelos[i].innerText.toLowerCase();
-       if(window.screen.width>990 && arrayModelos[i].innerText.length>18)
-       arrayModelos[i].innerText=arrayModelos[i].innerText.substring(0,6)+"...";
-   }
     </script>

@@ -21,7 +21,7 @@ else{
        <div class="header-general" style="background: url('<?php echo get_field("background_profesional")?>')"> <?php }?>
        <div class="container header-desk division">
        <h1 class="header-titulo"><?php echo get_field("titulo_header")?></h1>
-       <p class="header-texto"><?php echo get_field("texto_header")?></p>
+       <p class="header-texto"><?php if($estilo=="Amateur") echo get_field("texto_header"); else echo get_field("encabezado_texto_profesional");?></p>
         <div class="boton-header-home">
             <a class="boton-header" href="<?php echo get_field("boton_header")["url"]?>">
             <?php echo get_field("boton_header")["title"]?>
@@ -51,10 +51,8 @@ else{
                     <?php if(!get_field("boton_whatsapp")){
                         ?>
                     <img class="flecha" src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/Group.png">
-                    <?php }elseif($estilo=="Profesional"){ ?>
-                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>
-                        <?php }else{?>
-                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg"/>   
+                    <?php }else{?>
+                        <img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/dark/whatsapp.svg"/>   
                         <?php } ?> 
                 </a>
         </div>

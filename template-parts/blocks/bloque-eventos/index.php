@@ -38,7 +38,7 @@ else{
                     <span class="<?php if($estilo=="Profesional") echo "colorWhite"?>">Comparti con:</span>
                     <h3 class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo get_post_meta( get_the_ID(), 'compartido', true ) ?></h3>
                 </div>
-                <p class="evento_premio <?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo get_post_meta( get_the_ID(), 'premio', true )?></p>
+                <p class="evento_premio <?php if($estilo=="Profesional") echo "colorWhite"?>">Premio: <?php echo get_post_meta( get_the_ID(), 'premio', true )?></p>
             </div>
             <a onmouseover="hover(event)" onmouseout="out(event)" href="#" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
                 <span>Consultar</span>

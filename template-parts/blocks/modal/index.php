@@ -21,8 +21,8 @@ if(!isset($_GET["estilo"]) && !isset($_COOKIE["estilo"])){
                             <span class="title"><?php echo get_field("titulo");?></span>
                             <h4 class="pregunta"><?php echo get_field("pregunta");?></h4>
                             <div class="botones">
-                               <a class="boton_amateur" onClick="amateur()"><?php echo get_field("boton_amateur");?></a>
-                               <a class="boton_profesional" onClick="profesional()"><?php echo get_field("boton_profesional");?></a>
+                               <a class="boton_amateur" style="background-image: url(<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/boton-afic-pro.png)" onClick="amateur()"><?php echo get_field("boton_amateur");?></a>
+                               <a class="boton_profesional" style="background-image: url(<?php echo get_site_url(); ?>/wp-content/themes/wilier/img/boton-afic-pro.png)" onClick="profesional()"><?php echo get_field("boton_profesional");?></a>
                             </div>
                             <span class="nota"><?php echo get_field("nota");?></span>  
                             <div class="redes-sociales">

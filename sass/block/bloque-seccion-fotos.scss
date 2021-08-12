@@ -59,6 +59,9 @@
     display:none;
 }
 @media (max-width: 800px) {
+    .containerSeccionFotos{
+        padding:5vw 0;
+    }
     .imagenesLaterales{
         width:100%;
         height:auto;

@@ -23,9 +23,10 @@
     letter-spacing: 0.005em;
     margin-left: -10px;
   }
+  
   .header-texto {
     margin-bottom: 4vh;
-    width: 452px;
+    width: 552px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -46,7 +47,7 @@
 
   }
   .boton-header-home {
-    margin-bottom: 114px;
+    margin-bottom: 84px;
     background: #EE3031;
     width: 313px;
     height: 50px;
@@ -99,6 +100,11 @@
       font-size: 42px !important;
     }
   }
+  @media (min-width: 700px) and (max-width: 1350px) {
+    .header-titulo {
+      font-size: 65px !important;
+    }
+  }
   @media (max-width: 600px) {
     .header-texto, .boton-header-home, .imagen-header {
       display: none;
@@ -117,7 +123,7 @@
     .header-responsive {
       display: flex !important;
       margin-top: 30px;
-      margin-bottom: 50px;
+     padding-bottom: 50px;
     }
     .img-responsive {
       margin-right: 20px;

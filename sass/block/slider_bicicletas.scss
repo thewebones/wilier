@@ -94,7 +94,7 @@
 }
 .imagen_slider_container{
     width:630px;
-    height:336px;
+    height:436px;
 }
 .imagen_slider_container img{
     width:inherit;
@@ -117,8 +117,6 @@
     font-style:normal;
     line-height:21px;
     letter-spacing: 0.005em;
-    height: 170px;
-    overflow:auto;
     padding-right: 18px;
 }
 .carrusel_container{
@@ -132,7 +130,7 @@
     width: 30vw;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content:space-around;
 }
 .slider_button_price{
     justify-content: space-between;
@@ -192,6 +190,10 @@
     .imagen_slider_container{
         width:100%;
         height: auto;
+    }
+    .slider_container{
+        padding-top: 5vw;
+        padding-bottom: 5vw;
     }
 
 }

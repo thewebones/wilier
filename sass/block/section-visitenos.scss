@@ -50,6 +50,17 @@
             height:inherit;
             object-fit:cover;
         }
+        .descripcion p{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 0.005em;
+        }
+        .descripcionDarkVisitenos{
+            color:white !important;
+        }
         .descripcion {
             width:50%;
             display: flex;
@@ -77,14 +88,7 @@
 
                 letter-spacing: 0.0025em;   
             }
-            .destribuidor-visitenos {
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 21px;
-                letter-spacing: 0.005em;
-            }
+            
         }
         .fondo-visitenos {
             position: absolute;

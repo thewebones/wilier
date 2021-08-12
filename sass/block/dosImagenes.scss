@@ -6,19 +6,19 @@
 .fotoIzquierdaDI{
     width:49%;
     margin-right: 2%;
-    height:auto;
+    height:70vh;
 }
-.fotoIzquierdaDI{
+.fotoDerechaDI{
     width:49%;
-    height:auto;
+    height:70vh;
 }
 .fotoDerechaDI img,.fotoIzquierdaDI img{
     width:100%;
-    height:inherit;
-    object-fit:cover;
+    height:100%;
+    object-fit:contain;
 }
 
-@media (max-width:800){
+@media (max-width:800px){
     .ContainerDosFotos{
         padding:5vw 0;
         flex-direction: column;

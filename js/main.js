@@ -2,8 +2,8 @@
 
 $('pre.expandable').expander({
     slicePoint:130,
-    expandText:'leer mas',
-    collapseTimer:5000,
+    expandText:'leer más',
+    collapseTimer:10000,
     userCollapseText:'cerrar'
 });
 
@@ -22,7 +22,7 @@ document.getElementById("primary").addEventListener("click",function(e){
 
 
 function openNav() {
-    document.getElementById("sideNavigation").style.width = "250px";
+    document.getElementById("sideNavigation").style.width = "100%";
 }
  
 function closeNav() {
@@ -30,7 +30,7 @@ function closeNav() {
 }
 
 function openNav2() {
-    document.getElementById("sideNavigation2").style.width = "250px";
+    document.getElementById("sideNavigation2").style.width = "100%";
 }
 
 function closeNav2() {
