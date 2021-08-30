@@ -40,8 +40,8 @@ else{
                 </div>
                 <p class="evento_premio <?php if($estilo=="Profesional") echo "colorWhite"?>">Premio: <?php echo get_post_meta( get_the_ID(), 'premio', true )?></p>
             </div>
-            <a onmouseover="hover(event)" onmouseout="out(event)" href="#" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
-                <span>Consultar</span>
+            <a  href="https://api.whatsapp.com/send?phone=<?php echo get_post_meta( get_the_ID(), 'numero_telefono', true ) ?>&text=<?php echo get_post_meta( get_the_ID(), 'mensaje', true )?>" target="_blank" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                 <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                 </span>
             </a>

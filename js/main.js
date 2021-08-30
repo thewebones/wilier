@@ -1,12 +1,5 @@
 
 
-$('pre.expandable').expander({
-    slicePoint:130,
-    expandText:'leer más',
-    collapseTimer:10000,
-    userCollapseText:'cerrar'
-});
-
 document.getElementById("primary").addEventListener("click",function(e){
     if(document.getElementById("sideNavigation")!=e.target){
     closeNav();
@@ -67,3 +60,6 @@ function mostrarTel(){
 $( document ).ready(function() {
     $('#myModal').modal('toggle');
 });
+function showModal(){
+    $('#modalSuscribe').modal('toggle');
+}

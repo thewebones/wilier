@@ -53,7 +53,7 @@ else{
                                 <p class="slider_price">Desde <?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
                                 <?php $mensajeWhatsapp=get_post_meta( get_the_ID(), 'mensaje', true ); 
                                 ?>
-                                <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" class="btn btn-slider">
+                                <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" target="_blank" class="btn btn-slider">
                                     <span>Consultar</span> 
                                     <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                                 </span>

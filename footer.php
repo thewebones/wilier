@@ -91,7 +91,7 @@ $cats=get_categories($args);
 				</div>
 			</div>
 			<div class="footer_derechos mt-5">
-				<p><?php echo "© ".date('Y') .". Todos los derechos reservados."; ?></p>
+				<p><?php echo "ï¿½ ".date('Y') .". Todos los derechos reservados."; ?></p>
 				<div class="footer_term_policy">
 					<a class="mr-5" href="<?php echo get_field("term_conditions_link","option")["url"] ?>"><?php echo get_field("term_conditions_link","option")["title"]?></a>
 					<a href="<?php echo get_field("privacy_policy_links","option")["url"]?>"><?php echo get_field("privacy_policy_links","option")["title"]?></a>
@@ -109,7 +109,6 @@ $cats=get_categories($args);
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/swiper-bundle.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/vendors/bootstrap.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/template-parts/blocks/slider-medio/slider-medio.js"></script>
-<script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/js/jquery.expander.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/js/main.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/wilier/template-parts/blocks/slider-hover/slider-hover.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

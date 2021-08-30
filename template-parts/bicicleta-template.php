@@ -67,7 +67,7 @@
                 <p class="biciPrecio">Desde <?php echo get_post_meta( get_the_ID(), 'precio', true ) ?></p>
             </div>
             <div>
-                <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" target="_blank" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
                     <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                     <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                     </span>
@@ -96,7 +96,7 @@
                 <p class="<?php if($estilo=="Profesional")echo "colorWhite" ?>"><?php echo get_post_meta( get_the_ID(), 'repeater_modelo_' . $i . '_caracteristica_texto', true ); ?></p>
             </div>
             <div>
-            <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+            <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" target="_blank" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
                     <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                     <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                     </span>
@@ -119,11 +119,14 @@
         $item = get_post_meta( get_the_ID(), 'productos_relacionados_' . $i . '_producto', true );  
         ?>
         <div class="SingleproductoRelacionado <?php if($estilo=="Profesional")echo "quitarFondo"; ?>" >
-             <a href="<?php the_permalink($item); ?>" class="imagenProdRelaci" >
+             <a href="<?php the_permalink($item); ?>" class="imagenProdRelaci">
                 <?php if($estilo=="Profesional") {?>
                 <?php $imagenId=get_post_meta($item,'imagen_tema_profesional',true);?>
                 <img src="<?php echo wp_get_attachment_image_src($imagenId,'medium')[0];?>">
-                <?php }else the_post_thumbnail($item); ?>
+                <?php }else {
+                    $imagenIdA= get_post_thumbnail_id($item);?>
+                    <img src="<?php echo wp_get_attachment_image_src($imagenIdA,'medium')[0];?>" 
+                    <?php } ?>
             </a>    
             <div class="InfoProdRelacionado">
                 <p class="biciCategoria"><?php echo get_the_category($item)[0]->name ?></p>
@@ -133,7 +136,7 @@
                 </a>
                 <div class="precioBotonRelacio">
                     <p class="biciPrecio"><?php echo get_post_meta( $item, 'precio', true ) ?></p>
-                    <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title($item);?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                    <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title($item);?>" target="_blank" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
                         <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                         <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
                         </span>

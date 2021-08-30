@@ -174,7 +174,7 @@ $cats=get_categories($args);
                                 </a>
                                 <div class="precioBotonRelacio">
                                     <p class="biciPrecio"><?php echo get_post_meta(get_the_ID(), 'precio', true ) ?></p>
-                                    <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                                    <a  href="https://api.whatsapp.com/send?phone=<?php echo get_field("numero_telefono","option") ?>&text=<?php echo get_field("mensaje","option")." ".get_the_title();?>" target="_blank" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
                                         <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
                                         <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>"></span>
                                     </a>

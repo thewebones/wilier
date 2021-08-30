@@ -29,6 +29,7 @@
   @media (min-width: 994px) and (max-width: 1200px) {
     .titulo-wilier {
       padding-top: 0 !important;
+      width:100% !important;
     }
     .imagencontenedor{
       padding-right: 0;
@@ -70,7 +71,7 @@
       padding-top: 0 !important;
       font-size: 38px !important;
       text-align: -webkit-center;
-
+      width:100% !important;
     }
     .imagencontenedor {
       padding: 0;
@@ -131,6 +132,7 @@
     font-family: Roboto;
     font-weight: bold;
     line-height: 56px;
+    width:80%;
   }
   .texto-wilier2 {
     margin-bottom: 30px;

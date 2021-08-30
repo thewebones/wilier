@@ -57,6 +57,22 @@
 .flickity-prev-next-button.previous {
     left: 45%;
 }
+@media (min-width:1500px){
+  .flickity-prev-next-button.next {
+    right: 46.7%;
+}
+.flickity-prev-next-button.previous {
+    left: 46.7%;
+}
+}
+@media (min-width:600px) and (max-width:900px){
+  .flickity-prev-next-button.next {
+    right: 42.5%;
+}
+.flickity-prev-next-button.previous {
+    left: 42.5%;
+}
+}
 .flickity-page-dots {
   display: none;
 }

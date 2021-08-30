@@ -22,7 +22,7 @@ else{
     </div>  
     <div class="container pInnerComentarios">
         <div class="pComentariosWP">
-            <h1 class="texto-profesional"><?php echo get_field("texto_profesional")?></h1>
+            <h1 class="texto-profesional"><?php if($estilo=="Amateur") echo get_field("texto_profesional"); else echo get_field("texto_amateur");?></h1>
             <div class="boton-profesional">
                 <a class="boton-profesional" onClick="change()">
                     <?php if($estilo=="Profesional") 

@@ -112,15 +112,19 @@ $cats=get_categories($args);
 		<div class="menuBody">
   			<?php if(get_field("repeater_menu","option")){
 				foreach(get_field("repeater_menu","option") as $menu){ ?>
-				<a class="mb-3 linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" href="<?php echo $menu["item_menu"]["url"] ?>"><?php echo $menu["item_menu"]["title"] ?></a>	
+				<a class="mb-5 linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" href="<?php echo $menu["item_menu"]["url"] ?>"><?php echo $menu["item_menu"]["title"] ?></a>	
 			<?php }}?>
-			<a class="linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" onClick="openNav2()">VER CATEGORÍAS</a>
+			<a class="mb-5 linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" onClick="openNav2()">VER CATEGORÍAS</a>
 		</div>
 		<div class="btnLateralContainer">
-			<a class="btnMenuLateral " href="<?php echo get_field("boton_menu","option")["url"] ?>"><?php echo get_field("boton_menu","option")["title"] ?></a>
+			<a class="btnMenuLateral " onClick="showModal()"><?php echo get_field("boton_menu","option")["title"] ?></a>
 		</div>
 		<div class="<?php if($estilo=="Profesional") echo "imagenFondoLateralProfesional"; else echo "imagenFondoLateralAmateur"; ?>">
+			<?php if($estilo=="Amateur"){ ?>
 			<img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/imagenMenuLateral.png"/>
+			<?php }else{?>
+			<img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/imagenMenuLateral.png"/>
+			<?php } ?>
 		</div>	
 	</div>	
 </div>
@@ -140,12 +144,16 @@ $cats=get_categories($args);
 			$the_query_post = new WP_Query( $argsPost );
 			if($the_query_post->posts){
 				 ?>
-			 	<a class="mb-3 linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
+			 	<a class="mb-5 linkMenuLateral <?php if($estilo=="Profesional") echo "colorWhite"; ?>" href="<?php echo esc_url(get_category_link(get_cat_ID($cat->name))) ?>"><?php echo $cat->name ?></a>	
 			 <?php }} ?>	
 			</div>
 		
-		<div class="<?php if($estilo=="Profesional") echo "imagenFondoLateralProfesional"; else echo "imagenFondoLateralAmateur"; ?>">
+			<div class="<?php if($estilo=="Profesional") echo "imagenFondoLateralProfesional"; else echo "imagenFondoLateralAmateur"; ?>">
+			<?php if($estilo=="Amateur"){ ?>
 			<img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/imagenMenuLateral.png"/>
+			<?php }else{?>
+			<img src="<?php echo get_site_url();?>/wp-content/themes/wilier/img/imagenMenuLateral.png"/>
+			<?php } ?>
 		</div>	
 	</div>		
 </div>				
@@ -165,7 +173,7 @@ $cats=get_categories($args);
 				foreach(get_field("repeater_menu","option") as $menu){ ?>
 			 		<a class="linkMenu" href="<?php echo $menu["item_menu"]["url"] ?>"><?php echo $menu["item_menu"]["title"] ?></a>	
 				<?php }}?>
-		    		<a class="btnMenu" href="<?php echo get_field("boton_menu","option")["url"] ?>"><?php echo get_field("boton_menu","option")["title"] ?></a>
+		    		<a class="btnMenu" onClick="showModal()"><?php echo get_field("boton_menu","option")["title"] ?></a>
 			</div>
   			<a class="openNavButton" href="#" onclick="openNav()">
     		<svg width="30" height="30" id="icoOpen">
@@ -203,6 +211,22 @@ $cats=get_categories($args);
 		<?php } ?>
 </div>
 </div>
+<section class="section-modal">
+    <div class="modal fade " id="modalSuscribe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+        <div class="modal-dialog moda-dialog-centered" role="document">
+        	<div class="wrapper_form_header">
+				<div class="modal-content modalHeaderContent">
+            		<div class="form_header_container" style="background: url('<?php echo get_field("imagen_fondo_negra","option")?>')">
+       					<p class="form_titulo"><?php echo get_field("titulo_formulario","option") ?></p>
+                		<div class="input_container">
+                    		<?php Echo do_shortcode ("[mc4wp_form id=183]")?>
+                		</div>
+            		</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
 <script>
 
 function change(){
@@ -220,5 +244,6 @@ function hover(event){
 function out(event){
     event.currentTarget.children[1].children[0].setAttribute("src","<?php echo get_site_url();?>/wp-content/themes/wilier/img/robe_recursos/light/whatsapp.svg");
 }
+
 </script>
 </header>

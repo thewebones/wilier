@@ -32,10 +32,9 @@ $cont=0;
                         <p class="slider_modelo <?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["apellido"] ?></p>
                         <p class="<?php if($estilo=="Profesional") echo "colorWhite"?>"><?php echo $agente["experiencia"] ?> </p>
                             </div>
-                        <a href="<?php echo $agente["link_whatsapp"]["url"] ?>" class="btn btn-slider <?php if($estilo=="Profesional") echo "btnWhite";?>">
-                            <span><?php echo $agente["link_whatsapp"]["title"] ?> </span>
-                            <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>">    
-                            </span>
+                        <a  href="https://api.whatsapp.com/send?phone=<?php echo $agente["numero_telefono"] ?>&text=<?php echo $agente["mensaje"];?>" target="_blank" class="btn btn-slider <?php if($estilo=="Profesional")echo "borderWhite" ?>">
+                            <span class="<?php if($estilo=="Profesional")echo "colorWhite" ?>">Consultar</span> 
+                            <span class="iconWhatsapp <?php if($estilo=="Profesional") echo "iconWhatsappProfesional" ?>"></span>
                         </a>
                     </div>
                     <div class="fleximagenContainer">

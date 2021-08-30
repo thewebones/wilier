@@ -16,22 +16,25 @@ $cats=get_categories($args);
 ?>
 
 <section class="header-home <?php echo $estilo?>">
-    <?php if (get_field("estilo")=="Amateur") {?>
+    <?php if ($estilo=="Amateur") {?>
         <div class="header-general" style="background: url('<?php echo get_field("background_amateur")?>')"> <?php }?>
-    <?php if (get_field("estilo")=="Profesional") {?>
+    <?php if ($estilo=="Profesional") {?>
        <div class="header-general" style="background: url('<?php echo get_field("background_profesional")?>')"> <?php }?>
         <div class="container header-desk division">
             <h1 class="header-titulo"><?php echo get_field("titulo_header")?></h1>
             <p class="header-texto"><?php if($estilo=="Amateur") echo get_field("texto_header"); else echo get_field("encabezado_texto_profesional");?></p>
-            <img class="imagen-header" src="<?php if($estilo=="Profesional") echo get_field("imagen_header_profesional"); else echo get_field("imagen_header");?>">
+            <img class="imagen-header" src="<?php if($estilo=="Profesional") echo get_field("imagen_header"); else echo get_field("imagen_header_profesional");?>">
         </div>
     <div class="container empty division"></div>
     </div>
 <!--PARA RESPONSIVE-->
     <div class="container header-responsive">
         <div class="img-responsive">
-            <img class="imagen-header2" src="<?php echo get_field("imagen_header_responsive")?>">
-            <img class="imagen-header3" src="<?php echo get_field("imagen_header")?>">
+            <?php if($estilo=="Profesional"){ ?>
+            <img class="" src="<?php echo get_field("imagen_header")?>">
+            <?php } else{?>
+            <img class="" src="<?php echo get_field("imagen_header_profesional")?>">
+                <?php } ?>
         </div>
         <div class="texto-responsive2">
             <p class="header-texto2"><?php echo get_field("texto_header")?></p>
