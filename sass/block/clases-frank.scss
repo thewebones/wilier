@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
+
+.wilier-section,.section-slider-medio.Profesional {
+	margin-bottom:0 !important;
+}
+.header-home .header-general {
+    flex-flow: column;
+	justify-content: center;
+}
+/* Solicitud de Jess de eliminar las flechas */
+.header-general .imagen-header {
+	visibility: hidden;
+}
+.embajador-section .imagen-embajador {
+    width: auto;
+}
+
+.embajador-section {
+    justify-content: space-around;
+	padding:0;
+}
+
+.division-embajador {
+    width: 100%;
+    background-size: 50%;
+    background-position: center left;
+	background-repeat: no-repeat;
+	padding: 240px 0;
+}
+
+section.embajador-section .embajador-texto {
+    width: 100% !important;
+}
+.form_container {
+    position: relative;
+	top: auto;
+    left: auto;
+}
+
+.form_comunidad_container {
+    background-size: cover;
+    padding: 15vw 0;
+}
+
+.bloque_mapa_container {
+    padding: 100px 0;
+}
+
+.container.bloque_mapa_container {
+    grid-template-columns: 1fr 2fr;
+    display: grid;
+}
+
+.imagen_mapa_container {
+    width: 100%;
+    padding-left: 50px;
+}
+
+.main-btn a{
+    background: #EE3031;
+    padding: 5px 25px;
+    border-radius: 0;
+}
+.main-btn a:hover{
+	background: #C12728 !important;
+    text-decoration: none !important;
+}
+
+.cta-ig {
+    margin-top: 40px;
+}
+
+.ig-main {
+    margin-top: 90px;
+}
+
+.ig-main h4 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-family: 'Roboto';
+}
+
+.section-video-home a.boton-video {
+  margin-top: -130px;
+	margin-right: 0;
+}
+
+.section-video-home div.boton-video-home {
+    margin-right: 50px;
+}
+
+.mc4wp-alert.mc4wp-success {
+    color: #009641;
+    margin-top: 10px;
+}
+
+.menuContainerDark a.linkMenu, .Profesional .productosRelacionados p.biciCategoria {
+    color: #fff;
+}
+p.Descripcion {
+    font-size: 18px;
+}
+
+section.error-404.not-found {
+    margin-top: 40px;
+}
+
+@media (min-width: 1530px) {
+	.containerHomeBicicletas img {
+    width: auto;
+    margin: auto;
+    text-align: center;
+	}
+		.containerHomeBicicletas {
+			text-align: center;
+	}
+}
+@media (max-width: 768px) {
+    .division-embajador {
+        background-size: 100%;
+		padding: 0;
+        background-position: center top 110px;
+	}
+	section.embajador-section h1.nombre-embajador, .embajador-section .embajador-wilier {
+        display: block !important;
+        text-align: center;
+    }
+    .embajador-section .embajador-wilier {
+        margin-bottom: 100vw;
+    }
+    div.embajador-texto {
+        padding-top: 0;
+    }
+    .embajador-section .nombre-embajador {
+        font-size: 32px!important;
+        margin-bottom: 0px;
+    }
+    .embajador-section .embajador-wilier {
+        font-size: 18px;
+    }
+    .profesional-section .texto-profesional {
+        width: 100% !important;
+        line-height: 30px;
+        text-align: center;
+    }
+    .profesional-section .boton-profesional {
+        margin: auto;
+    }
+    .cta-ig .wp-block-buttons.is-content-justification-right {
+        justify-content: center;
+    }
+    .footer_derechos p, .footer_term_policy a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form_comunidad_container {
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 66vw 0 0 0;
+    }
+    .form_comunidad_container .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .form_container {
+        height: auto;
+        padding: 70px 10px;
+    }
+    .form_comunidad_container .input_container {
+        width: 100%;
+    }
+    .section-slider-hover .carousel {
+        margin-left: 0 !important;
+        padding: 0;
+    }
+    .section-slider-hover .container {
+        padding-right: 0;
+    }
+    .wilier-section .imageSectionContainer img {
+			object-fit: initial;
+			width: 100%;
+			height: auto;
+}
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .menu_mapa_container {
+        grid-area: option-map;
+    }
+    .imagen_mapa_container {
+        grid-area: map-content;
+        padding-left: 0;
+    }
+    .container.bloque_mapa_container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "map-content"
+            "option-map";
+    }
+	.cta-ig .wp-block-column:first-child {
+    display: none;
+}
+	.cta-ig .justification-right {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 400px) {
+    .division-embajador {
+        background-position: center top 100px;
+    }
+}
+.wp-block-columns{
+    margin: 0 !important;
+}
+.main-btn a:hover{
+	background: #C12728 !important;
+    text-decoration: none !important;
+}
+.btn{
+	border-radius:0 !important;
+}
+.header-home .header-titulo{
+	text-transform:uppercase
+}
